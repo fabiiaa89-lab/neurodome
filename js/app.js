@@ -5,7 +5,7 @@
 // CONFIG — API KEY GEMINI (interna)
 // ═══════════════════════════════════════
 // Pega tu key aquí O déjala vacía y se usará la guardada en localStorage.
-const GEMINI_API_KEY_BUILTIN = '';
+const GEMINI_API_KEY_BUILTIN = 'AIzaSyAfW_ip5uWc0ZmjMen5-VuvbW2RHCS5rhA';
 
 // ═══════════════════════════════════════
 // STORAGE KEYS
@@ -1158,16 +1158,10 @@ function toggleLangSlider() {
 
 function syncLangSliders() {
   const isEn = LANG === 'en';
-  // setup slider
-  const sTrack = document.getElementById('setup-lang-track');
   const sThumb = document.getElementById('setup-lang-thumb');
-  if (sTrack) sTrack.style.transform = isEn ? 'translateX(-50%)' : 'translateX(0)';
-  if (sThumb) { sThumb.style.left = isEn ? '40px' : '3px'; sThumb.textContent = isEn ? '🇺🇸' : '🇪🇸'; }
-  // hamburger slider
-  const hTrack = document.getElementById('hmenu-lang-track');
+  if (sThumb) { sThumb.style.left = isEn ? '40px' : '3px'; }
   const hThumb = document.getElementById('hmenu-lang-thumb');
-  if (hTrack) hTrack.style.transform = isEn ? 'translateX(-50%)' : 'translateX(0)';
-  if (hThumb) { hThumb.style.left = isEn ? '40px' : '3px'; hThumb.textContent = isEn ? '🇺🇸' : '🇪🇸'; }
+  if (hThumb) { hThumb.style.left = isEn ? '40px' : '3px'; }
 }
 
 // ── Single-button language toggle ──
