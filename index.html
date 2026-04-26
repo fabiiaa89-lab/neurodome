@@ -46,26 +46,11 @@ setTimeout(hideSplash, 4000);
 <!-- BOTÓN DE SILENCIO GLOBAL -->
 <div class="mute-btn-floating" id="mute-btn-floating" onclick="toggleGlobalMute()" title="Modo Baja Estimulación">🌗</div>
 
-<!-- ══════════════════════════════════════
-     SPLASH — Pantalla de carga inicial
-══════════════════════════════════════ -->
-<div id="screen-splash">
-  <div class="splash-logo">
-    <img src="./icono_neurodome.png" onerror="this.parentElement.textContent='♾️'">
-  </div>
-  <div class="splash-appname">NEURO<span>-DOME</span></div>
-  <div class="splash-by">by Fabiola Aponte</div>
-</div>
-
-
-<!-- ══════════════════════════════════════
-     SUSCRIPCIÓN
-══════════════════════════════════════ -->
 <div class="screen" id="screen-subscription">
 <div class="wrap">
   <div class="sub-hdr">
     <div class="back-btn" onclick="goBack()" style="width:36px;height:36px;border-radius:10px;background:var(--surface2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;color:var(--text2)">←</div>
-    <div style="flex:1;font-size:16px;font-weight:700" id="sub-hdr-title">Suscripción</div>
+    <div style="flex:1;font-size:16px;font-weight:700" id="sub-hdr-title" data-i18n="auto_251">Suscripción</div>
     <div style="font-size:22px">⭐</div>
   </div>
   <div class="sub-body">
@@ -73,43 +58,43 @@ setTimeout(hideSplash, 4000);
     <!-- Hero -->
     <div class="sub-hero">
       <div class="sub-hero-icon">♾️</div>
-      <div class="sub-hero-title" id="sub-hero-title">NEURO-DOME Pro</div>
-      <div class="sub-hero-sub" id="sub-hero-sub">Apoya el desarrollo de la app y desbloquea funciones avanzadas diseñadas para tu sistema nervioso.</div>
+      <div class="sub-hero-title" id="sub-hero-title" data-i18n="auto_252">NEURO-DOME Pro</div>
+      <div class="sub-hero-sub" id="sub-hero-sub" data-i18n="auto_253">Apoya el desarrollo de la app y desbloquea funciones avanzadas diseñadas para tu sistema nervioso.</div>
     </div>
 
     <!-- Plan Gratuito -->
     <div class="sub-plan">
       <div class="sub-plan-body">
-        <div class="sub-plan-name" id="sub-free-name">Plan Gratuito</div>
-        <div class="sub-plan-price">$0 <span id="sub-forever">/ siempre</span></div>
+        <div class="sub-plan-name" id="sub-free-name" data-i18n="auto_254">Plan Gratuito</div>
+        <div class="sub-plan-price">$0 <span id="sub-forever" data-i18n="auto_255">/ siempre</span></div>
         <div class="sub-plan-features">
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f1">SOS y credencial médica</span></div>
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f2">Niveles de regulación N1–N5</span></div>
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f3">Escáner corporal</span></div>
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f4">Tarjetas de comunicación</span></div>
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f5">Alarmas de medicación</span></div>
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f6">Taxi a casa</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f1" data-i18n="auto_256">SOS y credencial médica</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f2" data-i18n="auto_257">Niveles de regulación N1–N5</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f3" data-i18n="auto_258">Escáner corporal</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f4" data-i18n="auto_259">Tarjetas de comunicación</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f5" data-i18n="auto_260">Alarmas de medicación</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f6" data-i18n="auto_261">Taxi a casa</span></div>
         </div>
-        <button class="sub-btn sub-btn-free" disabled style="opacity:.5;cursor:default" id="sub-free-btn">Plan actual</button>
+        <button class="sub-btn sub-btn-free" disabled style="opacity:.5;cursor:default" id="sub-free-btn" data-i18n="auto_262">Plan actual</button>
       </div>
     </div>
 
     <!-- Plan Pro -->
     <div class="sub-plan featured">
-      <div class="sub-plan-badge" id="sub-pro-badge">✨ RECOMENDADO</div>
+      <div class="sub-plan-badge" id="sub-pro-badge" data-i18n="auto_263">✨ RECOMENDADO</div>
       <div class="sub-plan-body">
-        <div class="sub-plan-name" id="sub-pro-name">Plan Pro</div>
-        <div class="sub-plan-price" id="sub-pro-price">$4.99 <span id="sub-per-month">/ mes</span></div>
+        <div class="sub-plan-name" id="sub-pro-name" data-i18n="auto_264">Plan Pro</div>
+        <div class="sub-plan-price" id="sub-pro-price">$4.99 <span id="sub-per-month" data-i18n="auto_265">/ mes</span></div>
         <div class="sub-plan-features">
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f1">Todo el Plan Gratuito incluido</span></div>
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f2">IA personalizada sin límites — consejos adaptados a tu perfil</span></div>
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f3">Recetas y alimentación segura con IA</span></div>
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f4">Compañero emocional (mascota / objeto de regulación con IA)</span></div>
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f5">Tonos isocrónicos personalizados con IA</span></div>
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f6">Acceso prioritario a nuevas funciones</span></div>
-          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f7">Apoyas el desarrollo de la app ♾️</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f1" data-i18n="auto_266">Todo el Plan Gratuito incluido</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f2" data-i18n="auto_267">IA personalizada sin límites — consejos adaptados a tu perfil</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f3" data-i18n="auto_268">Recetas y alimentación segura con IA</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f4" data-i18n="auto_269">Compañero emocional (mascota / objeto de regulación con IA)</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f5" data-i18n="auto_270">Tonos isocrónicos personalizados con IA</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f6" data-i18n="auto_271">Acceso prioritario a nuevas funciones</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f7" data-i18n="auto_272">Apoyas el desarrollo de la app ♾️</span></div>
         </div>
-        <button class="sub-btn sub-btn-pro" onclick="handleSubClick()" id="sub-pro-btn">✦ Suscribirse a Pro</button>
+        <button class="sub-btn sub-btn-pro" onclick="handleSubClick()" id="sub-pro-btn" data-i18n="auto_273">✦ Suscribirse a Pro</button>
       </div>
     </div>
 
@@ -125,9 +110,8 @@ setTimeout(hideSplash, 4000);
 </div>
 
 
-<!-- ══════════════════════════════════════
-     SETUP — Formulario con Acordeón
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-setup">
 <div class="wrap">
   <div class="setup-hero">
@@ -135,23 +119,22 @@ setTimeout(hideSplash, 4000);
     <div class="setup-lang-corner">
       <div class="lang-slide" id="hmenu-lang-slider" onclick="toggleLangSlider();event.stopPropagation()">
                 <div class="lang-slide-track" id="hmenu-lang-track" style="width:100%">
-                  <div class="lang-slide-opt" style="width:50%">🇪🇸</div>
-                  <div class="lang-slide-opt" style="width:50%">🇺🇸</div>
+                  <div class="lang-slide-opt" style="width:50%" data-i18n="auto_153">🇪🇸</div>
+                  <div class="lang-slide-opt" style="width:50%" data-i18n="auto_154">🇺🇸</div>
                 </div>
                 <div class="lang-slide-thumb" id="hmenu-lang-thumb"></div>
               </div>
       </div>
-    </div>
     <div class="setup-hero-brand">
       <div class="setup-hero-logo">
         <img src="./icono_neurodome.png" onerror="this.parentElement.textContent='♾️'">
       </div>
-      <div class="setup-hero-appname">NEURO<span>-DOME</span></div>
+      <div class="setup-hero-appname">NEURO<span data-i18n="auto_155">-DOME</span></div>
     </div>
-    <h1 style="font-size:20px;font-weight:700;letter-spacing:-.2px;margin-bottom:0" id="setup-hero-title">Mi Perfil de Apoyo</h1>
-    <p class="setup-hero-sub" style="margin-top:6px">Tus datos se guardan solo en este dispositivo. La IA de Neuro-Dome usará esta información para personalizar tus consejos y regulaciones.</p>
+    <h1 style="font-size:20px;font-weight:700;letter-spacing:-.2px;margin-bottom:0" id="setup-hero-title" data-i18n="auto_156">Mi Perfil de Apoyo</h1>
+    <p class="setup-hero-sub" style="margin-top:6px" data-i18n="auto_157">Tus datos se guardan solo en este dispositivo. La IA de Neuro-Dome usará esta información para personalizar tus consejos y regulaciones.</p>
     <div style="margin-top:10px;padding:11px 13px;background:var(--surface2);border:1px solid var(--border2);border-radius:10px;font-size:13px;color:var(--text2);line-height:1.55">
-      <span id="setup-hint-text"><b style="color:var(--text)">👋 Solo 3 pasos para empezar:</b> completa los campos marcados con <b style="color:var(--red)">*</b> en <b>Mi identidad</b>, <b>Contacto de emergencia</b> e <b>Imágenes</b>. Puedes llenar el resto desde <b>Configuración ⚙️</b> cuando quieras, sin prisa.</span>
+      <span id="setup-hint-text"><b style="color:var(--text)" data-i18n="auto_158">👋 Solo 3 pasos para empezar:</b> completa los campos marcados con <b style="color:var(--red)">*</b> en <b data-i18n="auto_159">Mi identidad</b>, <b data-i18n="auto_160">Contacto de emergencia</b> e <b data-i18n="auto_161">Imágenes</b>. Puedes llenar el resto desde <b data-i18n="auto_162">Configuración ⚙️</b> cuando quieras, sin prisa.</span>
     </div>
   </div>
 
@@ -162,8 +145,8 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger open" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#0a1e32,#101820)">
         <span class="acc-icon">♾️</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#60b0f0">Mi identidad</div>
-          <div class="acc-sub">Nombre y Dirección</div>
+          <div class="acc-title" style="color:#60b0f0" data-i18n="auto_163">Mi identidad</div>
+          <div class="acc-sub" data-i18n="setupIdSub">Nombre y Teléfono</div>
         </div>
         <span class="acc-arrow" style="color:#60b0f0">▼</span>
       </button>
@@ -171,35 +154,11 @@ setTimeout(hideSplash, 4000);
         <div class="sfield" style="border-color:#1a3a5a">
           <label style="color:#60b0f0"><span data-i18n="sosNombreLbl">NOMBRE COMPLETO</span> <span style="color:#d93545">*</span></label>
           <input id="cfg-nombre" type="text" placeholder="Ej: José Aponte Torres" autocomplete="off" required>
-          <div class="field-error" id="err-nombre">Campo obligatorio</div>
+          <div class="field-error" id="err-nombre" data-i18n="auto_164">Campo obligatorio</div>
         </div>
         <div class="sfield" style="border-color:#1a3a5a">
-          <label style="color:#60b0f0"><span data-i18n="cfgDocLbl">DOCUMENTO DE IDENTIDAD (DNI/Pasaporte)</span></label>
-          <input id="cfg-doc" type="text" placeholder="Ej: 12345678" autocomplete="off">
-        </div>
-        <div class="sfield" style="border-color:#1a3a5a">
-          <label style="color:#60b0f0"><span data-i18n="cfgNacLbl">NACIONALIDAD</span></label>
-          <input id="cfg-nac" type="text" placeholder="Ej: Peruana" autocomplete="off">
-        </div>
-        <div class="sfield" style="border-color:#1a3a5a">
-          <label style="color:#60b0f0">MI DIRECCIÓN (calle y número)</label>
-          <input id="cfg-d1" type="text" placeholder="Ej: Av. Los Álamos 247" autocomplete="off">
-        </div>
-        <div class="sfield" style="border-color:#1a3a5a">
-          <label style="color:#60b0f0">DISTRITO</label>
-          <input id="cfg-d2" type="text" placeholder="Ej: Miraflores" autocomplete="off">
-        </div>
-        <div class="sfield" style="border-color:#1a3a5a">
-          <label style="color:#60b0f0">CIUDAD</label>
-          <input id="cfg-d3" type="text" placeholder="Ej: Lima" autocomplete="off">
-        </div>
-        <div class="sfield" style="border-color:#1a3a5a">
-          <label style="color:#60b0f0">PAÍS</label>
-          <input id="cfg-pais" type="text" placeholder="Ej: Perú" autocomplete="off">
-        </div>
-        <div class="sfield" style="border-color:#1a3a5a">
-          <label style="color:#60b0f0">REFERENCIA (opcional)</label>
-          <input id="cfg-d4" type="text" placeholder="Ej: Frente al parque" autocomplete="off">
+          <label style="color:#60b0f0"><span data-i18n="cfgTelLbl">TELÉFONO MÓVIL</span></label>
+          <input id="cfg-telefono" type="tel" placeholder="Ej: 51987654321" autocomplete="off">
         </div>
       </div>
     </div>
@@ -209,8 +168,8 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger open" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#200808,#1a0e0e)">
         <span class="acc-icon">🤝</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#e86060">Mi contacto de emergencia</div>
-          <div class="acc-sub">Persona de confianza para crisis</div>
+          <div class="acc-title" style="color:#e86060" data-i18n="auto_165">Mi contacto de emergencia</div>
+          <div class="acc-sub" data-i18n="auto_166">Persona de confianza para crisis</div>
         </div>
         <span class="acc-arrow" style="color:#e86060">▼</span>
       </button>
@@ -218,16 +177,16 @@ setTimeout(hideSplash, 4000);
         <div class="sfield" style="border-color:#3a1a1a">
           <label style="color:#e86060">NOMBRE Y APELLIDOS <span style="color:#d93545">*</span></label>
           <input id="cfg-cn" type="text" placeholder="Ej: María García" autocomplete="off" required>
-          <div class="field-error" id="err-cn">Campo obligatorio</div>
+          <div class="field-error" id="err-cn" data-i18n="auto_167">Campo obligatorio</div>
         </div>
         <div class="sfield" style="border-color:#3a1a1a">
           <label style="color:#e86060">TELÉFONO / WHATSAPP <span style="color:#d93545">*</span></label>
           <input id="cfg-ct" type="tel" placeholder="Ej: 51987654321" autocomplete="off" required>
-          <div class="fhint" style="margin-top:6px">Con código de país. Sin el +. Ej: 51 para Perú, 58 Venezuela, 57 Colombia.</div>
-          <div class="field-error" id="err-ct">Campo obligatorio</div>
+          <div class="fhint" style="margin-top:6px" data-i18n="auto_168">Con código de país. Sin el +. Ej: 51 para Perú, 58 Venezuela, 57 Colombia.</div>
+          <div class="field-error" id="err-ct" data-i18n="auto_169">Campo obligatorio</div>
         </div>
         <div class="sfield" style="border-color:#3a1a1a">
-          <label style="color:#e86060">RELACIÓN (opcional)</label>
+          <label style="color:#e86060" data-i18n="auto_170">RELACIÓN (opcional)</label>
           <input id="cfg-apoyo-rel" type="text" placeholder="Ej: mamá, pareja, mejor amiga" autocomplete="off">
         </div>
       </div>
@@ -238,32 +197,32 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger open" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#201408,#1a1206)">
         <span class="acc-icon">📷</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#d4a030">Gestión de Imágenes</div>
-          <div class="acc-sub">Subir desde galería (guardadas en el dispositivo)</div>
+          <div class="acc-title" style="color:#d4a030" data-i18n="auto_171">Gestión de Imágenes</div>
+          <div class="acc-sub" data-i18n="auto_172">Subir desde galería (guardadas en el dispositivo)</div>
         </div>
         <span class="acc-arrow" style="color:#d4a030">▼</span>
       </button>
       <div class="acc-body open" style="display:block;background:#100a02">
         <!-- Tu foto de perfil — PRIMERO -->
         <div class="sfield">
-          <label>TU FOTO (perfil)</label>
+          <label data-i18n="auto_173">TU FOTO (perfil)</label>
           <div class="file-upload-area" onclick="document.getElementById('file-usuario').click()">
             <div class="file-preview" id="prev-usuario">🧑</div>
             <div>
-              <div class="file-label"><b>Subir desde galería</b>Tu foto de identificación</div>
-              <div class="fhint">Aparece en la credencial SOS y en tu perfil.</div>
+              <div class="file-label"><b data-i18n="auto_174">Subir desde galería</b>Tu foto de identificación</div>
+              <div class="fhint" data-i18n="auto_175">Aparece en la credencial SOS y en tu perfil.</div>
             </div>
           </div>
           <input type="file" id="file-usuario" accept="image/*" style="display:none" onchange="handleFileUpload('usuario',this)">
         </div>
         <!-- Foto tuya con contacto — SEGUNDO -->
         <div class="sfield" style="border-bottom:none">
-          <label>FOTO TUYA CON CONTACTO DE EMERGENCIA</label>
+          <label data-i18n="auto_176">FOTO TUYA CON CONTACTO DE EMERGENCIA</label>
           <div class="file-upload-area" onclick="document.getElementById('file-contacto').click()">
-            <div class="file-preview" id="prev-contacto">🧑‍🤝‍🧑</div>
+            <div class="file-preview" id="prev-contacto" data-i18n="auto_177">🧑‍🤝‍🧑</div>
             <div>
-              <div class="file-label"><b>Subir desde galería</b>Foto tuya y tu contacto juntos</div>
-              <div class="fhint">Ayuda con la agnosia en el Nivel 2 — ver la foto ancla el reconocimiento.</div>
+              <div class="file-label"><b data-i18n="auto_178">Subir desde galería</b>Foto tuya y tu contacto juntos</div>
+              <div class="fhint" data-i18n="auto_179">Ayuda con la agnosia en el Nivel 2 — ver la foto ancla el reconocimiento.</div>
             </div>
           </div>
           <input type="file" id="file-contacto" accept="image/*" style="display:none" onchange="handleFileUpload('contacto',this)">
@@ -279,8 +238,8 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#2a0808,#1e1010)">
         <span class="acc-icon">🩺</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#f07070">Salud</div>
-          <div class="acc-sub">Tipo de sangre, Medicinas, Alergias</div>
+          <div class="acc-title" style="color:#f07070" data-i18n="auto_180">Salud</div>
+          <div class="acc-sub" data-i18n="auto_181">Tipo de sangre, Medicinas, Alergias</div>
         </div>
         <span class="acc-arrow" style="color:#f07070">▼</span>
       </button>
@@ -290,16 +249,16 @@ setTimeout(hideSplash, 4000);
           <input id="cfg-sangre" type="text" placeholder="Ej: A+" autocomplete="off">
         </div>
         <div class="sfield" style="border-color:#5a1a1a">
-          <label style="color:#f07070">ALERGIAS (separadas por coma)</label>
+          <label style="color:#f07070" data-i18n="auto_182">ALERGIAS (separadas por coma)</label>
           <input id="cfg-alergias" type="text" placeholder="Ej: Penicilina, Ibuprofeno, Látex" autocomplete="off">
-          <div class="fhint" style="margin-top:7px">Visible en la pantalla SOS para personal médico.</div>
+          <div class="fhint" style="margin-top:7px" data-i18n="auto_183">Visible en la pantalla SOS para personal médico.</div>
         </div>
         <div class="sfield" style="border-color:#5a1a1a">
-          <label style="color:#f07070">MEDICAMENTO DE CRISIS (Nivel 1)</label>
+          <label style="color:#f07070" data-i18n="auto_184">MEDICAMENTO DE CRISIS (Nivel 1)</label>
           <input id="cfg-mc" type="text" placeholder="Ej: Clonazepam 2mg" autocomplete="off">
         </div>
         <div class="sfield" style="border-color:#5a1a1a">
-          <label style="color:#f07070">MEDICAMENTO DIARIO (separar varios con coma)</label>
+          <label style="color:#f07070" data-i18n="auto_185">MEDICAMENTO DIARIO (separar varios con coma)</label>
           <input id="cfg-md" type="text" placeholder="Ej: Sertralina 100mg, Melatonina 5mg" autocomplete="off">
         </div>
       </div>
@@ -310,23 +269,23 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#221a04,#1a1408)">
         <span class="acc-icon">⚡</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#e0b030">Perfil Sensorial</div>
-          <div class="acc-sub">Hipersensibilidades, Triggers, Hiposensibilidades</div>
+          <div class="acc-title" style="color:#e0b030" data-i18n="auto_186">Perfil Sensorial</div>
+          <div class="acc-sub" data-i18n="auto_187">Hipersensibilidades, Triggers, Hiposensibilidades</div>
         </div>
         <span class="acc-arrow" style="color:#e0b030">▼</span>
       </button>
       <div class="acc-body" style="background:#120e02">
         <div class="sfield" style="border-color:#4a3a0a">
-          <label style="color:#e0b030">HIPERSENSIBILIDADES (separadas por coma)</label>
+          <label style="color:#e0b030" data-i18n="auto_188">HIPERSENSIBILIDADES (separadas por coma)</label>
           <input id="cfg-hiper" type="text" placeholder="Ej: ruidos agudos, luces fuertes, multitudes" autocomplete="off">
-          <div class="fhint" style="margin-top:7px">Estímulos que te sobrecargan. La IA y el escáner usan esta información.</div>
+          <div class="fhint" style="margin-top:7px" data-i18n="auto_189">Estímulos que te sobrecargan. La IA y el escáner usan esta información.</div>
         </div>
         <div class="sfield" style="border-color:#4a3a0a">
-          <label style="color:#e0b030">HIPOSENSIBILIDADES (separadas por coma)</label>
+          <label style="color:#e0b030" data-i18n="auto_190">HIPOSENSIBILIDADES (separadas por coma)</label>
           <input id="cfg-hipo" type="text" placeholder="Ej: temperatura extrema, dolor físico" autocomplete="off">
         </div>
         <div class="sfield" style="border-color:#4a3a0a">
-          <label style="color:#e0b030">DISPARADORES / TRIGGERS (separados por coma)</label>
+          <label style="color:#e0b030" data-i18n="auto_191">DISPARADORES / TRIGGERS (separados por coma)</label>
           <input id="cfg-triggers" type="text" placeholder="Ej: cambios de planes, ruido inesperado" autocomplete="off">
         </div>
       </div>
@@ -337,24 +296,22 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#18082e,#120a20)">
         <span class="acc-icon">🌀</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#c890f8">Mi Mundo Autista</div>
-          <div class="acc-sub">Comida, rutinas, lugares y hábitos propios</div>
+          <div class="acc-title" style="color:#c890f8" data-i18n="auto_192">Mi Mundo Autista</div>
+          <div class="acc-sub" data-i18n="auto_193">Comida, rutinas, lugares y hábitos propios</div>
         </div>
         <span class="acc-arrow" style="color:#c890f8">▼</span>
       </button>
       <div class="acc-body" style="background:#0c0618">
-        <div style="padding:13px 16px 10px;border-bottom:1px solid #2a1840;font-size:13px;color:#9060c0;line-height:1.6">
-          Estos detalles son tu arquitectura interna. No son rarezas — son el sistema con el que funciona tu cerebro.
-        </div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8">COMIDA SEGURA (separada por coma)</label><input id="cfg-comida" type="text" placeholder="Ej: Yogurt, Frutos secos, Arroz blanco" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8">MI LUGAR FIJO</label><input id="cfg-lugar-fijo" type="text" placeholder="Ej: El sillón izquierdo, la esquina del café" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8">MIS RUTAS HABITUALES</label><textarea id="cfg-rutas" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Al trabajo por Av. Principal…"></textarea></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8">QUÉ PASA SI MI RUTA CAMBIA</label><input id="cfg-ruta-cambio" type="text" placeholder="Ej: Me desregulo, entro en pánico…" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8">MIS RITUALES DE INICIO</label><textarea id="cfg-rituales" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Revisar llaves 3 veces, tocar la puerta…"></textarea></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8">COSAS QUE HAGO QUE OTROS NO ENTIENDEN</label><textarea id="cfg-peculiaridades" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Cuento escalones, ordeno la comida por colores…"></textarea></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8">OBJETOS IMPRESCINDIBLES AL SALIR</label><input id="cfg-objetos-salida" type="text" placeholder="Ej: Audífonos, fidget, botella de agua fría" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8">TEXTURAS QUE NO TOLERO EN ROPA</label><input id="cfg-texturas-ropa" type="text" placeholder="Ej: Lana, etiquetas, costuras gruesas" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8">MI STIMMING PRINCIPAL</label><input id="cfg-stimming" type="text" placeholder="Ej: Balanceo, golpear dedos, tararear" autocomplete="off"></div>
+        <div style="padding:13px 16px 10px;border-bottom:1px solid #2a1840;font-size:13px;color:#9060c0;line-height:1.6" data-i18n="auto_194">Estos detalles son tu arquitectura interna. No son rarezas — son el sistema con el que funciona tu cerebro.</div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_195">COMIDA SEGURA (separada por coma)</label><input id="cfg-comida" type="text" placeholder="Ej: Yogurt, Frutos secos, Arroz blanco" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_196">MI LUGAR FIJO</label><input id="cfg-lugar-fijo" type="text" placeholder="Ej: El sillón izquierdo, la esquina del café" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_197">MIS RUTAS HABITUALES</label><textarea id="cfg-rutas" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Al trabajo por Av. Principal…"></textarea></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_198">QUÉ PASA SI MI RUTA CAMBIA</label><input id="cfg-ruta-cambio" type="text" placeholder="Ej: Me desregulo, entro en pánico…" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_199">MIS RITUALES DE INICIO</label><textarea id="cfg-rituales" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Revisar llaves 3 veces, tocar la puerta…"></textarea></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_200">COSAS QUE HAGO QUE OTROS NO ENTIENDEN</label><textarea id="cfg-peculiaridades" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Cuento escalones, ordeno la comida por colores…"></textarea></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_201">OBJETOS IMPRESCINDIBLES AL SALIR</label><input id="cfg-objetos-salida" type="text" placeholder="Ej: Audífonos, fidget, botella de agua fría" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_202">TEXTURAS QUE NO TOLERO EN ROPA</label><input id="cfg-texturas-ropa" type="text" placeholder="Ej: Lana, etiquetas, costuras gruesas" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_203">MI STIMMING PRINCIPAL</label><input id="cfg-stimming" type="text" placeholder="Ej: Balanceo, golpear dedos, tararear" autocomplete="off"></div>
       </div>
     </div>
 
@@ -363,22 +320,20 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#041420,#081018)">
         <span class="acc-icon">🚕</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#40c0e8">Transporte Seguro</div>
-          <div class="acc-sub">Mi app de taxi y rutas de retorno</div>
+          <div class="acc-title" style="color:#40c0e8" data-i18n="auto_204">Transporte Seguro</div>
+          <div class="acc-sub" data-i18n="auto_205">Mi app de taxi y rutas de retorno</div>
         </div>
         <span class="acc-arrow" style="color:#40c0e8">▼</span>
       </button>
       <div class="acc-body" style="background:#020c14">
-        <div style="padding:13px 16px 10px;border-bottom:1px solid #0a2a3a;font-size:13px;color:#207080;line-height:1.6">
-          En un momento de crisis no tendrás que escribir tu dirección ni pensar a dónde ir. Un solo botón llamará a tu app de taxi con tu destino ya listo.
-        </div>
+        <div style="padding:13px 16px 10px;border-bottom:1px solid #0a2a3a;font-size:13px;color:#207080;line-height:1.6" data-i18n="auto_206">En un momento de crisis no tendrás que escribir tu dirección ni pensar a dónde ir. Un solo botón llamará a tu app de taxi con tu destino ya listo.</div>
         <div class="sfield" style="border-color:#0a2a3a">
-          <label style="color:#40c0e8">APP DE TAXI PREFERIDA</label>
+          <label style="color:#40c0e8" data-i18n="auto_207">APP DE TAXI PREFERIDA</label>
           <input id="cfg-taxi-app" type="text" placeholder="Ej: Uber, Cabify, inDriver, Beat…" autocomplete="off">
-          <div class="fhint" style="margin-top:6px">Escribe exactamente el nombre de la app que tienes instalada.</div>
+          <div class="fhint" style="margin-top:6px" data-i18n="auto_208">Escribe exactamente el nombre de la app que tienes instalada.</div>
         </div>
         <div class="sfield" style="border-color:#0a2a3a">
-          <label style="color:#40c0e8">MENSAJE PARA EL CONDUCTOR (opcional)</label>
+          <label style="color:#40c0e8" data-i18n="auto_209">MENSAJE PARA EL CONDUCTOR (opcional)</label>
           <input id="cfg-taxi-msg" type="text" placeholder="Ej: Soy autista. Por favor no hables durante el viaje." autocomplete="off">
         </div>
       </div>
@@ -389,16 +344,16 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#081e28,#0c1820)">
         <span class="acc-icon">💡</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#40c8e0">Intereses Restringidos</div>
-          <div class="acc-sub">Temas de hiperenfoque que te regulan</div>
+          <div class="acc-title" style="color:#40c8e0" data-i18n="auto_210">Intereses Restringidos</div>
+          <div class="acc-sub" data-i18n="auto_211">Temas de hiperenfoque que te regulan</div>
         </div>
         <span class="acc-arrow" style="color:#40c8e0">▼</span>
       </button>
       <div class="acc-body" style="background:#041218">
         <div class="sfield" style="border-color:#1a3a4a">
-          <label style="color:#40c8e0">TEMAS DE HIPERENFOQUE (separados por coma)</label>
+          <label style="color:#40c8e0" data-i18n="auto_212">TEMAS DE HIPERENFOQUE (separados por coma)</label>
           <input id="cfg-intereses" type="text" placeholder="Ej: astrofísica, datos, videojuegos de estrategia" autocomplete="off">
-          <div class="fhint">La IA los usa como ancla de regulación cuando el sistema nervioso está sobrecargado.</div>
+          <div class="fhint" data-i18n="auto_213">La IA los usa como ancla de regulación cuando el sistema nervioso está sobrecargado.</div>
         </div>
       </div>
     </div>
@@ -408,24 +363,24 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#160a2e,#110820)">
         <span class="acc-icon">💼</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#a080e8">A qué te dedicas</div>
-          <div class="acc-sub">Trabajo / Estudio</div>
+          <div class="acc-title" style="color:#a080e8" data-i18n="auto_214">A qué te dedicas</div>
+          <div class="acc-sub" data-i18n="auto_215">Trabajo / Estudio</div>
         </div>
         <span class="acc-arrow" style="color:#a080e8">▼</span>
       </button>
       <div class="acc-body" style="background:#0c0618">
         <div class="sfield" style="border-color:#2a1a4a">
-          <label style="color:#a080e8">OCUPACIÓN</label>
+          <label style="color:#a080e8" data-i18n="auto_216">OCUPACIÓN</label>
           <input id="cfg-ocupacion" type="text" placeholder="Ej: Desarrollador, Diseñador, Estudiante" autocomplete="off">
         </div>
         <div class="sfield" style="border-color:#2a1a4a">
-          <label style="color:#a080e8">HORAS AL DÍA</label>
+          <label style="color:#a080e8" data-i18n="auto_217">HORAS AL DÍA</label>
           <input id="cfg-horas" type="number" placeholder="Ej: 8" min="1" max="24" autocomplete="off">
         </div>
         <div class="sfield" style="border-color:#2a1a4a">
-          <label style="color:#a080e8">MAYORES RETOS (separados por coma)</label>
+          <label style="color:#a080e8" data-i18n="auto_218">MAYORES RETOS (separados por coma)</label>
           <input id="cfg-retos" type="text" placeholder="Ej: reuniones largas, tareas sin estructura" autocomplete="off">
-          <div class="fhint">La IA considera esto para sugerencias de contención en contexto laboral.</div>
+          <div class="fhint" data-i18n="auto_219">La IA considera esto para sugerencias de contención en contexto laboral.</div>
         </div>
       </div>
     </div>
@@ -435,8 +390,8 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#0a1e14,#0e1810)">
         <span class="acc-icon">🏥</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#50c890">Diagnóstico</div>
-          <div class="acc-sub">Sube tu documento de diagnóstico TEA</div>
+          <div class="acc-title" style="color:#50c890" data-i18n="auto_220">Diagnóstico</div>
+          <div class="acc-sub" data-i18n="auto_221">Sube tu documento de diagnóstico TEA</div>
         </div>
         <span class="acc-arrow" style="color:#50c890">▼</span>
       </button>
@@ -446,12 +401,12 @@ setTimeout(hideSplash, 4000);
           <div class="file-upload-area" style="border-color:#1a4a2a;background:#0a1e12" onclick="document.getElementById('file-diagnostico').click()">
             <div class="file-preview" id="prev-diagnostico" style="border-radius:8px;font-size:20px">📄</div>
             <div style="flex:1">
-              <div class="file-label"><b style="color:#50c890">Subir archivo</b>PDF o imagen de tu diagnóstico oficial</div>
+              <div class="file-label"><b style="color:#50c890" data-i18n="auto_222">Subir archivo</b>PDF o imagen de tu diagnóstico oficial</div>
               <div id="diag-filename" style="font-size:12px;color:var(--teal);margin-top:4px"></div>
             </div>
           </div>
           <input type="file" id="file-diagnostico" accept="image/*,application/pdf" style="display:none" onchange="handleDiagUpload(this)">
-          <div class="fhint" style="margin-top:8px">El archivo se guarda en este dispositivo. No se sube a ningún servidor.</div>
+          <div class="fhint" style="margin-top:8px" data-i18n="auto_223">El archivo se guarda en este dispositivo. No se sube a ningún servidor.</div>
         </div>
       </div>
     </div>
@@ -461,20 +416,20 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#0e2a20,#121a18)">
         <span class="acc-icon">🐾</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#3ad4a0">Mi apoyo incondicional</div>
-          <div class="acc-sub">Él me ayuda a regularme</div>
+          <div class="acc-title" style="color:#3ad4a0" data-i18n="auto_224">Mi apoyo incondicional</div>
+          <div class="acc-sub" data-i18n="auto_225">Él me ayuda a regularme</div>
         </div>
         <span class="acc-arrow" style="color:#3ad4a0">▼</span>
       </button>
       <div class="acc-body" style="background:#0a1e16">
-        <div class="sfield" style="border-color:#1a4a3a"><label style="color:#3ad4a0">NOMBRE DE TU APOYO INCONDICIONAL</label><input id="cfg-pet-name" type="text" placeholder="Ej: Luna, Mochi, Pelusa…" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#1a4a3a"><label style="color:#3ad4a0">TIPO DE APOYO INCONDICIONAL</label><input id="cfg-pet-type" type="text" placeholder="Ej: Gato, Perro, Conejo…" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#1a4a3a"><label style="color:#3ad4a0">DESCRIPCIÓN (para la IA)</label><textarea id="cfg-pet-desc" style="height:80px;background:#0e2a20;border-color:#1a5a40;color:var(--text)" placeholder="Ej: Gato negro, ojos verdes, muy juguetón…"></textarea></div>
+        <div class="sfield" style="border-color:#1a4a3a"><label style="color:#3ad4a0" data-i18n="auto_226">NOMBRE DE TU APOYO INCONDICIONAL</label><input id="cfg-pet-name" type="text" placeholder="Ej: Luna, Mochi, Pelusa…" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#1a4a3a"><label style="color:#3ad4a0" data-i18n="auto_227">TIPO DE APOYO INCONDICIONAL</label><input id="cfg-pet-type" type="text" placeholder="Ej: Gato, Perro, Conejo…" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#1a4a3a"><label style="color:#3ad4a0" data-i18n="auto_228">DESCRIPCIÓN (para la IA)</label><textarea id="cfg-pet-desc" style="height:80px;background:#0e2a20;border-color:#1a5a40;color:var(--text)" placeholder="Ej: Gato negro, ojos verdes, muy juguetón…"></textarea></div>
         <div class="sfield" style="border-color:#1a4a3a">
-          <label style="color:#3ad4a0">FOTO DE TU APOYO INCONDICIONAL (opcional)</label>
+          <label style="color:#3ad4a0" data-i18n="auto_229">FOTO DE TU APOYO INCONDICIONAL (opcional)</label>
           <div class="file-upload-area" style="border-color:#1a5a40;background:#0e2a20" onclick="document.getElementById('file-pet').click()">
             <div class="file-preview" id="prev-pet" style="border-radius:50%;font-size:22px">🐾</div>
-            <div style="flex:1"><div class="file-label"><b style="color:#3ad4a0">Subir foto</b></div></div>
+            <div style="flex:1"><div class="file-label"><b style="color:#3ad4a0" data-i18n="auto_230">Subir foto</b></div></div>
           </div>
           <input type="file" id="file-pet" accept="image/*" style="display:none" onchange="handleFileUpload('pet',this)">
         </div>
@@ -486,18 +441,16 @@ setTimeout(hideSplash, 4000);
       <button class="acc-trigger" onclick="toggleAcc(this)" style="background:linear-gradient(135deg,#1a0e2e,#14101e)">
         <span class="acc-icon">🧸</span>
         <div class="acc-text-block">
-          <div class="acc-title" style="color:#b090f0">Mis Objetos de Regulación</div>
-          <div class="acc-sub">Peluches, objetos de confort, anclajes</div>
+          <div class="acc-title" style="color:#b090f0" data-i18n="auto_231">Mis Objetos de Regulación</div>
+          <div class="acc-sub" data-i18n="auto_232">Peluches, objetos de confort, anclajes</div>
         </div>
         <span class="acc-arrow" style="color:#b090f0">▼</span>
       </button>
       <div class="acc-body" style="background:#0e0a1e">
-        <div style="padding:13px 16px 10px;border-bottom:1px solid #2a1a4a;font-size:13px;color:#8060d0;line-height:1.6">
-          Los objetos de regulación son válidos. No son "cosas de niños" — son herramientas de tu sistema nervioso.
-        </div>
-        <div class="sfield" style="border-color:#2a1a4a"><label style="color:#b090f0">NOMBRE DEL OBJETO</label><input id="cfg-obj-name" type="text" placeholder="Ej: Oso Nube, mi manta…" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#2a1a4a"><label style="color:#b090f0">DESCRIPCIÓN</label><textarea id="cfg-obj-desc" style="height:80px;background:#140e22;border-color:#3a2060;color:var(--text)" placeholder="Ej: Peluche blanco pequeño, muy suave…"></textarea></div>
-        <div class="sfield" style="border-color:#2a1a4a"><label style="color:#b090f0">¿DÓNDE SUELE ESTAR?</label><input id="cfg-obj-location" type="text" placeholder="Ej: En mi mochila, en el cajón del escritorio" autocomplete="off"><div class="fhint" style="margin-top:6px">Cuando estés desregulado, sabrás dónde buscarlo.</div></div>
+        <div style="padding:13px 16px 10px;border-bottom:1px solid #2a1a4a;font-size:13px;color:#8060d0;line-height:1.6" data-i18n="auto_233">Los objetos de regulación son válidos. No son "cosas de niños" — son herramientas de tu sistema nervioso.</div>
+        <div class="sfield" style="border-color:#2a1a4a"><label style="color:#b090f0" data-i18n="auto_234">NOMBRE DEL OBJETO</label><input id="cfg-obj-name" type="text" placeholder="Ej: Oso Nube, mi manta…" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1a4a"><label style="color:#b090f0" data-i18n="auto_235">DESCRIPCIÓN</label><textarea id="cfg-obj-desc" style="height:80px;background:#140e22;border-color:#3a2060;color:var(--text)" placeholder="Ej: Peluche blanco pequeño, muy suave…"></textarea></div>
+        <div class="sfield" style="border-color:#2a1a4a"><label style="color:#b090f0" data-i18n="auto_236">¿DÓNDE SUELE ESTAR?</label><input id="cfg-obj-location" type="text" placeholder="Ej: En mi mochila, en el cajón del escritorio" autocomplete="off"><div class="fhint" style="margin-top:6px" data-i18n="auto_237">Cuando estés desregulado, sabrás dónde buscarlo.</div></div>
       </div>
     </div>
 
@@ -506,28 +459,27 @@ setTimeout(hideSplash, 4000);
     <!-- Botón para expandir sección avanzada -->
     <button id="setup-show-more" class="show-more-btn" onclick="toggleAdvancedSetup()">
       <span id="setup-more-icon">＋</span>
-      <span id="setup-more-label">Completar mi perfil (opcional)</span>
+      <span id="setup-more-label" data-i18n="auto_238">Completar mi perfil (opcional)</span>
     </button>
 
     <button class="btn purple save-cfg-btn" style="font-size:15px;font-weight:600;height:52px;min-height:52px;letter-spacing:.5px;border-radius:14px;margin-top:4px;opacity:.95" onclick="saveConfig()">
       <span data-i18n="saveBtn">GUARDAR Y CONTINUAR</span>
     </button>
-    <div style="text-align:center;margin-top:12px;font-size:12px;color:var(--text3);letter-spacing:.4px;font-family:var(--mono)">NEURO-DOME by Fabiola Aponte</div>
+    <div style="text-align:center;margin-top:12px;font-size:12px;color:var(--text3);letter-spacing:.4px;font-family:var(--mono)" data-i18n="auto_239">NEURO-DOME by Fabiola Aponte</div>
     <div class="spacer"></div>
   </div>
 </div>
 </div>
 
 
-<!-- ══════════════════════════════════════
-     HOME
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-home">
 <div class="wrap">
   <div class="home-hdr">
     <!-- Brand: app name large, first name below -->
     <div class="h-brand">
-      <div class="h-appname">NEURO<span>-DOME</span></div>
+      <div class="h-appname">NEURO<span data-i18n="auto_49">-DOME</span></div>
     </div>
     <!-- Hamburger -->
     <div class="h-menu-wrap">
@@ -538,34 +490,34 @@ setTimeout(hideSplash, 4000);
           <!-- Sección principal -->
           <div class="h-menu-section">
             <div class="h-menu-item" onclick="go('profile');toggleHomeMenu()">
-              <span>👤</span><span id="hmenu-perfil">Perfil</span>
+              <span>👤</span><span id="hmenu-perfil" data-i18n="auto_50">Perfil</span>
             </div>
             <!-- Configuración con submenu Apariencia -->
             <div class="h-menu-item" onclick="toggleAppearanceSubmenu()">
-              <span>⚙️</span><span id="hmenu-config">Configuración</span>
+              <span>⚙️</span><span id="hmenu-config" data-i18n="auto_51">Configuración</span>
               <span class="h-menu-item-arrow" id="appear-arrow">›</span>
             </div>
             <div class="hmenu-submenu" id="appear-submenu">
               <div class="hmenu-submenu-body">
-                <div style="font-size:10px;letter-spacing:1.2px;color:var(--text3);font-family:var(--mono);padding:8px 12px 4px" id="hmenu-appear-lbl">APARIENCIA VISUAL</div>
+                <div style="font-size:10px;letter-spacing:1.2px;color:var(--text3);font-family:var(--mono);padding:8px 12px 4px" id="hmenu-appear-lbl" data-i18n="auto_52">APARIENCIA VISUAL</div>
                 <div class="hmenu-sub-item active" id="theme-btn-dark" onclick="setTheme('dark')">
                   <div class="theme-dot theme-dot-dark"></div>
-                  <span id="theme-lbl-dark">Modo Oscuro</span>
+                  <span id="theme-lbl-dark" data-i18n="auto_53">Modo Oscuro</span>
                   <span class="theme-check">✓</span>
                 </div>
                 <div class="hmenu-sub-item" id="theme-btn-light" onclick="setTheme('light')">
                   <div class="theme-dot theme-dot-light"></div>
-                  <span id="theme-lbl-light">Modo Claro</span>
+                  <span id="theme-lbl-light" data-i18n="auto_54">Modo Claro</span>
                   <span class="theme-check">✓</span>
                 </div>
                 <div class="hmenu-sub-item" id="theme-btn-rainbow" onclick="setTheme('rainbow')">
                   <div class="theme-dot theme-dot-rainbow"></div>
-                  <span id="theme-lbl-rainbow">Modo Arcoíris ♾️</span>
+                  <span id="theme-lbl-rainbow" data-i18n="auto_55">Modo Arcoíris ♾️</span>
                   <span class="theme-check">✓</span>
                 </div>
                 <div class="hmenu-sub-item" onclick="openSettings();toggleHomeMenu()" style="margin-top:4px;border-top:1px solid var(--border);padding-top:10px">
                   <span style="font-size:16px">⚙️</span>
-                  <span id="hmenu-config-direct">Ajustes del perfil</span>
+                  <span id="hmenu-config-direct" data-i18n="auto_56">Ajustes del perfil</span>
                 </div>
               </div>
             </div>
@@ -573,68 +525,68 @@ setTimeout(hideSplash, 4000);
           <!-- Secciones de la app -->
           <div class="h-menu-section">
             <div class="h-menu-item" onclick="go('sos');toggleHomeMenu()">
-              <span>🆘</span><span id="hmenu-sos">SOS</span>
+              <span>🆘</span><span id="hmenu-sos" data-i18n="auto_57">SOS</span>
             </div>
             <div class="h-menu-item" onclick="go('scanner');toggleHomeMenu()">
-              <span>📡</span><span id="hmenu-scanner">Escáner Corporal</span>
+              <span>📡</span><span id="hmenu-scanner" data-i18n="auto_58">Escáner Corporal</span>
             </div>
             <div class="h-menu-item" onclick="go('registro');toggleHomeMenu()">
-              <span>📓</span><span id="hmenu-registro">Registro Sensorial</span>
+              <span>📓</span><span id="hmenu-registro" data-i18n="auto_59">Registro Sensorial</span>
             </div>
             <div class="h-menu-item" onclick="openEmotionalScreen('pet');toggleHomeMenu()">
-              <span>🐾</span><span id="hmenu-apoyo">Mi apoyo emocional</span>
+              <span>🐾</span><span id="hmenu-apoyo" data-i18n="auto_60">Mi apoyo emocional</span>
             </div>
             <div class="h-menu-item" onclick="openEmotionalScreen('object');toggleHomeMenu()">
-              <span>🧸</span><span id="hmenu-objeto">Mi objeto favorito</span>
+              <span>🧸</span><span id="hmenu-objeto" data-i18n="auto_61">Mi objeto favorito</span>
             </div>
             <div class="h-menu-item" onclick="document.getElementById('ov-tareas').classList.add('active');toggleHomeMenu()">
-              <span>📝</span><span id="hmenu-pasoapaso">Paso a Paso (IA)</span>
+              <span>📝</span><span id="hmenu-pasoapaso" data-i18n="auto_62">Paso a Paso (IA)</span>
             </div>
             <div class="h-menu-item" onclick="document.getElementById('ov-guiones').classList.add('active');toggleHomeMenu()">
-              <span>💬</span><span id="hmenu-guiones">Guiones (IA)</span>
+              <span>💬</span><span id="hmenu-guiones" data-i18n="auto_63">Guiones (IA)</span>
             </div>
           </div>
           <!-- Herramientas -->
           <div class="h-menu-section">
             <div class="h-menu-item" onclick="go('comms');toggleHomeMenu()">
-              <span>🃏</span><span id="hmenu-tarjetas">Tarjetas</span>
+              <span>🃏</span><span id="hmenu-tarjetas" data-i18n="auto_64">Tarjetas</span>
             </div>
             <div class="h-menu-item" onclick="go('medication');toggleHomeMenu()">
-              <span>💊</span><span id="hmenu-alarmas">Alarmas</span>
+              <span>💊</span><span id="hmenu-alarmas" data-i18n="auto_65">Alarmas</span>
             </div>
             <div class="h-menu-item" onclick="go('deudas');toggleHomeMenu()">
-              <span>📊</span><span id="hmenu-deudas">Deudas</span>
+              <span>📊</span><span id="hmenu-deudas" data-i18n="auto_66">Deudas</span>
             </div>
             <div class="h-menu-item" onclick="go('isochronic');toggleHomeMenu()">
-              <span>🎵</span><span id="hmenu-tonos">Tonos ISO</span>
+              <span>🎵</span><span id="hmenu-tonos" data-i18n="auto_67">Tonos ISO</span>
             </div>
             <div class="h-menu-item" onclick="go('cave');toggleHomeMenu()">
-              <span>🕳️</span><span id="hmenu-cueva">Cueva</span>
+              <span data-i18n="auto_68">🕳️</span><span id="hmenu-cueva" data-i18n="auto_69">Cueva</span>
             </div>
             <div class="h-menu-item" onclick="go('kit');toggleHomeMenu()">
-              <span>🎒</span><span id="hmenu-kit">Kit de Supervivencia</span>
+              <span>🎒</span><span id="hmenu-kit" data-i18n="auto_70">Kit de Supervivencia</span>
             </div>
             <div class="h-menu-item" onclick="go('cucharas');toggleHomeMenu()">
-              <span>🥄</span><span id="hmenu-cucharas">Mis Cucharas</span>
+              <span>🥄</span><span id="hmenu-cucharas" data-i18n="auto_71">Mis Cucharas</span>
             </div>
           </div>
           <!-- Suscripción -->
           <div class="h-menu-section">
             <div class="h-menu-item" onclick="go('subscription');toggleHomeMenu()">
-              <span>★</span><span id="hmenu-sub">Suscripción</span>
+              <span>★</span><span id="hmenu-sub" data-i18n="auto_72">Suscripción</span>
             </div>
             <div class="h-menu-item" onclick="shareApp();toggleHomeMenu()" style="color:var(--amber)">
-              <span>🔗</span><span id="hmenu-share">Compartir App</span>
+              <span>🔗</span><span id="hmenu-share" data-i18n="auto_73">Compartir App</span>
             </div>
           </div>
           <!-- Selector de idioma deslizable -->
           <div class="h-menu-section">
             <div class="hmenu-lang-row">
-              <span class="hmenu-lang-label" id="hmenu-lang-lbl">IDIOMA</span>
+              <span class="hmenu-lang-label" id="hmenu-lang-lbl" data-i18n="auto_74">IDIOMA</span>
               <div class="lang-slide" id="hmenu-lang-slider" onclick="toggleLangSlider();event.stopPropagation()">
                 <div class="lang-slide-track" id="hmenu-lang-track" style="width:100%">
-                  <div class="lang-slide-opt" style="width:50%">🇪🇸</div>
-                  <div class="lang-slide-opt" style="width:50%">🇺🇸</div>
+                  <div class="lang-slide-opt" style="width:50%" data-i18n="auto_75">🇪🇸</div>
+                  <div class="lang-slide-opt" style="width:50%" data-i18n="auto_76">🇺🇸</div>
                 </div>
                 <div class="lang-slide-thumb" id="hmenu-lang-thumb"></div>
               </div>
@@ -644,84 +596,82 @@ setTimeout(hideSplash, 4000);
         </div>
       </div>
   </div>
-  <div class="home-body">
-
-    <button class="sos-main-btn" id="sos-main-btn" onclick="go('sos')">🆘 SOS — CREDENCIAL MÉDICA Y LEGAL</button>
+  <div class="home-body"><button class="sos-main-btn" id="sos-main-btn" onclick="go('sos')" data-i18n="auto_77">🆘 SOS — CREDENCIAL MÉDICA Y LEGAL</button>
 
     <!-- TAXI A CASA — botón de crisis -->
     <button class="taxi-crisis-btn" id="taxi-home-btn" onclick="callTaxiHome()">
       <div class="taxi-crisis-icon">🚕</div>
       <div class="taxi-crisis-text">
-        <div class="taxi-crisis-title" id="taxi-btn-title">IR A CASA EN TAXI</div>
-        <div class="taxi-crisis-sub" id="taxi-btn-sub">Un toque — tu dirección ya está lista</div>
+        <div class="taxi-crisis-title" id="taxi-btn-title" data-i18n="auto_78">IR A CASA EN TAXI</div>
+        <div class="taxi-crisis-sub" id="taxi-btn-sub" data-i18n="auto_79">Un toque — tu dirección ya está lista</div>
       </div>
       <div style="font-size:20px;color:#1a6080;flex-shrink:0">›</div>
     </button>
 
     <div class="sec-row">
-      <button class="sec-btn scanner" onclick="go('scanner')"><span class="icon">📡</span><span class="lbl" id="lbl-scanner">ESCÁNER</span></button>
-      <button class="sec-btn deudas"  onclick="go('deudas')"> <span class="icon">📊</span><span class="lbl" id="lbl-deudas">DEUDAS</span></button>
-      <button class="sec-btn ia"      onclick="showDailyReminder()"><span class="icon">🧠</span><span class="lbl" id="lbl-ia">IA HOY</span></button>
+      <button class="sec-btn scanner" onclick="go('scanner')"><span class="icon">📡</span><span class="lbl" id="lbl-scanner" data-i18n="auto_80">ESCÁNER</span></button>
+      <button class="sec-btn deudas"  onclick="go('deudas')"> <span class="icon">📊</span><span class="lbl" id="lbl-deudas" data-i18n="auto_81">DEUDAS</span></button>
+      <button class="sec-btn ia"      onclick="showDailyReminder()"><span class="icon">🧠</span><span class="lbl" id="lbl-ia" data-i18n="auto_82">IA HOY</span></button>
     </div>
     <div class="sec-row" style="margin-top:8px;">
       <button class="sec-btn" style="border-color:var(--blue);background:var(--blue-bg);flex:1;" onclick="document.getElementById('ov-tareas').classList.add('active')">
-        <span class="icon">📝</span><span class="lbl" id="lbl-pasoapaso" style="color:var(--blue)">PASO A PASO (IA)</span>
+        <span class="icon">📝</span><span class="lbl" id="lbl-pasoapaso" style="color:var(--blue)" data-i18n="auto_83">PASO A PASO (IA)</span>
       </button>
       <button class="sec-btn" style="border-color:var(--amber);background:var(--amber-bg);flex:1;" onclick="document.getElementById('ov-guiones').classList.add('active')">
-        <span class="icon">💬</span><span class="lbl" id="lbl-guiones" style="color:var(--amber)">GUIONES (IA)</span>
+        <span class="icon">💬</span><span class="lbl" id="lbl-guiones" style="color:var(--amber)" data-i18n="auto_84">GUIONES (IA)</span>
       </button>
     </div>
     <div class="sec-row">
-      <button class="sec-btn" style="border-color:var(--purple);background:var(--purple-bg)" onclick="go('isochronic')"><span class="icon">🎵</span><span class="lbl" id="lbl-tonos" style="color:var(--purple)">TONOS ISO</span></button>
-      <button class="sec-btn" style="border-color:var(--green);background:var(--green-bg)" onclick="go('registro')"><span class="icon">📓</span><span class="lbl" id="lbl-registro" style="color:var(--green)">REGISTRO SENSORIAL</span></button>
+      <button class="sec-btn" style="border-color:var(--purple);background:var(--purple-bg)" onclick="go('isochronic')"><span class="icon">🎵</span><span class="lbl" id="lbl-tonos" style="color:var(--purple)" data-i18n="auto_85">TONOS ISO</span></button>
+      <button class="sec-btn" style="border-color:var(--green);background:var(--green-bg)" onclick="go('registro')"><span class="icon">📓</span><span class="lbl" id="lbl-registro" style="color:var(--green)" data-i18n="auto_86">REGISTRO SENSORIAL</span></button>
     </div>
 
-    <div class="tag" id="tag-nivel" style="padding:2px 0 4px">SELECCIONA TU NIVEL ACTUAL</div>
+    <div class="tag" id="tag-nivel" style="padding:2px 0 4px" data-i18n="auto_87">SELECCIONA TU NIVEL ACTUAL</div>
 
     <button class="lvl-btn l1" onclick="go('l1')">
       <div class="lvl-num">N1</div>
-      <div class="lvl-c"><div class="lvl-title" id="n1-title">CRISIS SEVERA</div><div class="lvl-sub" id="n1-sub">Meltdown · Shutdown · No funciono</div></div>
+      <div class="lvl-c"><div class="lvl-title" id="n1-title" data-i18n="auto_88">CRISIS SEVERA</div><div class="lvl-sub" id="n1-sub" data-i18n="auto_89">Meltdown · Shutdown · No funciono</div></div>
       <div class="pulse"></div>
     </button>
     <button class="lvl-btn l2" onclick="go('l2')">
       <div class="lvl-num">N2</div>
-      <div class="lvl-c"><div class="lvl-title" id="n2-title">DISOCIACIÓN / AGNOSIA</div><div class="lvl-sub" id="n2-sub">No reconozco el entorno, ni personas</div></div>
+      <div class="lvl-c"><div class="lvl-title" id="n2-title" data-i18n="auto_90">DISOCIACIÓN / AGNOSIA</div><div class="lvl-sub" id="n2-sub" data-i18n="auto_91">No reconozco el entorno, ni personas</div></div>
     </button>
     <button class="lvl-btn l3" onclick="go('l3')">
       <div class="lvl-num">N3</div>
-      <div class="lvl-c"><div class="lvl-title" id="n3-title">BAJA ENERGÍA</div><div class="lvl-sub" id="n3-sub">Fatiga cognitiva · Burnout activo</div></div>
+      <div class="lvl-c"><div class="lvl-title" id="n3-title" data-i18n="auto_92">BAJA ENERGÍA</div><div class="lvl-sub" id="n3-sub" data-i18n="auto_93">Fatiga cognitiva · Burnout activo</div></div>
     </button>
     <button class="lvl-btn l4" onclick="go('l4')">
       <div class="lvl-num">N4</div>
-      <div class="lvl-c"><div class="lvl-title" id="n4-title">FUNCIONAL REDUCIDO</div><div class="lvl-sub" id="n4-sub">Tareas simples y rutinas</div></div>
+      <div class="lvl-c"><div class="lvl-title" id="n4-title" data-i18n="auto_94">FUNCIONAL REDUCIDO</div><div class="lvl-sub" id="n4-sub" data-i18n="auto_95">Tareas simples y rutinas</div></div>
     </button>
     <button class="lvl-btn l5" onclick="go('l5')">
       <div class="lvl-num">N5</div>
-      <div class="lvl-c"><div class="lvl-title" id="n5-title">ESTADO ÓPTIMO</div><div class="lvl-sub" id="n5-sub">Ventana funcional abierta</div></div>
+      <div class="lvl-c"><div class="lvl-title" id="n5-title" data-i18n="auto_96">ESTADO ÓPTIMO</div><div class="lvl-sub" id="n5-sub" data-i18n="auto_97">Ventana funcional abierta</div></div>
     </button>
 
     <div class="bottom-row">
-      <button class="btn ghost sm" id="btn-tarjetas" style="flex:1;font-size:13px" onclick="go('comms')">🃏 Tarjetas</button>
-      <button class="btn ghost sm" id="btn-cueva"    style="flex:1;font-size:13px" onclick="go('cave')">🕳️ Cueva</button>
-      <button class="btn ghost sm" id="btn-alarmas"  style="flex:1;font-size:13px" onclick="go('medication')">💊 Alarmas</button>
+      <button class="btn ghost sm" id="btn-tarjetas" style="flex:1;font-size:13px" onclick="go('comms')" data-i18n="auto_98">🃏 Tarjetas</button>
+      <button class="btn ghost sm" id="btn-cueva"    style="flex:1;font-size:13px" onclick="go('cave')" data-i18n="auto_99">🕳️ Cueva</button>
+      <button class="btn ghost sm" id="btn-alarmas"  style="flex:1;font-size:13px" onclick="go('medication')" data-i18n="auto_100">💊 Alarmas</button>
     </div>
     <div class="bottom-row">
-      <button class="btn ghost sm" id="btn-apoyo"  style="flex:1;font-size:13px;border-color:var(--teal);color:var(--teal)" onclick="openEmotionalScreen('pet')">🐾 Mi apoyo emocional</button>
-      <button class="btn ghost sm" id="btn-objeto" style="flex:1;font-size:13px;border-color:var(--purple);color:var(--purple)" onclick="openEmotionalScreen('object')">🧸 Mi objeto favorito</button>
-      <button class="btn ghost sm" id="btn-cucharas" style="flex:1;font-size:13px;border-color:var(--amber);color:var(--amber)" onclick="go('cucharas')">🥄 Cucharas</button>
+      <button class="btn ghost sm" id="btn-apoyo"  style="flex:1;font-size:13px;border-color:var(--teal);color:var(--teal)" onclick="openEmotionalScreen('pet')" data-i18n="auto_101">🐾 Mi apoyo emocional</button>
+      <button class="btn ghost sm" id="btn-objeto" style="flex:1;font-size:13px;border-color:var(--purple);color:var(--purple)" onclick="openEmotionalScreen('object')" data-i18n="auto_102">🧸 Mi objeto favorito</button>
+      <button class="btn ghost sm" id="btn-cucharas" style="flex:1;font-size:13px;border-color:var(--amber);color:var(--amber)" onclick="go('cucharas')" data-i18n="auto_103">🥄 Cucharas</button>
     </div>
 
     <!-- Batería Social -->
     <div class="social-battery">
       <div class="sb-icon" id="sb-icon">🔋</div>
       <div class="sb-info">
-        <div class="sb-label" id="bat-label">Mi Batería Social</div>
+        <div class="sb-label" id="bat-label" data-i18n="auto_104">Mi Batería Social</div>
         <div class="sb-bar-wrap">
           <div class="sb-bar-fill" id="sb-fill" style="width:80%;background:var(--green)"></div>
         </div>
         <input type="range" class="sb-slider" id="sb-slider" min="0" max="100" value="80" oninput="updateBattery(this.value)">
       </div>
-      <div class="sb-pct" id="sb-pct" style="color:var(--green)">80%</div>
+      <div class="sb-pct" id="sb-pct" style="color:var(--green)" data-i18n="auto_105">80%</div>
     </div>
     <div class="spacer"></div>
   </div>
@@ -729,21 +679,20 @@ setTimeout(hideSplash, 4000);
 </div>
 
 
-<!-- ══════════════════════════════════════
-     PERFIL
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-profile">
 <div class="wrap">
   <div class="profile-hdr">
     <div class="back-btn" onclick="go('home',false)">←</div>
-    <div style="flex:1;font-size:16px;font-weight:700" id="profile-hdr-title">Mi Perfil</div>
+    <div style="flex:1;font-size:16px;font-weight:700" id="profile-hdr-title" data-i18n="auto_136">Mi Perfil</div>
   </div>
   <div class="profile-body">
     <!-- Avatar -->
     <div class="profile-av-wrap">
       <div class="profile-av" id="profile-av" onclick="openLightbox(C.imgUsuario, C.nombre||'')">🧑</div>
       <div class="profile-name" id="profile-name-full">—</div>
-      <div class="profile-sub">NEURO-DOME</div>
+      <div class="profile-sub" data-i18n="auto_137">NEURO-DOME</div>
     </div>
 
     <!-- Info card -->
@@ -768,24 +717,23 @@ setTimeout(hideSplash, 4000);
 
     <!-- Language selector -->
     <div class="profile-lang-row">
-      <span class="profile-lang-label" id="pi-lang-label">🌐 Idioma / Language</span>
+      <span class="profile-lang-label" id="pi-lang-label" data-i18n="auto_138">🌐 Idioma / Language</span>
       <div class="profile-lang-btns">
-        <button class="profile-lang-btn active" data-lang="es" onclick="setLang('es')">🇪🇸 ES</button>
-        <button class="profile-lang-btn" data-lang="en" onclick="setLang('en')">🇺🇸 EN</button>
+        <button class="profile-lang-btn active" data-lang="es" onclick="setLang('es')" data-i18n="auto_139">🇪🇸 ES</button>
+        <button class="profile-lang-btn" data-lang="en" onclick="setLang('en')" data-i18n="auto_140">🇺🇸 EN</button>
       </div>
     </div>
 
     <!-- Edit button -->
-    <button class="btn purple" style="height:52px;font-size:15px;font-weight:700" onclick="openSettings()" id="pi-edit-btn">✏️ Editar perfil</button>
+    <button class="btn purple" style="height:52px;font-size:15px;font-weight:700" onclick="openSettings()" id="pi-edit-btn" data-i18n="auto_141">✏️ Editar perfil</button>
     <div class="spacer"></div>
   </div>
 </div>
 </div>
 
 
-<!-- ══════════════════════════════════════
-     SOS — PANTALLA BLANCA PARA TERCEROS
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-sos">
 <div class="sos-wrap">
 
@@ -816,13 +764,13 @@ setTimeout(hideSplash, 4000);
       <div class="sos-identity">
         <div class="sos-avatar" id="sos-avatar" onclick="openLightbox(C.imgUsuario, C.nombre||'')" style="cursor:pointer">🧑</div>
         <div class="sos-identity-text">
-          <div class="sos-lbl-sm">NOMBRE COMPLETO</div>
+          <div class="sos-lbl-sm" data-i18n="auto_240">NOMBRE COMPLETO</div>
           <div class="sos-nombre-big" id="sos-nombre">—</div>
         </div>
       </div>
       <div class="sos-row2">
         <div class="sos-cell">
-          <div class="sos-cell-lbl">DOCUMENTO</div>
+          <div class="sos-cell-lbl" data-i18n="auto_241">DOCUMENTO</div>
           <div class="sos-cell-val" id="sos-documento" style="font-size:20px">—</div>
         </div>
         <div class="sos-cell">
@@ -832,16 +780,16 @@ setTimeout(hideSplash, 4000);
       </div>
       <div class="sos-row2">
         <div class="sos-cell">
-          <div class="sos-cell-lbl">DIAGNÓSTICO</div>
-          <div class="sos-cell-val" style="font-size:15px;color:#7030c0">TEA / ASD ♾️</div>
+          <div class="sos-cell-lbl" data-i18n="auto_242">DIAGNÓSTICO</div>
+          <div class="sos-cell-val" style="font-size:15px;color:#7030c0" data-i18n="auto_243">TEA / ASD ♾️</div>
         </div>
         <div class="sos-cell">
-          <div class="sos-cell-lbl">TIPO DE SANGRE</div>
+          <div class="sos-cell-lbl" data-i18n="auto_244">TIPO DE SANGRE</div>
           <div class="sos-cell-val red" id="sos-sangre">—</div>
         </div>
       </div>
       <div style="padding:10px 15px;border-top:1px solid #e8e8e8">
-        <div class="sos-cell-lbl">📍 DIRECCIÓN DE DOMICILIO</div>
+        <div class="sos-cell-lbl" data-i18n="auto_245">📍 DIRECCIÓN DE DOMICILIO</div>
         <div style="font-size:15px;font-weight:700;color:#111;margin-top:4px;line-height:1.5" id="sos-direccion">—</div>
         <div style="font-size:13px;color:#555;margin-top:2px" id="sos-referencia"></div>
       </div>
@@ -876,7 +824,7 @@ setTimeout(hideSplash, 4000);
       <div style="padding:14px 15px;display:flex;align-items:center;gap:13px">
         <div class="sos-avatar" id="sos-c-avatar" onclick="openLightbox(C.imgContacto, C.cn||'')" style="cursor:pointer">👤</div>
         <div style="flex:1">
-      <div class="sos-cell-lbl" id="sos-cn-lbl">CONTACTO PRINCIPAL</div>
+      <div class="sos-cell-lbl" id="sos-cn-lbl" data-i18n="auto_246">CONTACTO PRINCIPAL</div>
           <div style="font-size:20px;font-weight:900;color:#111;margin:3px 0 2px" id="sos-contacto-nombre">—</div>
           <div style="font-size:18px;font-weight:700;color:#cc2030;font-family:'Roboto Mono',monospace" id="sos-contacto-tel">—</div>
         </div>
@@ -885,289 +833,28 @@ setTimeout(hideSplash, 4000);
 
     <!-- Botones de acción -->
     <button class="sos-wa-btn" onclick="sosSendWA()">
-      <span id="sos-wa-btn-txt">📱 WhatsApp de emergencia</span>
+      <span id="sos-wa-btn-txt" data-i18n="auto_247">📱 WhatsApp de emergencia</span>
     </button>
     <button class="sos-call-btn" onclick="llamar()">
-      <span id="sos-call-btn-txt">📞 LLAMAR AL CONTACTO AHORA</span>
+      <span id="sos-call-btn-txt" data-i18n="auto_248">📞 LLAMAR AL CONTACTO AHORA</span>
     </button>
-    <button class="btn ghost sm" id="btn-share-loc" style="width:100%; border-color:#555; color:#333; margin-top:8px;" onclick="compartirUbicacion()">
-      📍 Compartir mi ubicación en vivo
-    </button>
-    <button class="btn ghost sm" id="btn-export-pdf" style="width:100%; border-color:#555; color:#333; margin-top:8px;" onclick="exportarPDF()">
-      📄 Exportar Perfil a PDF
-    </button>
+    <button class="btn ghost sm" id="btn-share-loc" style="width:100%; border-color:#555; color:#333; margin-top:8px;" onclick="compartirUbicacion()" data-i18n="auto_249">📍 Compartir mi ubicación en vivo</button>
+    <button class="btn ghost sm" id="btn-export-pdf" style="width:100%; border-color:#555; color:#333; margin-top:8px;" onclick="exportarPDF()" data-i18n="auto_250">📄 Exportar Perfil a PDF</button>
     <div class="spacer"></div>
   </div>
 </div>
 </div>
 
 
-<!-- ══════════════════════════════════════
-     NIVEL 1 — CRISIS SEVERA
-══════════════════════════════════════ -->
-<div class="screen" id="screen-l1" style="background:#14060a;overflow-y:auto">
-<div class="wrap">
-  <div class="ls-hdr">
-    <div class="back" onclick="goBack()">←</div>
-    <div style="flex:1">
-      <div class="tag" style="color:#d84050;margin-bottom:4px" id="l1-tag">PROTOCOLO ACTIVO</div>
-      <h1 style="color:#d84050" id="l1-h1">NIVEL 1 — CRISIS</h1>
-    </div>
-    <div style="font-size:34px">🆘</div>
-  </div>
-  <div class="ls-body">
-
-    <button class="btn red" id="btn-tomar" style="height:64px;font-size:17px" onclick="tomarCrisis()">
-      💊 <span data-i18n="l1TomarBtn">TOMAR</span> <span id="lbl-mc">MEDICAMENTO</span>
-    </button>
-
-    <div class="card">
-      <div class="card-hd" id="l1-proto-hd">📋 Protocolo de crisis — una acción a la vez</div>
-      <div class="card-bd">
-        <div class="slist">
-          <div class="srow"><div class="sn r">1</div><div class="stxt" id="l1-step1"><b>Siéntate o acuéstate en el suelo ahora.</b> No importa dónde estés.</div></div>
-          <div class="srow"><div class="sn r">2</div><div class="stxt"><b data-i18n="l1Step2">Toma tu medicamento de crisis:</b> <em id="lbl-mc2">–</em></div></div>
-          <div class="srow"><div class="sn r">3</div><div class="stxt" id="l1-step3">No tienes que hablar. No tienes que responder mensajes. <b>Mutismo autorizado.</b></div></div>
-          <div class="srow"><div class="sn r">4</div><div class="stxt" id="l1-step4">Pon auriculares. Si no tienes, cúbrete las orejas con las manos.</div></div>
-          <div class="srow"><div class="sn r">5</div><div class="stxt" id="l1-step5">No tomes ninguna decisión ahora. <b>Ninguna.</b></div></div>
-        </div>
-      </div>
-    </div>
-
-    <button class="btn wa" onclick="sendWA()">📱 <span data-i18n="l1AvisarBtn">Avisar a</span> <span id="lbl-wa-cn">mi contacto</span></button>
-    <div id="wa-preview" style="font-size:12px;color:var(--text3);padding:6px 2px;line-height:1.5"></div>
-
-    <div id="l1-room-wrap" style="display:none"><img id="l1-room-img" class="card-img-cover"></div>
-    <div id="l1-meds-wrap" style="display:none"><img id="l1-meds-img" class="card-img-cover"></div>
-
-    <button class="btn ghost sm" onclick="go('cave')" id="btn-cave-mode">🕳️ Modo Cueva — cero estímulos</button>
-
-    <button class="btn" style="background:#1a0208;border:1.5px solid #d84050;color:#d84050;height:55px" onclick="showRisk()" id="btn-safety">
-      ⚠️ Protocolo de seguridad vital
-    </button>
-    <div class="spacer"></div>
-  </div>
-</div>
-</div>
 
 
-<!-- ══════════════════════════════════════
-     NIVEL 2 — DISOCIACIÓN
-══════════════════════════════════════ -->
-<div class="screen" id="screen-l2" style="background:#100a00;overflow-y:auto">
-<div class="wrap">
-  <div class="ls-hdr">
-    <div class="back" onclick="goBack()">←</div>
-    <div style="flex:1">
-      <div class="tag" style="color:#c87020;margin-bottom:4px" id="l2-tag">ANCLAJE DE REALIDAD</div>
-      <h1 style="color:#c87020" id="l2-h1">NIVEL 2 — DISOCIACIÓN</h1>
-    </div>
-    <div style="font-size:34px">🌫️</div>
-  </div>
-  <div class="ls-body">
-
-    <div class="card" style="border-color:#b06010">
-      <div class="card-hd" id="l2-who-hd">🪞 Quién eres ahora mismo</div>
-      <div style="padding:14px 16px;display:flex;gap:13px;align-items:center;min-height:0">
-        <div id="l2-av" style="width:58px;height:58px;min-width:58px;border-radius:10px;border:2px solid #c87020;display:flex;align-items:center;justify-content:center;font-size:26px;overflow:hidden;background:var(--surface2);cursor:pointer" onclick="openLightbox(C.imgUsuario, C.nombre||'')">🧑</div>
-        <div style="min-width:0;flex:1">
-          <div style="font-size:10px;font-family:var(--mono);letter-spacing:1.5px;color:var(--text3)" id="l2-your-name">TU NOMBRE</div>
-          <div style="font-size:22px;font-weight:900;margin-top:3px;word-break:break-word" id="l2-nombre">—</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" style="border-color:#505010">
-      <div class="card-hd" id="l2-home-hd">🏠 Tu casa está aquí</div>
-      <div class="card-bd">
-        <div style="font-size:16px;font-weight:700;margin-bottom:4px" id="l2-dir">—</div>
-        <div style="font-size:13px;color:var(--text3)" id="l2-ref"></div>
-      </div>
-      <div id="l2-casa-wrap" style="display:none"><img id="l2-casa-img" class="card-img-cover"></div>
-    </div>
-
-    <button class="btn maps" onclick="openMaps()" id="btn-maps">🗺️ Cómo llegar a casa caminando</button>
-
-    <div class="cstrip">
-      <div class="cav" id="l2-c-av" onclick="openLightbox(C.imgContacto, C.cn||'')" style="cursor:pointer">👤</div>
-      <div class="cinfo">
-        <div class="cname" id="l2-c-nombre">—</div>
-        <div class="crole" id="l2-contact-role">CONTACTO DE EMERGENCIA</div>
-      </div>
-      <button class="btn green sm" style="width:auto;padding:0 14px;height:44px" onclick="llamar()" id="btn-llamar">Llamar</button>
-    </div>
-
-    <div class="card">
-      <div class="card-hd" id="l2-anchor-hd">⚓ Protocolo de anclaje — 4 pasos</div>
-      <div class="card-bd">
-        <div class="slist">
-          <div class="srow"><div class="sn a">1</div><div class="stxt" id="l2-step1"><b>Aplica algo frío</b> en las muñecas o cara. Hielo, agua fría, lata fría.</div></div>
-          <div class="srow"><div class="sn a">2</div><div class="stxt" id="l2-step2"><b>Presión profunda:</b> aprieta tus brazos contra el cuerpo o siéntate en el suelo y siente el peso.</div></div>
-          <div class="srow"><div class="sn a">3</div><div class="stxt" id="l2-step3"><b>Toca el suelo</b> con las manos. Describe en voz baja la textura: rugoso, liso, frío.</div></div>
-          <div class="srow"><div class="sn a">4</div><div class="stxt" id="l2-step4">Encuentra <b>un objeto conocido</b> en tu bolsillo o mochila. Sostenlo.</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="spacer"></div>
-  </div>
-</div>
-</div>
-
-
-<!-- ══════════════════════════════════════
-     NIVEL 3 — BAJA ENERGÍA
-══════════════════════════════════════ -->
-<div class="screen" id="screen-l3" style="background:#0e0c00;overflow-y:auto">
-<div class="wrap">
-  <div class="ls-hdr">
-    <div class="back" onclick="goBack()">←</div>
-    <div style="flex:1">
-      <div class="tag" style="color:#b89820;margin-bottom:4px" id="l3-tag">MODO SUPERVIVENCIA</div>
-      <h1 style="color:#b89820" id="l3-h1">NIVEL 3 — BAJA ENERGÍA</h1>
-    </div>
-    <div style="font-size:34px">🪫</div>
-  </div>
-  <div class="ls-body">
-
-    <div class="card" style="border-color:#887800">
-      <div class="card-hd" id="l3-meds-hd">🪫 Medicación registrada</div>
-      <div style="padding:14px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-height:0">
-        <div style="font-size:16px;font-weight:700;flex:1;min-width:0;word-break:break-word" id="lbl-md">—</div>
-      </div>
-      <div id="l3-meds-wrap" style="display:none;padding:0 14px 14px"><img id="l3-meds-img" class="card-img-cover"></div>
-    </div>
-
-    <div class="card">
-      <div class="card-hd" id="l3-food-hd">🍽️ Comida segura ahora</div>
-      <div class="card-bd">
-        <div class="pills" id="l3-comida-pills"></div>
-        <button class="btn sm" style="margin-top:12px;height:46px;background:var(--teal-bg);border:1.5px solid var(--teal);color:var(--teal);font-weight:700" onclick="openRecipeModal()" id="btn-recipes">
-          🥘 Prepara algo sencillo — ver recetas
-        </button>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hd" style="color:var(--text2)" id="l3-validation-hd">✅ Validación operativa</div>
-      <div class="card-bd" style="font-size:15px;color:var(--text2);line-height:1.8">
-        <b style="color:var(--text)" data-i18n="l3ValTitle">Hoy puede ser uno de esos días. Está bien.</b><br><br>
-        <span data-i18n="l3Val1">No ducharte hoy es una <b>decisión lógica de ahorro de energía</b>, no descuido.</span><br>
-        <span data-i18n="l3Val2">No contestar mensajes no te hace mala persona. Te hace alguien con batería al mínimo.</span><br>
-        <span data-i18n="l3Val3">No cocinar no es fracasar. Es adaptarte.</span><br>
-        <span data-i18n="l3Val4">No limpiar hoy no destruye tu espacio para siempre.</span><br>
-        <span data-i18n="l3Val5">No salir no es rendirse.</span><br><br>
-        <span style="color:var(--teal)" data-i18n="l3Val6">Una sola cosa completada ya cuenta como victoria.</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hd" id="l3-priority-hd">📋 Prioridades — sólo estas cuatro</div>
-      <div class="card-bd">
-        <div class="slist">
-          <div class="srow"><div class="sn r">P1</div><div class="stxt"><span data-i18n="l3P1"><b>Medicación.</b> Lo primero, sin negociar.</span></div></div>
-          <div class="srow"><div class="sn b">P2</div><div class="stxt"><span data-i18n="l3P2"><b>Agua.</b> Mínimo un vaso ahora.</span></div></div>
-          <div class="srow"><div class="sn a">P3</div><div class="stxt"><span data-i18n="l3P3"><b>Comida segura.</b> Una opción simple, puede ser una receta rápida.</span></div></div>
-          <div class="srow"><div class="sn g">P4</div><div class="stxt"><span data-i18n="l3P4"><b>Diferir todo lo demás.</b> Todo. Nada más importa hoy.</span></div></div>
-        </div>
-      </div>
-    </div>
-    <div class="spacer"></div>
-  </div>
-</div>
-</div>
-
-
-<!-- ══════════════════════════════════════
-     NIVEL 4 — FUNCIONAL REDUCIDO
-══════════════════════════════════════ -->
-<div class="screen" id="screen-l4" style="background:#06100c;overflow-y:auto">
-<div class="wrap">
-  <div class="ls-hdr">
-    <div class="back" onclick="goBack()">←</div>
-    <div style="flex:1">
-      <div class="tag" style="color:#28a870;margin-bottom:4px" id="l4-tag">MODO ECONOMÍA</div>
-      <h1 style="color:#28a870" id="l4-h1">NIVEL 4 — FUNCIONAL</h1>
-    </div>
-    <div style="font-size:34px">⚙️</div>
-  </div>
-  <div class="ls-body">
-    <div class="card">
-      <div class="card-hd" id="l4-avail-hd">✅ Actividades disponibles ahora</div>
-      <div class="card-bd">
-        <div class="slist">
-          <div class="srow"><div class="sn g">1</div><div class="stxt"><span data-i18n="l4Act1"><b>Contenido pasivo:</b> video, podcast, música sin esfuerzo de análisis.</span></div></div>
-          <div class="srow"><div class="sn g">2</div><div class="stxt"><span data-i18n="l4Act2"><b>Lectura conocida:</b> material ya leído antes o de interés propio.</span></div></div>
-          <div class="srow"><div class="sn g">3</div><div class="stxt"><span data-i18n="l4Act3"><b>Tareas mecánicas:</b> organizar, limpiar en silencio, ordenar archivos.</span></div></div>
-          <div class="srow"><div class="sn g">4</div><div class="stxt"><span data-i18n="l4Act4"><b>Paseo corto</b> sin objetivo ni itinerario.</span></div></div>
-        </div>
-      </div>
-    </div>
-    <div class="card" style="border-color:#d84050">
-      <div class="card-hd" style="color:var(--red)" id="l4-avoid-hd">🚫 Evitar</div>
-      <div class="card-bd">
-        <div class="pills">
-          <div class="pill r" data-i18n="l4Avoid1">Decisiones importantes</div>
-          <div class="pill r" data-i18n="l4Avoid2">Conversaciones exigentes</div>
-          <div class="pill r" data-i18n="l4Avoid3">Compromisos nuevos</div>
-          <div class="pill r" data-i18n="l4Avoid4">Entornos ruidosos</div>
-        </div>
-      </div>
-    </div>
-    <div class="spacer"></div>
-  </div>
-</div>
-</div>
-
-
-<!-- ══════════════════════════════════════
-     NIVEL 5 — ESTADO ÓPTIMO
-══════════════════════════════════════ -->
-<div class="screen" id="screen-l5" style="background:#060c18;overflow-y:auto">
-<div class="wrap">
-  <div class="ls-hdr">
-    <div class="back" onclick="goBack()">←</div>
-    <div style="flex:1">
-      <div class="tag" style="color:#4888d0;margin-bottom:4px" id="l5-tag">VENTANA ABIERTA</div>
-      <h1 style="color:#4888d0" id="l5-h1">NIVEL 5 — ÓPTIMO</h1>
-    </div>
-    <div style="font-size:34px">⚡</div>
-  </div>
-  <div class="ls-body">
-    <div class="card">
-      <div class="card-hd" id="l5-acts-hd">🚀 Actividades de alto retorno</div>
-      <div class="card-bd">
-        <div class="slist">
-          <div class="srow"><div class="sn b">1</div><div class="stxt"><span data-i18n="l5Act1"><b>Estudio activo y aprendizaje</b> de material nuevo o complejo.</span></div></div>
-          <div class="srow"><div class="sn b">2</div><div class="stxt"><span data-i18n="l5Act2"><b>Trabajo creativo o técnico</b> de alta demanda cognitiva.</span></div></div>
-          <div class="srow"><div class="sn b">3</div><div class="stxt"><span data-i18n="l5Act3"><b>Interacción social breve</b> con personas conocidas (máx. 90 min).</span></div></div>
-          <div class="srow"><div class="sn b">4</div><div class="stxt"><span data-i18n="l5Act4"><b>Ejercicio o movimiento</b> con intensidad moderada-alta.</span></div></div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-hd" id="l5-cons-hd">🛡️ Protocolo de conservación</div>
-      <div class="card-bd" style="font-size:15px;color:var(--text2);line-height:1.7">
-        <span data-i18n="l5Cons1">Define la duración de cada actividad <b>antes de comenzar</b>.</span><br>
-        <span data-i18n="l5Cons2">Prepara tu espacio de descanso antes de que termine la ventana.</span><br>
-        <span data-i18n="l5Cons3">La medicación sigue siendo prioritaria aunque estés bien.</span>
-      </div>
-    </div>
-    <div class="spacer"></div>
-  </div>
-</div>
-</div>
-
-
-<!-- ══════════════════════════════════════
-     ESCÁNER CORPORAL
-══════════════════════════════════════ -->
 <div class="screen" id="screen-scanner">
 <div class="wrap">
   <div class="scan-hdr">
     <div class="back" onclick="goBack()">←</div>
     <div style="flex:1">
       <div style="font-size:11px;letter-spacing:1.5px;color:rgba(255,255,255,.7)"><span data-i18n="scanCalib">CALIBRACIÓN INTEROCEPTIVA</span></div>
-      <div style="font-size:18px;font-weight:900;color:#fff">ESCÁNER CORPORAL</div>
+      <div style="font-size:18px;font-weight:900;color:#fff" data-i18n="auto_152">ESCÁNER CORPORAL</div>
     </div>
     <div style="font-size:28px">📡</div>
   </div>
@@ -1193,30 +880,8 @@ setTimeout(hideSplash, 4000);
 </div>
 
 
-<!-- ══════════════════════════════════════
-     OVERLAY — IA DINÁMICA (pop-up de contención)
-══════════════════════════════════════ -->
-<div class="ov" id="ov-ia">
-  <div class="ovc" style="max-width:420px;text-align:left">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-      <div style="font-size:28px" id="ov-ia-icon">🧠</div>
-      <div>
-        <div style="font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:var(--purple);text-transform:uppercase" id="ov-ia-label">SISTEMA DE APOYO</div>
-        <div style="font-size:15px;font-weight:700;color:var(--text)" id="ov-ia-title">—</div>
-      </div>
-      <div id="ov-ia-loading" style="margin-left:auto;font-size:13px;color:var(--text3);display:none">…</div>
-    </div>
-    <div id="ov-ia-body" style="font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:18px;min-height:60px"></div>
-    <div style="display:flex;flex-direction:column;gap:8px" id="ov-ia-actions">
-      <button class="btn ghost sm" id="btn-cerrar-ia" onclick="closeOv('ov-ia')">Entendido — Cerrar</button>
-    </div>
-  </div>
-</div>
 
 
-<!-- ══════════════════════════════════════
-     DEUDAS — GESTIÓN DE FLUJOS FUTUROS
-══════════════════════════════════════ -->
 <div class="screen" id="screen-deudas">
 <div class="wrap" style="height:100%;overflow:hidden">
 
@@ -1233,8 +898,8 @@ setTimeout(hideSplash, 4000);
         <span></span><span></span><span></span>
       </div>
       <div class="hamburger-menu" id="hamburger-menu">
-        <div class="hm-item" id="hm-add-deuda" onclick="openDeudaForm();toggleHamburger()">➕ Añadir compromiso</div>
-        <div class="hm-item" id="hm-hist-deuda" onclick="showHistorial();toggleHamburger()">📋 Historial</div>
+        <div class="hm-item" id="hm-add-deuda" onclick="openDeudaForm();toggleHamburger()" data-i18n="auto_32">➕ Añadir compromiso</div>
+        <div class="hm-item" id="hm-hist-deuda" onclick="showHistorial();toggleHamburger()" data-i18n="auto_33">📋 Historial</div>
       </div>
     </div>
   </div>
@@ -1245,29 +910,29 @@ setTimeout(hideSplash, 4000);
     <!-- Mantra fijo -->
     <div class="mantra-box">
       <div class="mantra-lbl"><span data-i18n="deudasMantraLbl">Marco operativo</span></div>
-      <div class="mantra-txt">"El dinero es un recurso traído del futuro. Este registro es la ruta técnica para devolverlo al presente. No es un fallo moral, es un proceso técnico en curso."</div>
+      <div class="mantra-txt" data-i18n="auto_34">"El dinero es un recurso traído del futuro. Este registro es la ruta técnica para devolverlo al presente. No es un fallo moral, es un proceso técnico en curso."</div>
     </div>
 
     <!-- Formulario de nueva deuda (oculto por defecto) -->
     <div class="deuda-form" id="deuda-form">
-      <div style="font-size:15px;font-weight:700;color:var(--purple)">Nuevo compromiso</div>
+      <div style="font-size:15px;font-weight:700;color:var(--purple)" data-i18n="auto_35">Nuevo compromiso</div>
       <div>
-        <label>ACREEDOR / CONCEPTO</label>
+        <label data-i18n="auto_36">ACREEDOR / CONCEPTO</label>
         <input id="deuda-acreedor" type="text" placeholder="Ej: Alquiler, Tarjeta, Préstamo">
       </div>
       <div class="deuda-form-row">
         <div style="flex:1">
-          <label>MONTO</label>
+          <label data-i18n="auto_37">MONTO</label>
           <input id="deuda-monto" type="text" placeholder="Ej: S/. 850">
         </div>
         <div style="flex:1">
-          <label>FECHA DE PAGO</label>
+          <label data-i18n="auto_38">FECHA DE PAGO</label>
           <input id="deuda-fecha" type="date">
         </div>
       </div>
       <div style="display:flex;gap:8px">
-        <button class="btn purple sm" id="btn-registrar-deuda" style="flex:1" onclick="addDeuda()">✓ Registrar</button>
-        <button class="btn ghost sm" id="btn-cancelar-deuda" style="flex:1" onclick="closeDeudaForm()">✗ Cancelar</button>
+        <button class="btn purple sm" id="btn-registrar-deuda" style="flex:1" onclick="addDeuda()" data-i18n="auto_39">✓ Registrar</button>
+        <button class="btn ghost sm" id="btn-cancelar-deuda" style="flex:1" onclick="closeDeudaForm()" data-i18n="auto_40">✗ Cancelar</button>
       </div>
     </div>
 
@@ -1300,23 +965,21 @@ setTimeout(hideSplash, 4000);
 </div>
 
 
-<!-- ══════════════════════════════════════
-     CAVE — MODO CUEVA
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-cave">
-  <div class="cave-icon">🕳️</div>
+  <div class="cave-icon" data-i18n="auto_1">🕳️</div>
   <div class="cave-title"><span data-i18n="caveTitle">MODO CERO ESTÍMULOS</span></div>
   <div class="cave-body"><span data-i18n="caveBody">Sin ruido.<br>Sin luz.<br>Sin demandas.<br>Solo estar.</span></div>
   <div class="cave-exit" onclick="go('home', false)">
     <div class="cave-exit-lbl"><span data-i18n="caveTap">TAP PARA SALIR</span></div>
-    <div class="cave-timer" id="cave-timer">15:00</div>
+    <div class="cave-timer" id="cave-timer" data-i18n="auto_2">15:00</div>
   </div>
 </div>
 
 
-<!-- ══════════════════════════════════════
-     MEDICATION — GESTOR DE ALARMAS
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-medication">
 <div class="wrap">
   <div class="alarm-hdr">
@@ -1331,9 +994,9 @@ setTimeout(hideSplash, 4000);
 
     <!-- Mantra -->
     <div id="med-mantra-box" style="background:var(--amber-bg);border:1.5px solid var(--amber);border-radius:var(--r);padding:12px 15px">
-      <div class="tag" style="color:var(--amber);margin-bottom:4px">RECORDATORIO</div>
+      <div class="tag" style="color:var(--amber);margin-bottom:4px" data-i18n="auto_129">RECORDATORIO</div>
       <div style="font-size:14px;color:var(--text2);line-height:1.6"><span data-i18n="medMantra">La medicación no es opcional. Es parte del protocolo. Configura tus horarios una vez y el sistema te avisará.</span></div>
-      <button class="btn ghost sm" style="margin-top:10px;color:var(--amber);border-color:var(--amber)" onclick="document.getElementById('med-mantra-box').style.display='none'">✓ Entendido</button>
+      <button class="btn ghost sm" style="margin-top:10px;color:var(--amber);border-color:var(--amber)" onclick="document.getElementById('med-mantra-box').style.display='none'" data-i18n="auto_130">✓ Entendido</button>
     </div>
 
     <!-- Botón añadir -->
@@ -1345,15 +1008,15 @@ setTimeout(hideSplash, 4000);
     <div class="alarm-form" id="alarm-form">
       <div style="font-size:15px;font-weight:700;color:var(--amber)"><span data-i18n="medNewAlarm">Nueva alarma</span></div>
       <div>
-        <label>MEDICAMENTO</label>
+        <label data-i18n="auto_131">MEDICAMENTO</label>
         <input id="alarm-med-name" type="text" placeholder="Ej: Ritalin, Sertralina…">
       </div>
       <div>
-        <label>HORA</label>
+        <label data-i18n="auto_132">HORA</label>
         <input id="alarm-time-input" type="time">
       </div>
       <div>
-        <label>DÍAS</label>
+        <label data-i18n="auto_133">DÍAS</label>
         <div id="alarm-days-picker" style="display:flex;gap:6px;flex-wrap:wrap">
           <button class="day-btn active" data-day="L">L</button>
           <button class="day-btn active" data-day="M">M</button>
@@ -1365,8 +1028,8 @@ setTimeout(hideSplash, 4000);
         </div>
       </div>
       <div style="display:flex;gap:8px">
-        <button class="btn sm" id="btn-guardar-alarma" style="flex:1;background:var(--amber);color:#111;font-weight:700;height:48px" onclick="addAlarm()">✓ Guardar</button>
-        <button class="btn ghost sm" id="btn-cancelar-alarma" style="flex:1;height:48px" onclick="closeAlarmForm()">✗ Cancelar</button>
+        <button class="btn sm" id="btn-guardar-alarma" style="flex:1;background:var(--amber);color:#111;font-weight:700;height:48px" onclick="addAlarm()" data-i18n="auto_134">✓ Guardar</button>
+        <button class="btn ghost sm" id="btn-cancelar-alarma" style="flex:1;height:48px" onclick="closeAlarmForm()" data-i18n="auto_135">✗ Cancelar</button>
       </div>
     </div>
 
@@ -1389,9 +1052,8 @@ setTimeout(hideSplash, 4000);
 </div>
 
 
-<!-- ══════════════════════════════════════
-     MED-CAL — CALENDARIO DE TOMAS
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-medcal">
 <div class="wrap">
   <div class="medcal-hdr">
@@ -1406,7 +1068,7 @@ setTimeout(hideSplash, 4000);
     <div class="card">
       <div class="card-hd"><span data-i18n="medCalHowHdr">📌 Cómo funciona</span></div>
       <div class="card-bd" style="font-size:14px;color:var(--text2);line-height:1.7">
-        <span data-i18n="medCalHow">Cada vez que tocas <b>Entendido</b> en una alarma, ese día queda marcado como tomada. Si un día no confirmas, aparece en rojo. No es un juicio, es información.</span>
+        <span data-i18n="medCalHow">Cada vez que tocas <b data-i18n="auto_128">Entendido</b> en una alarma, ese día queda marcado como tomada. Si un día no confirmas, aparece en rojo. No es un juicio, es información.</span>
       </div>
     </div>
 
@@ -1435,9 +1097,8 @@ setTimeout(hideSplash, 4000);
 </div>
 
 
-<!-- ══════════════════════════════════════
-     COMMS — LISTA DE TARJETAS
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-comms">
 <div class="wrap">
   <div class="comms-hdr">
@@ -1450,38 +1111,38 @@ setTimeout(hideSplash, 4000);
   <div class="comms-body">
 
     <!-- ESTADO ACTUAL -->
-    <div class="tag" style="color:var(--text3);padding:2px 0 6px;letter-spacing:1.5px">ESTADO ACTUAL</div>
-    <button class="comm-btn purple" onclick="showCard('noconozco')">🌫️ No te reconozco ahora mismo</button>
-    <button class="comm-btn purple" onclick="showCard('hablar')">🔇 No puedo hablar</button>
-    <button class="comm-btn purple" onclick="showCard('autista')">♾️ Soy autista — instrucciones</button>
+    <div class="tag" style="color:var(--text3);padding:2px 0 6px;letter-spacing:1.5px" data-i18n="auto_4">ESTADO ACTUAL</div>
+    <button class="comm-btn purple" onclick="showCard('noconozco')" data-i18n="auto_5">🌫️ No te reconozco ahora mismo</button>
+    <button class="comm-btn purple" onclick="showCard('hablar')" data-i18n="auto_6">🔇 No puedo hablar</button>
+    <button class="comm-btn purple" onclick="showCard('autista')" data-i18n="auto_7">♾️ Soy autista — instrucciones</button>
 
     <!-- NECESITO -->
-    <div class="tag" style="color:var(--text3);padding:10px 0 6px;letter-spacing:1.5px">NECESITO AHORA</div>
-    <button class="comm-btn teal" onclick="showCard('clona')">💊 Necesito mi Clona</button>
-    <button class="comm-btn teal" onclick="showCard('agua')">💧 Necesito tomar agua</button>
-    <button class="comm-btn teal" onclick="showCard('piso')">🧘 Necesito acostarme en el piso</button>
-    <button class="comm-btn teal" onclick="showCard('presion')">🫂 Necesito presión en el pecho</button>
+    <div class="tag" style="color:var(--text3);padding:10px 0 6px;letter-spacing:1.5px" data-i18n="auto_8">NECESITO AHORA</div>
+    <button class="comm-btn teal" onclick="showCard('clona')" data-i18n="auto_9">💊 Necesito mi Clona</button>
+    <button class="comm-btn teal" onclick="showCard('agua')" data-i18n="auto_10">💧 Necesito tomar agua</button>
+    <button class="comm-btn teal" onclick="showCard('piso')" data-i18n="auto_11">🧘 Necesito acostarme en el piso</button>
+    <button class="comm-btn teal" onclick="showCard('presion')" data-i18n="auto_12">🫂 Necesito presión en el pecho</button>
 
     <!-- SENSORIAL -->
-    <div class="tag" style="color:var(--text3);padding:10px 0 6px;letter-spacing:1.5px">SENSORIAL</div>
-    <button class="comm-btn amber" onclick="showCard('ruido')">🔊 Me molestan los ruidos</button>
-    <button class="comm-btn amber" onclick="showCard('luz')">💡 Me molesta la luz</button>
-    <button class="comm-btn amber" onclick="showCard('audifonos')">🎧 Necesito mis audífonos o loops</button>
-    <button class="comm-btn amber" onclick="showCard('gafas')">🕶️ Necesito mis gafas de sol</button>
-    <button class="comm-btn amber" onclick="showCard('fidget')">🪀 Necesito un fidget toy</button>
+    <div class="tag" style="color:var(--text3);padding:10px 0 6px;letter-spacing:1.5px" data-i18n="auto_13">SENSORIAL</div>
+    <button class="comm-btn amber" onclick="showCard('ruido')" data-i18n="auto_14">🔊 Me molestan los ruidos</button>
+    <button class="comm-btn amber" onclick="showCard('luz')" data-i18n="auto_15">💡 Me molesta la luz</button>
+    <button class="comm-btn amber" onclick="showCard('audifonos')" data-i18n="auto_16">🎧 Necesito mis audífonos o loops</button>
+    <button class="comm-btn amber" onclick="showCard('gafas')" data-i18n="auto_17">🕶️ Necesito mis gafas de sol</button>
+    <button class="comm-btn amber" onclick="showCard('fidget')" data-i18n="auto_18">🪀 Necesito un fidget toy</button>
 
     <!-- EMERGENCIA -->
-    <div class="tag" id="comms-tag-emergencia" style="color:var(--text3);padding:10px 0 6px;letter-spacing:1.5px">EMERGENCIA</div>
-    <button class="comm-btn red" id="comms-btn-emergencia" onclick="showCard('emergencia')">🏥 EMERGENCIA — llamar contacto</button>
+    <div class="tag" id="comms-tag-emergencia" style="color:var(--text3);padding:10px 0 6px;letter-spacing:1.5px" data-i18n="auto_19">EMERGENCIA</div>
+    <button class="comm-btn red" id="comms-btn-emergencia" onclick="showCard('emergencia')" data-i18n="auto_20">🏥 EMERGENCIA — llamar contacto</button>
 
     <!-- PERSONALIZADAS -->
     <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0 6px;">
-      <div class="tag" id="cc-tag" style="color:var(--text3);letter-spacing:1.5px">MIS TARJETAS</div>
-      <button class="btn ghost xs" id="cc-btn-create" style="width:auto; padding:0 10px; height:30px; min-height:30px; font-size:12px;" onclick="openCustomCardForm()">➕ Crear</button>
+      <div class="tag" id="cc-tag" style="color:var(--text3);letter-spacing:1.5px" data-i18n="auto_21">MIS TARJETAS</div>
+      <button class="btn ghost xs" id="cc-btn-create" style="width:auto; padding:0 10px; height:30px; min-height:30px; font-size:12px;" onclick="openCustomCardForm()" data-i18n="auto_22">➕ Crear</button>
     </div>
     
     <div class="custom-card-form" id="custom-card-form">
-      <div style="font-size:14px;font-weight:700;color:var(--purple)" id="cc-new-title">Nueva Tarjeta</div>
+      <div style="font-size:14px;font-weight:700;color:var(--purple)" id="cc-new-title" data-i18n="auto_23">Nueva Tarjeta</div>
       <div style="display:flex; gap:8px;">
         <input id="cc-icon" type="text" placeholder="Emoji (ej: 🐶)" style="width:60px; text-align:center;">
         <input id="cc-title" type="text" placeholder="Título corto" style="flex:1;">
@@ -1489,8 +1150,8 @@ setTimeout(hideSplash, 4000);
       <textarea id="cc-text" placeholder="Mensaje principal (ej: Necesito a mi perro de asistencia)"></textarea>
       <input id="cc-sub" type="text" placeholder="Instrucción secundaria (opcional)">
       <div style="display:flex;gap:8px;margin-top:4px;">
-        <button class="btn purple sm" id="cc-btn-save" style="flex:1" onclick="saveCustomCard()">Guardar</button>
-        <button class="btn ghost sm" id="cc-btn-cancel" style="flex:1" onclick="closeCustomCardForm()">Cancelar</button>
+        <button class="btn purple sm" id="cc-btn-save" style="flex:1" onclick="saveCustomCard()" data-i18n="auto_24">Guardar</button>
+        <button class="btn ghost sm" id="cc-btn-cancel" style="flex:1" onclick="closeCustomCardForm()" data-i18n="auto_25">Cancelar</button>
       </div>
     </div>
 
@@ -1502,27 +1163,25 @@ setTimeout(hideSplash, 4000);
 </div>
 
 
-<!-- ══════════════════════════════════════
-     COMMS DISPLAY — Pantalla de tarjeta
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-comms-display">
   <div class="cd-icon" id="cd-icon"></div>
   <div class="cd-text" id="cd-text"></div>
   <div class="cd-sub"  id="cd-sub"></div>
-  <button class="btn ghost sm" id="btn-volver-tarjetas" style="max-width:300px;margin-top:20px" onclick="goBack()">← Volver a tarjetas</button>
+  <button class="btn ghost sm" id="btn-volver-tarjetas" style="max-width:300px;margin-top:20px" onclick="goBack()" data-i18n="auto_3">← Volver a tarjetas</button>
 </div>
 
 
-<!-- ══════════════════════════════════════
-     EMOTIONAL SUPPORT — Mi ser de apoyo
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-emotional">
 <div class="wrap">
   <div class="emo-hdr">
     <div class="back" onclick="goBack()">←</div>
     <div style="flex:1">
-      <div class="tag" style="color:var(--teal)">APOYO EMOCIONAL</div>
-      <div style="font-size:16px;font-weight:700" id="emo-screen-title">Mi ser de apoyo</div>
+      <div class="tag" style="color:var(--teal)" data-i18n="auto_41">APOYO EMOCIONAL</div>
+      <div style="font-size:16px;font-weight:700" id="emo-screen-title" data-i18n="auto_42">Mi ser de apoyo</div>
     </div>
     <div style="font-size:28px" id="emo-screen-icon">🐾</div>
   </div>
@@ -1539,27 +1198,21 @@ setTimeout(hideSplash, 4000);
 
     <!-- Mensaje de contención -->
     <div class="card" style="border-color:var(--teal)">
-      <div class="card-hd" id="emo-card-hd">💌 Está contigo ahora mismo</div>
+      <div class="card-hd" id="emo-card-hd" data-i18n="auto_43">💌 Está contigo ahora mismo</div>
       <div class="card-bd">
-        <div id="emo-message" style="font-size:16px;color:var(--text2);line-height:1.75;text-align:center">
-          Aunque no esté físicamente aquí, su energía viaja contigo. Pronto volverás a casa.
-        </div>
+        <div id="emo-message" style="font-size:16px;color:var(--text2);line-height:1.75;text-align:center" data-i18n="auto_44">Aunque no esté físicamente aquí, su energía viaja contigo. Pronto volverás a casa.</div>
       </div>
     </div>
 
     <!-- Imagen generada por IA -->
     <div class="card">
-      <div class="card-hd">✨ Recreado con IA — solo para ti</div>
+      <div class="card-hd" data-i18n="auto_45">✨ Recreado con IA — solo para ti</div>
       <div id="emo-ai-img-wrap" class="emo-ai-img-wrap">
-        <div style="padding:24px;text-align:center;color:var(--text3);font-size:14px" id="emo-ai-placeholder">
-          Toca el botón para que la IA genere una imagen de tu ser de apoyo mostrándote amor 🤍
-        </div>
+        <div style="padding:24px;text-align:center;color:var(--text3);font-size:14px" id="emo-ai-placeholder" data-i18n="auto_46">Toca el botón para que la IA genere una imagen de tu ser de apoyo mostrándote amor 🤍</div>
       </div>
       <div style="padding:12px 14px">
-        <button class="emo-gen-btn" onclick="generateEmotionalImage()">
-          ✨ Generar imagen de apoyo con IA
-        </button>
-        <div id="emo-gen-loading" style="display:none;text-align:center;padding:12px;font-size:13px;color:var(--text3);font-family:var(--mono)">Generando imagen…</div>
+        <button class="emo-gen-btn" onclick="generateEmotionalImage()" data-i18n="auto_47">✨ Generar imagen de apoyo con IA</button>
+        <div id="emo-gen-loading" style="display:none;text-align:center;padding:12px;font-size:13px;color:var(--text3);font-family:var(--mono)" data-i18n="auto_48">Generando imagen…</div>
       </div>
     </div>
 
@@ -1569,32 +1222,31 @@ setTimeout(hideSplash, 4000);
 </div>
 
 
-<!-- ══════════════════════════════════════
-     ISOCHRONIC TONES
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-isochronic">
 <div class="wrap">
   <div class="iso-hdr">
     <div class="back" onclick="goBack()">←</div>
     <div style="flex:1">
-      <div class="tag" id="iso-subtitle-txt" style="color:var(--purple)">REGULACIÓN NEUROLÓGICA</div>
-      <div style="font-size:16px;font-weight:700" id="iso-title-txt">Tonos Isocrónicos</div>
+      <div class="tag" id="iso-subtitle-txt" style="color:var(--purple)" data-i18n="auto_106">REGULACIÓN NEUROLÓGICA</div>
+      <div style="font-size:16px;font-weight:700" id="iso-title-txt" data-i18n="auto_107">Tonos Isocrónicos</div>
     </div>
     <div style="font-size:26px">🎵</div>
   </div>
   <div class="iso-body">
 
     <div class="card" style="border-color:var(--purple)">
-      <div class="card-hd" id="iso-what-txt">¿Qué son los tonos isocrónicos?</div>
+      <div class="card-hd" id="iso-what-txt" data-i18n="auto_108">¿Qué son los tonos isocrónicos?</div>
       <div class="card-bd" id="iso-desc-txt" style="font-size:14px;color:var(--text2);line-height:1.75">
-        Son pulsos rítmicos de sonido puro que sincronizan las ondas cerebrales sin necesidad de auriculares. Especialmente útiles para autistas: <b>reducen la hiperactivación del sistema nervioso</b>, facilitan el sueño y ayudan a salir de estados de bloqueo. Escúchalos a volumen bajo y cómodo.
+        Son pulsos rítmicos de sonido puro que sincronizan las ondas cerebrales sin necesidad de auriculares. Especialmente útiles para autistas: <b data-i18n="auto_109">reducen la hiperactivación del sistema nervioso</b>, facilitan el sueño y ayudan a salir de estados de bloqueo. Escúchalos a volumen bajo y cómodo.
       </div>
     </div>
 
     <div id="iso-tones-list"></div>
 
     <button class="btn" style="background:var(--purple-bg);border:1.5px solid var(--purple);color:var(--purple);height:52px;font-weight:700" onclick="loadIsoTonesWithAI()">
-      <span id="iso-ai-btn-txt">🧠 Sugerir tonos personalizados con IA</span>
+      <span id="iso-ai-btn-txt" data-i18n="auto_110">🧠 Sugerir tonos personalizados con IA</span>
     </button>
     <div id="iso-ai-result" style="display:none"></div>
 
@@ -1604,23 +1256,22 @@ setTimeout(hideSplash, 4000);
 </div>
 
 
-<!-- ══════════════════════════════════════
-     KIT DE SUPERVIVENCIA (AFILIADOS)
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-kit">
 <div class="wrap">
   <div class="ls-hdr">
     <div class="back" onclick="goBack()">←</div>
     <div style="flex:1">
-      <div class="tag" id="kit-tag" style="color:var(--amber)">HERRAMIENTAS SENSORIALES</div>
-      <div style="font-size:16px;font-weight:700" id="kit-title">Kit de Supervivencia</div>
+      <div class="tag" id="kit-tag" style="color:var(--amber)" data-i18n="auto_111">HERRAMIENTAS SENSORIALES</div>
+      <div style="font-size:16px;font-weight:700" id="kit-title" data-i18n="auto_112">Kit de Supervivencia</div>
     </div>
     <div style="font-size:26px">🎒</div>
   </div>
   <div class="ls-body">
     <div style="font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:12px;padding:0 4px;">
-      <span id="kit-desc">Selección de herramientas probadas para la regulación del sistema nervioso.</span>
-      <i id="kit-disclaimer" style="font-size:12px;color:var(--text3);display:block;margin-top:4px;">*Al comprar desde estos enlaces, apoyas el desarrollo de NEURO-DOME sin costo extra para ti.</i>
+      <span id="kit-desc" data-i18n="auto_113">Selección de herramientas probadas para la regulación del sistema nervioso.</span>
+      <i id="kit-disclaimer" style="font-size:12px;color:var(--text3);display:block;margin-top:4px;" data-i18n="auto_114">*Al comprar desde estos enlaces, apoyas el desarrollo de NEURO-DOME sin costo extra para ti.</i>
     </div>
 
     <!-- Item 1 -->
@@ -1628,9 +1279,9 @@ setTimeout(hideSplash, 4000);
       <div style="padding:14px;display:flex;gap:14px;align-items:center;">
         <div style="width:70px;height:70px;border-radius:10px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0;">🎧</div>
         <div style="flex:1;">
-          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px;" id="kit-i1-title">Tapones Loop Experience</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.4;margin-bottom:8px;" id="kit-i1-desc">Reducen el ruido de fondo sin aislarte por completo. Ideales para supermercados o reuniones.</div>
-          <button class="btn amber sm" id="kit-i1-btn" style="height:36px;min-height:36px;font-size:13px;padding:0 12px;width:auto;display:inline-flex;" onclick="window.open('https://www.amazon.com/s?k=loop+experience+earplugs', '_blank')">Ver en Amazon ↗</button>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px;" id="kit-i1-title" data-i18n="auto_115">Tapones Loop Experience</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.4;margin-bottom:8px;" id="kit-i1-desc" data-i18n="auto_116">Reducen el ruido de fondo sin aislarte por completo. Ideales para supermercados o reuniones.</div>
+          <button class="btn amber sm" id="kit-i1-btn" style="height:36px;min-height:36px;font-size:13px;padding:0 12px;width:auto;display:inline-flex;" onclick="window.open('https://www.amazon.com/s?k=loop+experience+earplugs', '_blank')" data-i18n="auto_117">Ver en Amazon ↗</button>
         </div>
       </div>
     </div>
@@ -1640,9 +1291,9 @@ setTimeout(hideSplash, 4000);
       <div style="padding:14px;display:flex;gap:14px;align-items:center;">
         <div style="width:70px;height:70px;border-radius:10px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0;">🛌</div>
         <div style="flex:1;">
-          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px;" id="kit-i2-title">Manta con Peso (Weighted Blanket)</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.4;margin-bottom:8px;" id="kit-i2-desc">Presión profunda constante (DTP). Ayuda a regular el sistema nervioso y mejorar el sueño.</div>
-          <button class="btn purple sm" id="kit-i2-btn" style="height:36px;min-height:36px;font-size:13px;padding:0 12px;width:auto;display:inline-flex;" onclick="window.open('https://www.amazon.com/s?k=weighted+blanket+adult', '_blank')">Ver en Amazon ↗</button>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px;" id="kit-i2-title" data-i18n="auto_118">Manta con Peso (Weighted Blanket)</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.4;margin-bottom:8px;" id="kit-i2-desc" data-i18n="auto_119">Presión profunda constante (DTP). Ayuda a regular el sistema nervioso y mejorar el sueño.</div>
+          <button class="btn purple sm" id="kit-i2-btn" style="height:36px;min-height:36px;font-size:13px;padding:0 12px;width:auto;display:inline-flex;" onclick="window.open('https://www.amazon.com/s?k=weighted+blanket+adult', '_blank')" data-i18n="auto_120">Ver en Amazon ↗</button>
         </div>
       </div>
     </div>
@@ -1652,9 +1303,9 @@ setTimeout(hideSplash, 4000);
       <div style="padding:14px;display:flex;gap:14px;align-items:center;">
         <div style="width:70px;height:70px;border-radius:10px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0;">🪀</div>
         <div style="flex:1;">
-          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px;" id="kit-i3-title">Fidget Cube / Tangle</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.4;margin-bottom:8px;" id="kit-i3-desc">Herramienta de stimming silenciosa. Ayuda a canalizar la ansiedad motora en público.</div>
-          <button class="btn teal sm" id="kit-i3-btn" style="height:36px;min-height:36px;font-size:13px;padding:0 12px;width:auto;display:inline-flex;" onclick="window.open('https://www.amazon.com/s?k=fidget+cube+adult', '_blank')">Ver en Amazon ↗</button>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px;" id="kit-i3-title" data-i18n="auto_121">Fidget Cube / Tangle</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.4;margin-bottom:8px;" id="kit-i3-desc" data-i18n="auto_122">Herramienta de stimming silenciosa. Ayuda a canalizar la ansiedad motora en público.</div>
+          <button class="btn teal sm" id="kit-i3-btn" style="height:36px;min-height:36px;font-size:13px;padding:0 12px;width:auto;display:inline-flex;" onclick="window.open('https://www.amazon.com/s?k=fidget+cube+adult', '_blank')" data-i18n="auto_123">Ver en Amazon ↗</button>
         </div>
       </div>
     </div>
@@ -1662,11 +1313,11 @@ setTimeout(hideSplash, 4000);
     <!-- Item 4 -->
     <div class="card" style="border-color:var(--blue);margin-bottom:12px;">
       <div style="padding:14px;display:flex;gap:14px;align-items:center;">
-        <div style="width:70px;height:70px;border-radius:10px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0;">🕶️</div>
+        <div style="width:70px;height:70px;border-radius:10px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0;" data-i18n="auto_124">🕶️</div>
         <div style="flex:1;">
-          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px;" id="kit-i4-title">Gafas FL-41 (Sensibilidad a la luz)</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.4;margin-bottom:8px;" id="kit-i4-desc">Bloquean la luz azul/verde de pantallas y luces fluorescentes que causan migrañas y sobrecarga.</div>
-          <button class="btn blue sm" id="kit-i4-btn" style="height:36px;min-height:36px;font-size:13px;padding:0 12px;width:auto;display:inline-flex;" onclick="window.open('https://www.amazon.com/s?k=fl-41+glasses', '_blank')">Ver en Amazon ↗</button>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px;" id="kit-i4-title" data-i18n="auto_125">Gafas FL-41 (Sensibilidad a la luz)</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.4;margin-bottom:8px;" id="kit-i4-desc" data-i18n="auto_126">Bloquean la luz azul/verde de pantallas y luces fluorescentes que causan migrañas y sobrecarga.</div>
+          <button class="btn blue sm" id="kit-i4-btn" style="height:36px;min-height:36px;font-size:13px;padding:0 12px;width:auto;display:inline-flex;" onclick="window.open('https://www.amazon.com/s?k=fl-41+glasses', '_blank')" data-i18n="auto_127">Ver en Amazon ↗</button>
         </div>
       </div>
     </div>
@@ -1676,38 +1327,37 @@ setTimeout(hideSplash, 4000);
 </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     REGISTRO SENSORIAL
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-registro">
 <div class="wrap">
   <div class="ls-hdr">
     <div class="back" onclick="goBack()">←</div>
     <div style="flex:1">
-      <div class="tag" style="color:var(--green)">DATA TRACKER</div>
-      <div style="font-size:16px;font-weight:700">Registro Sensorial</div>
+      <div class="tag" style="color:var(--green)" data-i18n="auto_142">DATA TRACKER</div>
+      <div style="font-size:16px;font-weight:700" data-i18n="auto_143">Registro Sensorial</div>
     </div>
     <div style="font-size:26px">📓</div>
   </div>
   <div class="ls-body">
     <div class="card" style="border-color:var(--green)">
-      <div class="card-hd">Registrar Evento</div>
+      <div class="card-hd" data-i18n="auto_144">Registrar Evento</div>
       <div class="card-bd" style="display:flex;flex-direction:column;gap:10px;">
-        <label style="font-size:12px;font-weight:700;color:var(--text2);">TIPO DE EVENTO</label>
+        <label style="font-size:12px;font-weight:700;color:var(--text2);" data-i18n="auto_145">TIPO DE EVENTO</label>
         <select id="reg-tipo" style="width:100%; height:48px; background:var(--surface2); border:1.5px solid var(--border2); border-radius:8px; color:var(--text); padding:0 14px; outline:none;">
-          <option value="Meltdown">Meltdown (Explosión/Crisis)</option>
-          <option value="Shutdown">Shutdown (Apagado/Bloqueo)</option>
-          <option value="Sobrecarga">Sobrecarga Sensorial</option>
+          <option value="Meltdown" data-i18n="auto_146">Meltdown (Explosión/Crisis)</option>
+          <option value="Shutdown" data-i18n="auto_147">Shutdown (Apagado/Bloqueo)</option>
+          <option value="Sobrecarga" data-i18n="auto_148">Sobrecarga Sensorial</option>
         </select>
         
-        <label style="font-size:12px;font-weight:700;color:var(--text2);margin-top:4px;">DESENCADENANTE (TRIGGER)</label>
+        <label style="font-size:12px;font-weight:700;color:var(--text2);margin-top:4px;" data-i18n="auto_149">DESENCADENANTE (TRIGGER)</label>
         <input id="reg-trigger" type="text" placeholder="Ej: Ruido fuerte, cambio de planes..." style="width:100%; height:48px; background:var(--surface2); border:1.5px solid var(--border2); border-radius:8px; color:var(--text); padding:0 14px; outline:none;">
         
-        <button class="btn green sm" style="margin-top:8px;" onclick="guardarRegistro()">Guardar Registro</button>
+        <button class="btn green sm" style="margin-top:8px;" onclick="guardarRegistro()" data-i18n="auto_150">Guardar Registro</button>
       </div>
     </div>
 
-    <div class="tag" style="margin-top:12px; margin-bottom:4px;">HISTORIAL RECIENTE</div>
+    <div class="tag" style="margin-top:12px; margin-bottom:4px;" data-i18n="auto_151">HISTORIAL RECIENTE</div>
     <div id="registro-lista" style="display:flex;flex-direction:column;gap:8px;"></div>
     
     <div class="spacer"></div>
@@ -1715,25 +1365,22 @@ setTimeout(hideSplash, 4000);
 </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     CUCHARAS (SPOON THEORY)
-══════════════════════════════════════ -->
+
+
 <div class="screen" id="screen-cucharas">
 <div class="wrap">
   <div class="spoon-hdr">
     <div class="back" onclick="goBack()">←</div>
     <div style="flex:1">
-      <div class="tag" id="spoon-tag" style="color:var(--amber)">GESTIÓN DE ENERGÍA</div>
-      <div style="font-size:16px;font-weight:700" id="spoon-title">Mis Cucharas</div>
+      <div class="tag" id="spoon-tag" style="color:var(--amber)" data-i18n="auto_26">GESTIÓN DE ENERGÍA</div>
+      <div style="font-size:16px;font-weight:700" id="spoon-title" data-i18n="auto_27">Mis Cucharas</div>
     </div>
     <div style="font-size:26px">🥄</div>
   </div>
   <div class="spoon-body">
     <div class="card" style="border-color:var(--amber)">
-      <div class="card-hd" id="spoon-card-hd">Teoría de las Cucharas</div>
-      <div class="card-bd" id="spoon-card-bd" style="font-size:14px;color:var(--text2);line-height:1.6;">
-        Cada cuchara representa una unidad de energía física y mental. Tocar una cuchara la "gasta". Úsalo para visualizar cuánta energía te queda hoy y evitar el burnout.
-      </div>
+      <div class="card-hd" id="spoon-card-hd" data-i18n="auto_28">Teoría de las Cucharas</div>
+      <div class="card-bd" id="spoon-card-bd" style="font-size:14px;color:var(--text2);line-height:1.6;" data-i18n="auto_29">Cada cuchara representa una unidad de energía física y mental. Tocar una cuchara la "gasta". Úsalo para visualizar cuánta energía te queda hoy y evitar el burnout.</div>
     </div>
 
     <div style="text-align:center; margin-top:20px;">
@@ -1741,8 +1388,8 @@ setTimeout(hideSplash, 4000);
       <div class="spoon-display" id="spoon-display"></div>
       
       <div class="spoon-controls" style="justify-content:center;">
-        <button class="btn ghost sm" id="spoon-btn-rm" style="width:auto; padding:0 20px;" onclick="removeSpoon()">- Quitar cuchara total</button>
-        <button class="btn ghost sm" id="spoon-btn-add" style="width:auto; padding:0 20px;" onclick="addSpoon()">+ Añadir cuchara total</button>
+        <button class="btn ghost sm" id="spoon-btn-rm" style="width:auto; padding:0 20px;" onclick="removeSpoon()" data-i18n="auto_30">- Quitar cuchara total</button>
+        <button class="btn ghost sm" id="spoon-btn-add" style="width:auto; padding:0 20px;" onclick="addSpoon()" data-i18n="auto_31">+ Añadir cuchara total</button>
       </div>
     </div>
 
@@ -1751,9 +1398,8 @@ setTimeout(hideSplash, 4000);
 </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     OVERLAY — RIESGO VITAL
-══════════════════════════════════════ -->
+
+
 <div class="ov" id="ov-risk">
   <div class="ovc">
     <div class="ov-icon">🆘</div>

@@ -1,0 +1,65 @@
+<div class="screen" id="screen-subscription">
+<div class="wrap">
+  <div class="sub-hdr">
+    <div class="back-btn" onclick="goBack()" style="width:36px;height:36px;border-radius:10px;background:var(--surface2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;color:var(--text2)">←</div>
+    <div style="flex:1;font-size:16px;font-weight:700" id="sub-hdr-title" data-i18n="auto_251">Suscripción</div>
+    <div style="font-size:22px">⭐</div>
+  </div>
+  <div class="sub-body">
+
+    <!-- Hero -->
+    <div class="sub-hero">
+      <div class="sub-hero-icon">♾️</div>
+      <div class="sub-hero-title" id="sub-hero-title" data-i18n="auto_252">NEURO-DOME Pro</div>
+      <div class="sub-hero-sub" id="sub-hero-sub" data-i18n="auto_253">Apoya el desarrollo de la app y desbloquea funciones avanzadas diseñadas para tu sistema nervioso.</div>
+    </div>
+
+    <!-- Plan Gratuito -->
+    <div class="sub-plan">
+      <div class="sub-plan-body">
+        <div class="sub-plan-name" id="sub-free-name" data-i18n="auto_254">Plan Gratuito</div>
+        <div class="sub-plan-price">$0 <span id="sub-forever" data-i18n="auto_255">/ siempre</span></div>
+        <div class="sub-plan-features">
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f1" data-i18n="auto_256">SOS y credencial médica</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f2" data-i18n="auto_257">Niveles de regulación N1–N5</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f3" data-i18n="auto_258">Escáner corporal</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f4" data-i18n="auto_259">Tarjetas de comunicación</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f5" data-i18n="auto_260">Alarmas de medicación</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-free-f6" data-i18n="auto_261">Taxi a casa</span></div>
+        </div>
+        <button class="sub-btn sub-btn-free" disabled style="opacity:.5;cursor:default" id="sub-free-btn" data-i18n="auto_262">Plan actual</button>
+      </div>
+    </div>
+
+    <!-- Plan Pro -->
+    <div class="sub-plan featured">
+      <div class="sub-plan-badge" id="sub-pro-badge" data-i18n="auto_263">✨ RECOMENDADO</div>
+      <div class="sub-plan-body">
+        <div class="sub-plan-name" id="sub-pro-name" data-i18n="auto_264">Plan Pro</div>
+        <div class="sub-plan-price" id="sub-pro-price">$4.99 <span id="sub-per-month" data-i18n="auto_265">/ mes</span></div>
+        <div class="sub-plan-features">
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f1" data-i18n="auto_266">Todo el Plan Gratuito incluido</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f2" data-i18n="auto_267">IA personalizada sin límites — consejos adaptados a tu perfil</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f3" data-i18n="auto_268">Recetas y alimentación segura con IA</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f4" data-i18n="auto_269">Compañero emocional (mascota / objeto de regulación con IA)</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f5" data-i18n="auto_270">Tonos isocrónicos personalizados con IA</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f6" data-i18n="auto_271">Acceso prioritario a nuevas funciones</span></div>
+          <div class="sub-plan-feat"><b>✓</b><span id="sub-pro-f7" data-i18n="auto_272">Apoyas el desarrollo de la app ♾️</span></div>
+        </div>
+        <button class="sub-btn sub-btn-pro" onclick="handleSubClick()" id="sub-pro-btn" data-i18n="auto_273">✦ Suscribirse a Pro</button>
+      </div>
+    </div>
+
+    <!-- Legal -->
+    <div class="sub-legal" id="sub-legal">
+      Pago seguro. Cancela cuando quieras.<br>
+      NEURO-DOME by Fabiola Aponte — todos los derechos reservados.
+    </div>
+
+    <div class="spacer"></div>
+  </div>
+</div>
+</div>
+
+
+

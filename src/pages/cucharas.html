@@ -1,0 +1,32 @@
+<div class="screen" id="screen-cucharas">
+<div class="wrap">
+  <div class="spoon-hdr">
+    <div class="back" onclick="goBack()">←</div>
+    <div style="flex:1">
+      <div class="tag" id="spoon-tag" style="color:var(--amber)" data-i18n="auto_26">GESTIÓN DE ENERGÍA</div>
+      <div style="font-size:16px;font-weight:700" id="spoon-title" data-i18n="auto_27">Mis Cucharas</div>
+    </div>
+    <div style="font-size:26px">🥄</div>
+  </div>
+  <div class="spoon-body">
+    <div class="card" style="border-color:var(--amber)">
+      <div class="card-hd" id="spoon-card-hd" data-i18n="auto_28">Teoría de las Cucharas</div>
+      <div class="card-bd" id="spoon-card-bd" style="font-size:14px;color:var(--text2);line-height:1.6;" data-i18n="auto_29">Cada cuchara representa una unidad de energía física y mental. Tocar una cuchara la "gasta". Úsalo para visualizar cuánta energía te queda hoy y evitar el burnout.</div>
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+      <div id="spoon-status" style="font-size:16px; font-weight:700; margin-bottom:10px;"></div>
+      <div class="spoon-display" id="spoon-display"></div>
+      
+      <div class="spoon-controls" style="justify-content:center;">
+        <button class="btn ghost sm" id="spoon-btn-rm" style="width:auto; padding:0 20px;" onclick="removeSpoon()" data-i18n="auto_30">- Quitar cuchara total</button>
+        <button class="btn ghost sm" id="spoon-btn-add" style="width:auto; padding:0 20px;" onclick="addSpoon()" data-i18n="auto_31">+ Añadir cuchara total</button>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+  </div>
+</div>
+</div>
+
+

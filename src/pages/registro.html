@@ -1,0 +1,37 @@
+<div class="screen" id="screen-registro">
+<div class="wrap">
+  <div class="ls-hdr">
+    <div class="back" onclick="goBack()">←</div>
+    <div style="flex:1">
+      <div class="tag" style="color:var(--green)" data-i18n="auto_142">DATA TRACKER</div>
+      <div style="font-size:16px;font-weight:700" data-i18n="auto_143">Registro Sensorial</div>
+    </div>
+    <div style="font-size:26px">📓</div>
+  </div>
+  <div class="ls-body">
+    <div class="card" style="border-color:var(--green)">
+      <div class="card-hd" data-i18n="auto_144">Registrar Evento</div>
+      <div class="card-bd" style="display:flex;flex-direction:column;gap:10px;">
+        <label style="font-size:12px;font-weight:700;color:var(--text2);" data-i18n="auto_145">TIPO DE EVENTO</label>
+        <select id="reg-tipo" style="width:100%; height:48px; background:var(--surface2); border:1.5px solid var(--border2); border-radius:8px; color:var(--text); padding:0 14px; outline:none;">
+          <option value="Meltdown" data-i18n="auto_146">Meltdown (Explosión/Crisis)</option>
+          <option value="Shutdown" data-i18n="auto_147">Shutdown (Apagado/Bloqueo)</option>
+          <option value="Sobrecarga" data-i18n="auto_148">Sobrecarga Sensorial</option>
+        </select>
+        
+        <label style="font-size:12px;font-weight:700;color:var(--text2);margin-top:4px;" data-i18n="auto_149">DESENCADENANTE (TRIGGER)</label>
+        <input id="reg-trigger" type="text" placeholder="Ej: Ruido fuerte, cambio de planes..." style="width:100%; height:48px; background:var(--surface2); border:1.5px solid var(--border2); border-radius:8px; color:var(--text); padding:0 14px; outline:none;">
+        
+        <button class="btn green sm" style="margin-top:8px;" onclick="guardarRegistro()" data-i18n="auto_150">Guardar Registro</button>
+      </div>
+    </div>
+
+    <div class="tag" style="margin-top:12px; margin-bottom:4px;" data-i18n="auto_151">HISTORIAL RECIENTE</div>
+    <div id="registro-lista" style="display:flex;flex-direction:column;gap:8px;"></div>
+    
+    <div class="spacer"></div>
+  </div>
+</div>
+</div>
+
+

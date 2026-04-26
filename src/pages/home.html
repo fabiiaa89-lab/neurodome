@@ -1,0 +1,206 @@
+<div class="screen" id="screen-home">
+<div class="wrap">
+  <div class="home-hdr">
+    <!-- Brand: app name large, first name below -->
+    <div class="h-brand">
+      <div class="h-appname">NEURO<span data-i18n="auto_49">-DOME</span></div>
+    </div>
+    <!-- Hamburger -->
+    <div class="h-menu-wrap">
+      <div class="h-hamburger" id="h-hamburger-btn" onclick="toggleHomeMenu()">
+        <span></span><span></span><span></span>
+      </div>
+        <div class="h-menu" id="h-menu">
+          <!-- Sección principal -->
+          <div class="h-menu-section">
+            <div class="h-menu-item" onclick="go('profile');toggleHomeMenu()">
+              <span>👤</span><span id="hmenu-perfil" data-i18n="auto_50">Perfil</span>
+            </div>
+            <!-- Configuración con submenu Apariencia -->
+            <div class="h-menu-item" onclick="toggleAppearanceSubmenu()">
+              <span>⚙️</span><span id="hmenu-config" data-i18n="auto_51">Configuración</span>
+              <span class="h-menu-item-arrow" id="appear-arrow">›</span>
+            </div>
+            <div class="hmenu-submenu" id="appear-submenu">
+              <div class="hmenu-submenu-body">
+                <div style="font-size:10px;letter-spacing:1.2px;color:var(--text3);font-family:var(--mono);padding:8px 12px 4px" id="hmenu-appear-lbl" data-i18n="auto_52">APARIENCIA VISUAL</div>
+                <div class="hmenu-sub-item active" id="theme-btn-dark" onclick="setTheme('dark')">
+                  <div class="theme-dot theme-dot-dark"></div>
+                  <span id="theme-lbl-dark" data-i18n="auto_53">Modo Oscuro</span>
+                  <span class="theme-check">✓</span>
+                </div>
+                <div class="hmenu-sub-item" id="theme-btn-light" onclick="setTheme('light')">
+                  <div class="theme-dot theme-dot-light"></div>
+                  <span id="theme-lbl-light" data-i18n="auto_54">Modo Claro</span>
+                  <span class="theme-check">✓</span>
+                </div>
+                <div class="hmenu-sub-item" id="theme-btn-rainbow" onclick="setTheme('rainbow')">
+                  <div class="theme-dot theme-dot-rainbow"></div>
+                  <span id="theme-lbl-rainbow" data-i18n="auto_55">Modo Arcoíris ♾️</span>
+                  <span class="theme-check">✓</span>
+                </div>
+                <div class="hmenu-sub-item" onclick="openSettings();toggleHomeMenu()" style="margin-top:4px;border-top:1px solid var(--border);padding-top:10px">
+                  <span style="font-size:16px">⚙️</span>
+                  <span id="hmenu-config-direct" data-i18n="auto_56">Ajustes del perfil</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Secciones de la app -->
+          <div class="h-menu-section">
+            <div class="h-menu-item" onclick="go('sos');toggleHomeMenu()">
+              <span>🆘</span><span id="hmenu-sos" data-i18n="auto_57">SOS</span>
+            </div>
+            <div class="h-menu-item" onclick="go('scanner');toggleHomeMenu()">
+              <span>📡</span><span id="hmenu-scanner" data-i18n="auto_58">Escáner Corporal</span>
+            </div>
+            <div class="h-menu-item" onclick="go('registro');toggleHomeMenu()">
+              <span>📓</span><span id="hmenu-registro" data-i18n="auto_59">Registro Sensorial</span>
+            </div>
+            <div class="h-menu-item" onclick="openEmotionalScreen('pet');toggleHomeMenu()">
+              <span>🐾</span><span id="hmenu-apoyo" data-i18n="auto_60">Mi apoyo emocional</span>
+            </div>
+            <div class="h-menu-item" onclick="openEmotionalScreen('object');toggleHomeMenu()">
+              <span>🧸</span><span id="hmenu-objeto" data-i18n="auto_61">Mi objeto favorito</span>
+            </div>
+            <div class="h-menu-item" onclick="document.getElementById('ov-tareas').classList.add('active');toggleHomeMenu()">
+              <span>📝</span><span id="hmenu-pasoapaso" data-i18n="auto_62">Paso a Paso (IA)</span>
+            </div>
+            <div class="h-menu-item" onclick="document.getElementById('ov-guiones').classList.add('active');toggleHomeMenu()">
+              <span>💬</span><span id="hmenu-guiones" data-i18n="auto_63">Guiones (IA)</span>
+            </div>
+          </div>
+          <!-- Herramientas -->
+          <div class="h-menu-section">
+            <div class="h-menu-item" onclick="go('comms');toggleHomeMenu()">
+              <span>🃏</span><span id="hmenu-tarjetas" data-i18n="auto_64">Tarjetas</span>
+            </div>
+            <div class="h-menu-item" onclick="go('medication');toggleHomeMenu()">
+              <span>💊</span><span id="hmenu-alarmas" data-i18n="auto_65">Alarmas</span>
+            </div>
+            <div class="h-menu-item" onclick="go('deudas');toggleHomeMenu()">
+              <span>📊</span><span id="hmenu-deudas" data-i18n="auto_66">Deudas</span>
+            </div>
+            <div class="h-menu-item" onclick="go('isochronic');toggleHomeMenu()">
+              <span>🎵</span><span id="hmenu-tonos" data-i18n="auto_67">Tonos ISO</span>
+            </div>
+            <div class="h-menu-item" onclick="go('cave');toggleHomeMenu()">
+              <span data-i18n="auto_68">🕳️</span><span id="hmenu-cueva" data-i18n="auto_69">Cueva</span>
+            </div>
+            <div class="h-menu-item" onclick="go('kit');toggleHomeMenu()">
+              <span>🎒</span><span id="hmenu-kit" data-i18n="auto_70">Kit de Supervivencia</span>
+            </div>
+            <div class="h-menu-item" onclick="go('cucharas');toggleHomeMenu()">
+              <span>🥄</span><span id="hmenu-cucharas" data-i18n="auto_71">Mis Cucharas</span>
+            </div>
+          </div>
+          <!-- Suscripción -->
+          <div class="h-menu-section">
+            <div class="h-menu-item" onclick="go('subscription');toggleHomeMenu()">
+              <span>★</span><span id="hmenu-sub" data-i18n="auto_72">Suscripción</span>
+            </div>
+            <div class="h-menu-item" onclick="shareApp();toggleHomeMenu()" style="color:var(--amber)">
+              <span>🔗</span><span id="hmenu-share" data-i18n="auto_73">Compartir App</span>
+            </div>
+          </div>
+          <!-- Selector de idioma deslizable -->
+          <div class="h-menu-section">
+            <div class="hmenu-lang-row">
+              <span class="hmenu-lang-label" id="hmenu-lang-lbl" data-i18n="auto_74">IDIOMA</span>
+              <div class="lang-slide" id="hmenu-lang-slider" onclick="toggleLangSlider();event.stopPropagation()">
+                <div class="lang-slide-track" id="hmenu-lang-track" style="width:100%">
+                  <div class="lang-slide-opt" style="width:50%" data-i18n="auto_75">🇪🇸</div>
+                  <div class="lang-slide-opt" style="width:50%" data-i18n="auto_76">🇺🇸</div>
+                </div>
+                <div class="lang-slide-thumb" id="hmenu-lang-thumb"></div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="home-body"><button class="sos-main-btn" id="sos-main-btn" onclick="go('sos')" data-i18n="auto_77">🆘 SOS — CREDENCIAL MÉDICA Y LEGAL</button>
+
+    <!-- TAXI A CASA — botón de crisis -->
+    <button class="taxi-crisis-btn" id="taxi-home-btn" onclick="callTaxiHome()">
+      <div class="taxi-crisis-icon">🚕</div>
+      <div class="taxi-crisis-text">
+        <div class="taxi-crisis-title" id="taxi-btn-title" data-i18n="auto_78">IR A CASA EN TAXI</div>
+        <div class="taxi-crisis-sub" id="taxi-btn-sub" data-i18n="auto_79">Un toque — tu dirección ya está lista</div>
+      </div>
+      <div style="font-size:20px;color:#1a6080;flex-shrink:0">›</div>
+    </button>
+
+    <div class="sec-row">
+      <button class="sec-btn scanner" onclick="go('scanner')"><span class="icon">📡</span><span class="lbl" id="lbl-scanner" data-i18n="auto_80">ESCÁNER</span></button>
+      <button class="sec-btn deudas"  onclick="go('deudas')"> <span class="icon">📊</span><span class="lbl" id="lbl-deudas" data-i18n="auto_81">DEUDAS</span></button>
+      <button class="sec-btn ia"      onclick="showDailyReminder()"><span class="icon">🧠</span><span class="lbl" id="lbl-ia" data-i18n="auto_82">IA HOY</span></button>
+    </div>
+    <div class="sec-row" style="margin-top:8px;">
+      <button class="sec-btn" style="border-color:var(--blue);background:var(--blue-bg);flex:1;" onclick="document.getElementById('ov-tareas').classList.add('active')">
+        <span class="icon">📝</span><span class="lbl" id="lbl-pasoapaso" style="color:var(--blue)" data-i18n="auto_83">PASO A PASO (IA)</span>
+      </button>
+      <button class="sec-btn" style="border-color:var(--amber);background:var(--amber-bg);flex:1;" onclick="document.getElementById('ov-guiones').classList.add('active')">
+        <span class="icon">💬</span><span class="lbl" id="lbl-guiones" style="color:var(--amber)" data-i18n="auto_84">GUIONES (IA)</span>
+      </button>
+    </div>
+    <div class="sec-row">
+      <button class="sec-btn" style="border-color:var(--purple);background:var(--purple-bg)" onclick="go('isochronic')"><span class="icon">🎵</span><span class="lbl" id="lbl-tonos" style="color:var(--purple)" data-i18n="auto_85">TONOS ISO</span></button>
+      <button class="sec-btn" style="border-color:var(--green);background:var(--green-bg)" onclick="go('registro')"><span class="icon">📓</span><span class="lbl" id="lbl-registro" style="color:var(--green)" data-i18n="auto_86">REGISTRO SENSORIAL</span></button>
+    </div>
+
+    <div class="tag" id="tag-nivel" style="padding:2px 0 4px" data-i18n="auto_87">SELECCIONA TU NIVEL ACTUAL</div>
+
+    <button class="lvl-btn l1" onclick="go('l1')">
+      <div class="lvl-num">N1</div>
+      <div class="lvl-c"><div class="lvl-title" id="n1-title" data-i18n="auto_88">CRISIS SEVERA</div><div class="lvl-sub" id="n1-sub" data-i18n="auto_89">Meltdown · Shutdown · No funciono</div></div>
+      <div class="pulse"></div>
+    </button>
+    <button class="lvl-btn l2" onclick="go('l2')">
+      <div class="lvl-num">N2</div>
+      <div class="lvl-c"><div class="lvl-title" id="n2-title" data-i18n="auto_90">DISOCIACIÓN / AGNOSIA</div><div class="lvl-sub" id="n2-sub" data-i18n="auto_91">No reconozco el entorno, ni personas</div></div>
+    </button>
+    <button class="lvl-btn l3" onclick="go('l3')">
+      <div class="lvl-num">N3</div>
+      <div class="lvl-c"><div class="lvl-title" id="n3-title" data-i18n="auto_92">BAJA ENERGÍA</div><div class="lvl-sub" id="n3-sub" data-i18n="auto_93">Fatiga cognitiva · Burnout activo</div></div>
+    </button>
+    <button class="lvl-btn l4" onclick="go('l4')">
+      <div class="lvl-num">N4</div>
+      <div class="lvl-c"><div class="lvl-title" id="n4-title" data-i18n="auto_94">FUNCIONAL REDUCIDO</div><div class="lvl-sub" id="n4-sub" data-i18n="auto_95">Tareas simples y rutinas</div></div>
+    </button>
+    <button class="lvl-btn l5" onclick="go('l5')">
+      <div class="lvl-num">N5</div>
+      <div class="lvl-c"><div class="lvl-title" id="n5-title" data-i18n="auto_96">ESTADO ÓPTIMO</div><div class="lvl-sub" id="n5-sub" data-i18n="auto_97">Ventana funcional abierta</div></div>
+    </button>
+
+    <div class="bottom-row">
+      <button class="btn ghost sm" id="btn-tarjetas" style="flex:1;font-size:13px" onclick="go('comms')" data-i18n="auto_98">🃏 Tarjetas</button>
+      <button class="btn ghost sm" id="btn-cueva"    style="flex:1;font-size:13px" onclick="go('cave')" data-i18n="auto_99">🕳️ Cueva</button>
+      <button class="btn ghost sm" id="btn-alarmas"  style="flex:1;font-size:13px" onclick="go('medication')" data-i18n="auto_100">💊 Alarmas</button>
+    </div>
+    <div class="bottom-row">
+      <button class="btn ghost sm" id="btn-apoyo"  style="flex:1;font-size:13px;border-color:var(--teal);color:var(--teal)" onclick="openEmotionalScreen('pet')" data-i18n="auto_101">🐾 Mi apoyo emocional</button>
+      <button class="btn ghost sm" id="btn-objeto" style="flex:1;font-size:13px;border-color:var(--purple);color:var(--purple)" onclick="openEmotionalScreen('object')" data-i18n="auto_102">🧸 Mi objeto favorito</button>
+      <button class="btn ghost sm" id="btn-cucharas" style="flex:1;font-size:13px;border-color:var(--amber);color:var(--amber)" onclick="go('cucharas')" data-i18n="auto_103">🥄 Cucharas</button>
+    </div>
+
+    <!-- Batería Social -->
+    <div class="social-battery">
+      <div class="sb-icon" id="sb-icon">🔋</div>
+      <div class="sb-info">
+        <div class="sb-label" id="bat-label" data-i18n="auto_104">Mi Batería Social</div>
+        <div class="sb-bar-wrap">
+          <div class="sb-bar-fill" id="sb-fill" style="width:80%;background:var(--green)"></div>
+        </div>
+        <input type="range" class="sb-slider" id="sb-slider" min="0" max="100" value="80" oninput="updateBattery(this.value)">
+      </div>
+      <div class="sb-pct" id="sb-pct" style="color:var(--green)" data-i18n="auto_105">80%</div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</div>
+</div>
+
+
+

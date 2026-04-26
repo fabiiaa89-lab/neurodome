@@ -1,0 +1,33 @@
+<div class="screen" id="screen-isochronic">
+<div class="wrap">
+  <div class="iso-hdr">
+    <div class="back" onclick="goBack()">←</div>
+    <div style="flex:1">
+      <div class="tag" id="iso-subtitle-txt" style="color:var(--purple)" data-i18n="auto_106">REGULACIÓN NEUROLÓGICA</div>
+      <div style="font-size:16px;font-weight:700" id="iso-title-txt" data-i18n="auto_107">Tonos Isocrónicos</div>
+    </div>
+    <div style="font-size:26px">🎵</div>
+  </div>
+  <div class="iso-body">
+
+    <div class="card" style="border-color:var(--purple)">
+      <div class="card-hd" id="iso-what-txt" data-i18n="auto_108">¿Qué son los tonos isocrónicos?</div>
+      <div class="card-bd" id="iso-desc-txt" style="font-size:14px;color:var(--text2);line-height:1.75">
+        Son pulsos rítmicos de sonido puro que sincronizan las ondas cerebrales sin necesidad de auriculares. Especialmente útiles para autistas: <b data-i18n="auto_109">reducen la hiperactivación del sistema nervioso</b>, facilitan el sueño y ayudan a salir de estados de bloqueo. Escúchalos a volumen bajo y cómodo.
+      </div>
+    </div>
+
+    <div id="iso-tones-list"></div>
+
+    <button class="btn" style="background:var(--purple-bg);border:1.5px solid var(--purple);color:var(--purple);height:52px;font-weight:700" onclick="loadIsoTonesWithAI()">
+      <span id="iso-ai-btn-txt" data-i18n="auto_110">🧠 Sugerir tonos personalizados con IA</span>
+    </button>
+    <div id="iso-ai-result" style="display:none"></div>
+
+    <div class="spacer"></div>
+  </div>
+</div>
+</div>
+
+
+

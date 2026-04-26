@@ -1,0 +1,113 @@
+<div class="screen" id="screen-sos">
+<div class="sos-wrap">
+
+  <div class="sos-back-bar">
+    <div class="back-btn-sos" onclick="go('home', false)">←</div>
+    <div>
+      <div class="sos-hdr-title"><span data-i18n="sosHdrTitle">IDENTIFICACIÓN MÉDICA Y LEGAL</span></div>
+      <div class="sos-hdr-sub"><span data-i18n="sosHdrSub">Mostrar a policía, médico o personal de emergencia</span></div>
+    </div>
+  </div>
+
+  <div class="sos-body">
+
+    <!-- Banner principal -->
+    <div class="sos-banner">
+      <div class="sos-banner-main"><span data-i18n="sosBannerMain">SOY AUTISTA (TEA)</span></div>
+      <div class="sos-banner-rules">
+        <span data-i18n="sosRule1">NO ME TOQUE SIN AVISAR PRIMERO</span><br>
+        <span data-i18n="sosRule2">NO ME GRITE NI ELEVE LA VOZ</span><br>
+        <span data-i18n="sosRule3">PERMÍTAME USAR AURICULARES</span><br>
+        <span data-i18n="sosRule4">DÉME ESPACIO — NO FUERCE CONTACTO VISUAL</span>
+      </div>
+    </div>
+
+    <!-- Identidad -->
+    <div class="sos-data">
+      <div class="sos-data-hdr"><span data-i18n="sosIdHdr">👤 Identificación del titular</span></div>
+      <div class="sos-identity">
+        <div class="sos-avatar" id="sos-avatar" onclick="openLightbox(C.imgUsuario, C.nombre||'')" style="cursor:pointer">🧑</div>
+        <div class="sos-identity-text">
+          <div class="sos-lbl-sm" data-i18n="auto_240">NOMBRE COMPLETO</div>
+          <div class="sos-nombre-big" id="sos-nombre">—</div>
+        </div>
+      </div>
+      <div class="sos-row2">
+        <div class="sos-cell">
+          <div class="sos-cell-lbl" data-i18n="auto_241">DOCUMENTO</div>
+          <div class="sos-cell-val" id="sos-documento" style="font-size:20px">—</div>
+        </div>
+        <div class="sos-cell">
+          <div class="sos-cell-lbl"><span data-i18n="sosNacLbl">NACIONALIDAD</span></div>
+          <div class="sos-cell-val" id="sos-nacionalidad">—</div>
+        </div>
+      </div>
+      <div class="sos-row2">
+        <div class="sos-cell">
+          <div class="sos-cell-lbl" data-i18n="auto_242">DIAGNÓSTICO</div>
+          <div class="sos-cell-val" style="font-size:15px;color:#7030c0" data-i18n="auto_243">TEA / ASD ♾️</div>
+        </div>
+        <div class="sos-cell">
+          <div class="sos-cell-lbl" data-i18n="auto_244">TIPO DE SANGRE</div>
+          <div class="sos-cell-val red" id="sos-sangre">—</div>
+        </div>
+      </div>
+      <div style="padding:10px 15px;border-top:1px solid #e8e8e8">
+        <div class="sos-cell-lbl" data-i18n="auto_245">📍 DIRECCIÓN DE DOMICILIO</div>
+        <div style="font-size:15px;font-weight:700;color:#111;margin-top:4px;line-height:1.5" id="sos-direccion">—</div>
+        <div style="font-size:13px;color:#555;margin-top:2px" id="sos-referencia"></div>
+      </div>
+    </div>
+    <div class="sos-data">
+      <div class="sos-data-hdr"><span data-i18n="sosMedHdr">🩺 Datos médicos</span></div>
+      <div style="padding:12px 15px; border-bottom:1px solid #e8e8e8">
+        <div class="sos-cell-lbl"><span data-i18n="sosAlergLbl">⚠️ ALERGIAS — NO ADMINISTRAR</span></div>
+        <div style="font-size:18px;font-weight:900;color:#cc6600;margin-top:4px" id="sos-alergias">—</div>
+      </div>
+      <div style="padding:12px 15px">
+        <div class="sos-cell-lbl"><span data-i18n="sosMedActLbl">MEDICACIÓN ACTIVA</span></div>
+        <div style="font-size:16px;font-weight:700;color:#111;margin-top:4px;line-height:1.4" id="sos-medicacion">—</div>
+      </div>
+    </div>
+
+    <!-- Instrucciones de manejo -->
+    <div class="sos-data">
+      <div class="sos-data-hdr"><span data-i18n="sosInstHdr">📋 Instrucciones de manejo</span></div>
+      <div style="padding:13px 15px;display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:#ffeeed;border-radius:8px;border:1px solid #ffcccc"><span style="font-size:18px">🚫</span><span style="font-size:15px;font-weight:700;color:#111"><span data-i18n="sosInst1">No tocar sin avisar verbalmente primero</span></span></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:#ffeeed;border-radius:8px;border:1px solid #ffcccc"><span style="font-size:18px">🔇</span><span style="font-size:15px;font-weight:700;color:#111"><span data-i18n="sosInst2">No gritar ni elevar el tono de voz</span></span></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:#eef8ee;border-radius:8px;border:1px solid #cceecc"><span style="font-size:18px">✅</span><span style="font-size:15px;font-weight:700;color:#111"><span data-i18n="sosInst3">Hablar despacio, frases cortas, una instrucción a la vez</span></span></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:#eef8ee;border-radius:8px;border:1px solid #cceecc"><span style="font-size:18px">🎧</span><span style="font-size:15px;font-weight:700;color:#111"><span data-i18n="sosInst4">Permitir auriculares y herramientas de regulación</span></span></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:#eef0ff;border-radius:8px;border:1px solid #ccd0ff"><span style="font-size:18px">⏳</span><span style="font-size:15px;font-weight:700;color:#111"><span data-i18n="sosInst5">Dar tiempo para procesar. No presionar respuesta inmediata</span></span></div>
+      </div>
+    </div>
+
+    <!-- Contacto de emergencia -->
+    <div class="sos-data">
+      <div class="sos-data-hdr"><span data-i18n="sosCntHdr">📞 Contacto de emergencia</span></div>
+      <div style="padding:14px 15px;display:flex;align-items:center;gap:13px">
+        <div class="sos-avatar" id="sos-c-avatar" onclick="openLightbox(C.imgContacto, C.cn||'')" style="cursor:pointer">👤</div>
+        <div style="flex:1">
+      <div class="sos-cell-lbl" id="sos-cn-lbl" data-i18n="auto_246">CONTACTO PRINCIPAL</div>
+          <div style="font-size:20px;font-weight:900;color:#111;margin:3px 0 2px" id="sos-contacto-nombre">—</div>
+          <div style="font-size:18px;font-weight:700;color:#cc2030;font-family:'Roboto Mono',monospace" id="sos-contacto-tel">—</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botones de acción -->
+    <button class="sos-wa-btn" onclick="sosSendWA()">
+      <span id="sos-wa-btn-txt" data-i18n="auto_247">📱 WhatsApp de emergencia</span>
+    </button>
+    <button class="sos-call-btn" onclick="llamar()">
+      <span id="sos-call-btn-txt" data-i18n="auto_248">📞 LLAMAR AL CONTACTO AHORA</span>
+    </button>
+    <button class="btn ghost sm" id="btn-share-loc" style="width:100%; border-color:#555; color:#333; margin-top:8px;" onclick="compartirUbicacion()" data-i18n="auto_249">📍 Compartir mi ubicación en vivo</button>
+    <button class="btn ghost sm" id="btn-export-pdf" style="width:100%; border-color:#555; color:#333; margin-top:8px;" onclick="exportarPDF()" data-i18n="auto_250">📄 Exportar Perfil a PDF</button>
+    <div class="spacer"></div>
+  </div>
+</div>
+</div>
+
+
+

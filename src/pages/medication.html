@@ -1,0 +1,73 @@
+<div class="screen" id="screen-medication">
+<div class="wrap">
+  <div class="alarm-hdr">
+    <div class="back" onclick="goBack()">←</div>
+    <div style="flex:1">
+      <div class="tag" style="color:var(--amber)"><span data-i18n="medTag">RECORDATORIO MÉDICO</span></div>
+      <div style="font-size:16px;font-weight:700"><span data-i18n="medTitle">Alarmas de Medicación</span></div>
+    </div>
+    <div style="font-size:28px">💊</div>
+  </div>
+  <div class="alarm-body">
+
+    <!-- Mantra -->
+    <div id="med-mantra-box" style="background:var(--amber-bg);border:1.5px solid var(--amber);border-radius:var(--r);padding:12px 15px">
+      <div class="tag" style="color:var(--amber);margin-bottom:4px" data-i18n="auto_129">RECORDATORIO</div>
+      <div style="font-size:14px;color:var(--text2);line-height:1.6"><span data-i18n="medMantra">La medicación no es opcional. Es parte del protocolo. Configura tus horarios una vez y el sistema te avisará.</span></div>
+      <button class="btn ghost sm" style="margin-top:10px;color:var(--amber);border-color:var(--amber)" onclick="document.getElementById('med-mantra-box').style.display='none'" data-i18n="auto_130">✓ Entendido</button>
+    </div>
+
+    <!-- Botón añadir -->
+    <button class="btn" style="background:var(--amber-bg);border:1.5px solid var(--amber);color:var(--amber);height:52px;font-weight:700" onclick="openAlarmForm()">
+      <span data-i18n="medAddBtn">➕ Añadir alarma</span>
+    </button>
+
+    <!-- Formulario nueva alarma (oculto) -->
+    <div class="alarm-form" id="alarm-form">
+      <div style="font-size:15px;font-weight:700;color:var(--amber)"><span data-i18n="medNewAlarm">Nueva alarma</span></div>
+      <div>
+        <label data-i18n="auto_131">MEDICAMENTO</label>
+        <input id="alarm-med-name" type="text" placeholder="Ej: Ritalin, Sertralina…">
+      </div>
+      <div>
+        <label data-i18n="auto_132">HORA</label>
+        <input id="alarm-time-input" type="time">
+      </div>
+      <div>
+        <label data-i18n="auto_133">DÍAS</label>
+        <div id="alarm-days-picker" style="display:flex;gap:6px;flex-wrap:wrap">
+          <button class="day-btn active" data-day="L">L</button>
+          <button class="day-btn active" data-day="M">M</button>
+          <button class="day-btn active" data-day="X">X</button>
+          <button class="day-btn active" data-day="J">J</button>
+          <button class="day-btn active" data-day="V">V</button>
+          <button class="day-btn active" data-day="S">S</button>
+          <button class="day-btn active" data-day="D">D</button>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn sm" id="btn-guardar-alarma" style="flex:1;background:var(--amber);color:#111;font-weight:700;height:48px" onclick="addAlarm()" data-i18n="auto_134">✓ Guardar</button>
+        <button class="btn ghost sm" id="btn-cancelar-alarma" style="flex:1;height:48px" onclick="closeAlarmForm()" data-i18n="auto_135">✗ Cancelar</button>
+      </div>
+    </div>
+
+    <!-- Lista de alarmas -->
+    <div id="alarm-lista"></div>
+    <div id="alarm-empty" style="display:none" class="alarm-empty">
+      <div style="font-size:40px;margin-bottom:10px">⏰</div>
+      <div style="font-size:15px;font-weight:700;color:var(--text3)"><span data-i18n="medNoAlarms">Sin alarmas configuradas</span></div>
+      <div style="font-size:13px;color:var(--text3);margin-top:4px"><span data-i18n="medNoAlarmsSub">Añade tus horarios de medicación</span></div>
+    </div>
+
+    <!-- Link al calendario -->
+    <button class="btn ghost sm" onclick="go('medcal')" style="border-color:var(--teal);color:var(--teal)">
+      <span data-i18n="medCalBtn">📅 Ver calendario de tomas</span>
+    </button>
+
+    <div class="spacer"></div>
+  </div>
+</div>
+</div>
+
+
+

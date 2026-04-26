@@ -1,0 +1,33 @@
+<div class="screen" id="screen-scanner">
+<div class="wrap">
+  <div class="scan-hdr">
+    <div class="back" onclick="goBack()">←</div>
+    <div style="flex:1">
+      <div style="font-size:11px;letter-spacing:1.5px;color:rgba(255,255,255,.7)"><span data-i18n="scanCalib">CALIBRACIÓN INTEROCEPTIVA</span></div>
+      <div style="font-size:18px;font-weight:900;color:#fff" data-i18n="auto_152">ESCÁNER CORPORAL</div>
+    </div>
+    <div style="font-size:28px">📡</div>
+  </div>
+  <div class="scan-body">
+    <div id="scan-progress" class="scan-progress"></div>
+    <div id="scan-q-card" class="scan-q-card">
+      <div id="scan-q-num" class="scan-q-num"></div>
+      <div id="scan-q-text" class="scan-q-text"></div>
+      <div id="scan-q-hint" class="scan-q-hint"></div>
+    </div>
+    <div class="yn-row" style="display:flex">
+      <button class="btn yn yes" onclick="scanAnswer(true)"><span data-i18n="scanYes">✓ SÍ</span></button>
+      <button class="btn yn no"  onclick="scanAnswer(false)"><span data-i18n="scanNo">✗ NO</span></button>
+    </div>
+    <div class="scan-result" id="scan-result">
+      <div class="scan-result-label"><span data-i18n="scanResult">RESULTADO DEL ESCÁNER</span></div>
+      <div id="scan-rec" class="scan-result-recommendation"></div>
+      <div id="scan-detail" class="scan-result-detail"></div>
+      <div id="scan-actions" class="scan-result-actions"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+

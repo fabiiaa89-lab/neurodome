@@ -1,0 +1,84 @@
+<div class="screen" id="screen-deudas">
+<div class="wrap" style="height:100%;overflow:hidden">
+
+  <!-- Header con hamburguesa -->
+  <div class="deudas-hdr">
+    <div class="back" onclick="goBack()">←</div>
+    <div style="flex:1">
+      <div class="tag" style="color:var(--teal)"><span data-i18n="deudasTag">MÓDULO FINANCIERO</span></div>
+      <div style="font-size:18px;font-weight:700"><span data-i18n="deudasTitle">COMPROMISOS FUTUROS</span></div>
+    </div>
+    <!-- Hamburguesa -->
+    <div class="hamburger-wrap">
+      <div class="hamburger-btn" id="hamburger-btn" onclick="toggleHamburger()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div class="hm-item" id="hm-add-deuda" onclick="openDeudaForm();toggleHamburger()" data-i18n="auto_32">➕ Añadir compromiso</div>
+        <div class="hm-item" id="hm-hist-deuda" onclick="showHistorial();toggleHamburger()" data-i18n="auto_33">📋 Historial</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cuerpo scrolleable -->
+  <div class="deudas-body" style="flex:1;overflow-y:auto">
+
+    <!-- Mantra fijo -->
+    <div class="mantra-box">
+      <div class="mantra-lbl"><span data-i18n="deudasMantraLbl">Marco operativo</span></div>
+      <div class="mantra-txt" data-i18n="auto_34">"El dinero es un recurso traído del futuro. Este registro es la ruta técnica para devolverlo al presente. No es un fallo moral, es un proceso técnico en curso."</div>
+    </div>
+
+    <!-- Formulario de nueva deuda (oculto por defecto) -->
+    <div class="deuda-form" id="deuda-form">
+      <div style="font-size:15px;font-weight:700;color:var(--purple)" data-i18n="auto_35">Nuevo compromiso</div>
+      <div>
+        <label data-i18n="auto_36">ACREEDOR / CONCEPTO</label>
+        <input id="deuda-acreedor" type="text" placeholder="Ej: Alquiler, Tarjeta, Préstamo">
+      </div>
+      <div class="deuda-form-row">
+        <div style="flex:1">
+          <label data-i18n="auto_37">MONTO</label>
+          <input id="deuda-monto" type="text" placeholder="Ej: S/. 850">
+        </div>
+        <div style="flex:1">
+          <label data-i18n="auto_38">FECHA DE PAGO</label>
+          <input id="deuda-fecha" type="date">
+        </div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn purple sm" id="btn-registrar-deuda" style="flex:1" onclick="addDeuda()" data-i18n="auto_39">✓ Registrar</button>
+        <button class="btn ghost sm" id="btn-cancelar-deuda" style="flex:1" onclick="closeDeudaForm()" data-i18n="auto_40">✗ Cancelar</button>
+      </div>
+    </div>
+
+    <!-- Lista de deudas -->
+    <div id="deudas-lista"></div>
+
+    <!-- Estado vacío -->
+    <div id="deudas-empty" style="display:none;text-align:center;padding:32px 0">
+      <div style="font-size:48px;margin-bottom:12px">✅</div>
+      <div style="font-size:16px;font-weight:700;color:var(--green)"><span data-i18n="deudasEmpty">Sin compromisos pendientes</span></div>
+      <div style="font-size:14px;color:var(--text3);margin-top:6px"><span data-i18n="deudasEmptySub">Todos los bucles están cerrados.</span></div>
+    </div>
+
+    <!-- Historial (oculto) -->
+    <div id="historial-block" style="display:none">
+      <div class="tag" style="padding:2px 0 8px;color:var(--teal)"><span data-i18n="deudasHistTag">HISTORIAL — BUCLES CERRADOS</span></div>
+      <div id="historial-lista" style="display:flex;flex-direction:column;gap:8px"></div>
+    </div>
+
+    <div class="spacer"></div>
+  </div>
+
+  <!-- Footer total -->
+  <div class="deudas-footer">
+    <div class="deudas-footer-lbl"><span data-i18n="deudasTotal">Total por procesar</span></div>
+    <div class="deudas-footer-total" id="deudas-total">—</div>
+  </div>
+
+</div>
+</div>
+
+
+

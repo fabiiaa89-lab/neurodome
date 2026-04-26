@@ -1,0 +1,52 @@
+<div class="screen" id="screen-profile">
+<div class="wrap">
+  <div class="profile-hdr">
+    <div class="back-btn" onclick="go('home',false)">←</div>
+    <div style="flex:1;font-size:16px;font-weight:700" id="profile-hdr-title" data-i18n="auto_136">Mi Perfil</div>
+  </div>
+  <div class="profile-body">
+    <!-- Avatar -->
+    <div class="profile-av-wrap">
+      <div class="profile-av" id="profile-av" onclick="openLightbox(C.imgUsuario, C.nombre||'')">🧑</div>
+      <div class="profile-name" id="profile-name-full">—</div>
+      <div class="profile-sub" data-i18n="auto_137">NEURO-DOME</div>
+    </div>
+
+    <!-- Info card -->
+    <div class="profile-info-card">
+      <div class="profile-info-row">
+        <span class="profile-info-lbl" id="pi-lbl-sangre" data-i18n="piSangreLbl">SANGRE</span>
+        <span class="profile-info-val" id="pi-sangre">—</span>
+      </div>
+      <div class="profile-info-row">
+        <span class="profile-info-lbl" id="pi-lbl-alergias" data-i18n="piAlergiasLbl">ALERGIAS</span>
+        <span class="profile-info-val" id="pi-alergias" style="font-size:13px;line-height:1.4">—</span>
+      </div>
+      <div class="profile-info-row">
+        <span class="profile-info-lbl" id="pi-lbl-mc" data-i18n="piCrisisLbl">CRISIS</span>
+        <span class="profile-info-val" id="pi-mc">—</span>
+      </div>
+      <div class="profile-info-row">
+        <span class="profile-info-lbl" id="pi-lbl-dir" data-i18n="piDirLbl">DIRECCIÓN</span>
+        <span class="profile-info-val" id="pi-dir" style="font-size:13px;line-height:1.4">—</span>
+      </div>
+    </div>
+
+    <!-- Language selector -->
+    <div class="profile-lang-row">
+      <span class="profile-lang-label" id="pi-lang-label" data-i18n="auto_138">🌐 Idioma / Language</span>
+      <div class="profile-lang-btns">
+        <button class="profile-lang-btn active" data-lang="es" onclick="setLang('es')" data-i18n="auto_139">🇪🇸 ES</button>
+        <button class="profile-lang-btn" data-lang="en" onclick="setLang('en')" data-i18n="auto_140">🇺🇸 EN</button>
+      </div>
+    </div>
+
+    <!-- Edit button -->
+    <button class="btn purple" style="height:52px;font-size:15px;font-weight:700" onclick="openSettings()" id="pi-edit-btn" data-i18n="auto_141">✏️ Editar perfil</button>
+    <div class="spacer"></div>
+  </div>
+</div>
+</div>
+
+
+

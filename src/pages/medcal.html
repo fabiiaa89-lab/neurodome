@@ -1,0 +1,44 @@
+<div class="screen" id="screen-medcal">
+<div class="wrap">
+  <div class="medcal-hdr">
+    <div class="back" onclick="goBack()">←</div>
+    <div style="flex:1">
+      <div class="tag" style="color:var(--teal)"><span data-i18n="medCalTag">HISTORIAL DE MEDICACIÓN</span></div>
+      <div style="font-size:16px;font-weight:700"><span data-i18n="medCalTitle">Calendario de tomas</span></div>
+    </div>
+    <div style="font-size:26px">📅</div>
+  </div>
+  <div class="medcal-body">
+    <div class="card">
+      <div class="card-hd"><span data-i18n="medCalHowHdr">📌 Cómo funciona</span></div>
+      <div class="card-bd" style="font-size:14px;color:var(--text2);line-height:1.7">
+        <span data-i18n="medCalHow">Cada vez que tocas <b data-i18n="auto_128">Entendido</b> en una alarma, ese día queda marcado como tomada. Si un día no confirmas, aparece en rojo. No es un juicio, es información.</span>
+      </div>
+    </div>
+
+    <div class="cal-month-hdr">
+      <div class="cal-nav" onclick="calPrevMonth()">‹</div>
+      <div class="cal-month-lbl" id="cal-month-lbl">—</div>
+      <div class="cal-nav" onclick="calNextMonth()">›</div>
+    </div>
+
+    <div class="cal-grid" id="cal-dow-row">
+      <div class="cal-dow">L</div><div class="cal-dow">M</div><div class="cal-dow">X</div>
+      <div class="cal-dow">J</div><div class="cal-dow">V</div><div class="cal-dow">S</div>
+      <div class="cal-dow">D</div>
+    </div>
+    <div class="cal-grid" id="cal-grid"></div>
+
+    <div class="cal-legend">
+      <div class="cal-leg-item"><div class="cal-leg-dot" style="background:var(--green);"></div> Tomada</div>
+      <div class="cal-leg-item"><div class="cal-leg-dot" style="background:var(--red);"></div> Olvidada</div>
+      <div class="cal-leg-item"><div class="cal-leg-dot" style="background:var(--surface);border:1px solid var(--purple);"></div> Hoy</div>
+    </div>
+
+    <div class="spacer"></div>
+  </div>
+</div>
+</div>
+
+
+

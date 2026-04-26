@@ -1,0 +1,65 @@
+<div class="screen" id="screen-comms">
+<div class="wrap">
+  <div class="comms-hdr">
+    <div class="back" onclick="goBack()">←</div>
+    <div>
+      <div class="tag" style="color:var(--purple)" data-i18n="commsTag">COMUNICACIÓN AUMENTATIVA</div>
+      <div style="font-size:16px;font-weight:700" data-i18n="commsTitle">Tarjetas de Comunicación</div>
+    </div>
+  </div>
+  <div class="comms-body">
+
+    <!-- ESTADO ACTUAL -->
+    <div class="tag" style="color:var(--text3);padding:2px 0 6px;letter-spacing:1.5px" data-i18n="auto_4">ESTADO ACTUAL</div>
+    <button class="comm-btn purple" onclick="showCard('noconozco')" data-i18n="auto_5">🌫️ No te reconozco ahora mismo</button>
+    <button class="comm-btn purple" onclick="showCard('hablar')" data-i18n="auto_6">🔇 No puedo hablar</button>
+    <button class="comm-btn purple" onclick="showCard('autista')" data-i18n="auto_7">♾️ Soy autista — instrucciones</button>
+
+    <!-- NECESITO -->
+    <div class="tag" style="color:var(--text3);padding:10px 0 6px;letter-spacing:1.5px" data-i18n="auto_8">NECESITO AHORA</div>
+    <button class="comm-btn teal" onclick="showCard('clona')" data-i18n="auto_9">💊 Necesito mi Clona</button>
+    <button class="comm-btn teal" onclick="showCard('agua')" data-i18n="auto_10">💧 Necesito tomar agua</button>
+    <button class="comm-btn teal" onclick="showCard('piso')" data-i18n="auto_11">🧘 Necesito acostarme en el piso</button>
+    <button class="comm-btn teal" onclick="showCard('presion')" data-i18n="auto_12">🫂 Necesito presión en el pecho</button>
+
+    <!-- SENSORIAL -->
+    <div class="tag" style="color:var(--text3);padding:10px 0 6px;letter-spacing:1.5px" data-i18n="auto_13">SENSORIAL</div>
+    <button class="comm-btn amber" onclick="showCard('ruido')" data-i18n="auto_14">🔊 Me molestan los ruidos</button>
+    <button class="comm-btn amber" onclick="showCard('luz')" data-i18n="auto_15">💡 Me molesta la luz</button>
+    <button class="comm-btn amber" onclick="showCard('audifonos')" data-i18n="auto_16">🎧 Necesito mis audífonos o loops</button>
+    <button class="comm-btn amber" onclick="showCard('gafas')" data-i18n="auto_17">🕶️ Necesito mis gafas de sol</button>
+    <button class="comm-btn amber" onclick="showCard('fidget')" data-i18n="auto_18">🪀 Necesito un fidget toy</button>
+
+    <!-- EMERGENCIA -->
+    <div class="tag" id="comms-tag-emergencia" style="color:var(--text3);padding:10px 0 6px;letter-spacing:1.5px" data-i18n="auto_19">EMERGENCIA</div>
+    <button class="comm-btn red" id="comms-btn-emergencia" onclick="showCard('emergencia')" data-i18n="auto_20">🏥 EMERGENCIA — llamar contacto</button>
+
+    <!-- PERSONALIZADAS -->
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0 6px;">
+      <div class="tag" id="cc-tag" style="color:var(--text3);letter-spacing:1.5px" data-i18n="auto_21">MIS TARJETAS</div>
+      <button class="btn ghost xs" id="cc-btn-create" style="width:auto; padding:0 10px; height:30px; min-height:30px; font-size:12px;" onclick="openCustomCardForm()" data-i18n="auto_22">➕ Crear</button>
+    </div>
+    
+    <div class="custom-card-form" id="custom-card-form">
+      <div style="font-size:14px;font-weight:700;color:var(--purple)" id="cc-new-title" data-i18n="auto_23">Nueva Tarjeta</div>
+      <div style="display:flex; gap:8px;">
+        <input id="cc-icon" type="text" placeholder="Emoji (ej: 🐶)" style="width:60px; text-align:center;">
+        <input id="cc-title" type="text" placeholder="Título corto" style="flex:1;">
+      </div>
+      <textarea id="cc-text" placeholder="Mensaje principal (ej: Necesito a mi perro de asistencia)"></textarea>
+      <input id="cc-sub" type="text" placeholder="Instrucción secundaria (opcional)">
+      <div style="display:flex;gap:8px;margin-top:4px;">
+        <button class="btn purple sm" id="cc-btn-save" style="flex:1" onclick="saveCustomCard()" data-i18n="auto_24">Guardar</button>
+        <button class="btn ghost sm" id="cc-btn-cancel" style="flex:1" onclick="closeCustomCardForm()" data-i18n="auto_25">Cancelar</button>
+      </div>
+    </div>
+
+    <div id="custom-cards-container"></div>
+
+    <div class="spacer"></div>
+  </div>
+</div>
+</div>
+
+
+

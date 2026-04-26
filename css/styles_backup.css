@@ -1,4 +1,4 @@
-
+﻿
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap');
 
 /* Global scrollbar styling */
@@ -7,9 +7,9 @@
 ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
 * { scrollbar-width: thin; scrollbar-color: var(--border2) transparent; }
 
-/* ═══════════════════════════════════════
-   TOKENS DE DISEÑO
-═══════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   TOKENS DE DISEÃ‘O
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 :root {
   --bg:       #1a1a1a;
   --surface:  #242424;
@@ -54,30 +54,28 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── SCREEN LAYER ── */
+/* â”€â”€ SCREEN LAYER â”€â”€ */
 .screen { position:fixed; inset:0; display:none; flex-direction:column; overflow:hidden; background:var(--bg); color:var(--text); height:100dvh; }
 .screen.active { display:flex; }
 
-/* ── CENTRADO / CONTENEDOR ── */
+/* â”€â”€ CENTRADO / CONTENEDOR â”€â”€ */
 .wrap {
   width:100%; max-width:520px;
   margin:0 auto;
   min-height:0;
   height:100%;
-  display: flex;
-  flex-direction: column;
 }
 
-/* ═══════════════════════════════════════
-   TIPOGRAFÍA BASE
-═══════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   TIPOGRAFÃA BASE
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .tag { font-family:var(--mono); font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--text3); }
 h1 { font-size:24px; font-weight:700; line-height:1.2; }
 h2 { font-size:20px; font-weight:700; line-height:1.25; }
 
-/* ═══════════════════════════════════════
-   BOTONES — altura fija 55px, flex centrado
-═══════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   BOTONES â€” altura fija 55px, flex centrado
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .btn {
   width:100%;
   height:55px;
@@ -106,19 +104,19 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .btn.yn.yes { background:var(--green); color:#fff; }
 .btn.yn.no  { background:var(--surface3); border:1.5px solid var(--border2); color:var(--text2); }
 
-/* ── PILLS ── */
+/* â”€â”€ PILLS â”€â”€ */
 .pills { display:flex; flex-wrap:wrap; gap:6px; }
 .pill { padding:7px 13px; border-radius:30px; font-size:14px; font-weight:500; border:1px solid var(--border2); background:var(--surface2); color:var(--text2); }
 .pill.g { border-color:var(--green); color:var(--green); background:var(--green-bg); }
 .pill.a { border-color:var(--amber); color:var(--amber); background:var(--amber-bg); }
 .pill.r { border-color:var(--red);   color:var(--red);   background:var(--red-bg);   }
 
-/* ── CARD ── */
+/* â”€â”€ CARD â”€â”€ */
 .card { background:var(--surface); border:1px solid var(--border); border-radius:var(--r); }
 .card-hd { padding:12px 16px; background:var(--surface2); border-bottom:1px solid var(--border); border-radius:var(--r) var(--r) 0 0; font-family:var(--sans); font-size:14px; font-weight:700; letter-spacing:.2px; color:var(--text2); }
 .card-bd { padding:15px; word-wrap:break-word; overflow-wrap:break-word; }
 
-/* ── STEP LIST ── */
+/* â”€â”€ STEP LIST â”€â”€ */
 .slist { display:flex; flex-direction:column; }
 .srow { display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-bottom:1px solid var(--border); }
 .srow:last-child { border-bottom:none; padding-bottom:0; }
@@ -132,11 +130,11 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .stxt b { color:var(--text); font-weight:700; }
 .stxt em { font-style:normal; color:var(--amber); font-weight:700; }
 
-/* ── BACK BUTTON ── */
+/* â”€â”€ BACK BUTTON â”€â”€ */
 .back { width:46px; height:46px; border-radius:50%; background:rgba(255,255,255,.07); border:1px solid var(--border2); display:flex; align-items:center; justify-content:center; font-size:18px; cursor:pointer; flex-shrink:0; }
 .back:active { opacity:.6; }
 
-/* ── CONTACT STRIP ── */
+/* â”€â”€ CONTACT STRIP â”€â”€ */
 .cstrip { display:flex; align-items:center; gap:12px; padding:13px 15px; background:var(--surface); border:1px solid var(--border); border-radius:var(--r); }
 .cav { width:48px; height:48px; border-radius:50%; background:var(--surface2); border:2px solid var(--green); display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0; overflow:hidden; }
 .cav img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
@@ -148,9 +146,9 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .gap6  { height:6px;  flex-shrink:0; }
 .gap10 { height:10px; flex-shrink:0; }
 
-/* ═══════════════════════════════════════
-   SETUP — Acordeón
-═══════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   SETUP â€” AcordeÃ³n
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #screen-setup { background:var(--bg); }
 .setup-hero {
   background:linear-gradient(160deg,#1e1c2e 0%,#1a1a1a 100%);
@@ -162,7 +160,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .setup-lang-corner {
   position:absolute; top:14px; right:14px;
 }
-/* Sliding lang toggle — shared style for setup + hamburger */
+/* Sliding lang toggle â€” shared style for setup + hamburger */
 .lang-slide {
   position:relative; width:72px; height:32px; border-radius:16px;
   background:var(--surface3); border:1.5px solid var(--border2); cursor:pointer;
@@ -220,23 +218,23 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 /* Required field asterisk */
 .req { color:var(--red); margin-left:2px; font-weight:900; }
 
-/* ── ACORDEÓN ──────────────────────────────────────────────
+/* â”€â”€ ACORDEÃ“N â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    ARQUITECTURA:
-   - .acc-item NO tiene overflow:hidden — permite que el body
+   - .acc-item NO tiene overflow:hidden â€” permite que el body
      crezca libremente sin aplastar a los hermanos
    - .acc-trigger tiene altura FIJA de 62px con flex centrado
-   - .acc-body cerrado: display:none  → no ocupa espacio
+   - .acc-body cerrado: display:none  â†’ no ocupa espacio
    - .acc-body abierto: display:block + max-height fija + scroll
-──────────────────────────────────────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .acc-item {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r);
-  /* SIN overflow:hidden — es lo que aplastaba los demás */
+  /* SIN overflow:hidden â€” es lo que aplastaba los demÃ¡s */
   flex-shrink: 0;  /* impide que flex-column lo comprima */
 }
 
-/* Header del acordeón — altura fija, flex, todo centrado */
+/* Header del acordeÃ³n â€” altura fija, flex, todo centrado */
 .acc-trigger {
   width: 100%;
   height: 62px;
@@ -244,10 +242,10 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
   max-height: 62px;
   background: var(--surface2);
   border: none;
-  border-radius: var(--r);       /* esquinas redondeadas mientras está cerrado */
+  border-radius: var(--r);       /* esquinas redondeadas mientras estÃ¡ cerrado */
   padding: 0 14px 0 14px;
   display: flex;
-  align-items: center;           /* centra verticalmente ícono + texto + flecha */
+  align-items: center;           /* centra verticalmente Ã­cono + texto + flecha */
   justify-content: flex-start;
   cursor: pointer;
   text-align: left;
@@ -260,11 +258,11 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .acc-trigger:active  { background: var(--surface3); }
 .acc-trigger.open    {
   background: var(--surface3);
-  border-radius: var(--r) var(--r) 0 0;  /* sólo esquinas superiores redondeadas */
+  border-radius: var(--r) var(--r) 0 0;  /* sÃ³lo esquinas superiores redondeadas */
   border-bottom: 1px solid var(--border);
 }
 
-/* Ícono — caja cuadrada fija, flex centrado, sin saltar */
+/* Ãcono â€” caja cuadrada fija, flex centrado, sin saltar */
 .acc-icon {
   flex-shrink: 0;
   width: 30px;
@@ -314,8 +312,8 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 }
 .acc-trigger.open .acc-arrow { transform: rotate(180deg); }
 
-/* Cuerpo del acordeón
-   - CERRADO: display:none → 0 espacio, 0 impacto en hermanos
+/* Cuerpo del acordeÃ³n
+   - CERRADO: display:none â†’ 0 espacio, 0 impacto en hermanos
    - ABIERTO: max-height fija + overflow-y:scroll = scroll contenido
    - touch-action:pan-y evita que el scroll se escape al padre en iOS
 */
@@ -327,15 +325,15 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .acc-body.open {
   display: block;
   max-height: 340px;
-  overflow-y: scroll;           /* scroll siempre visible, no auto — más predecible */
-  overscroll-behavior-y: contain;  /* contiene el scroll dentro del acordeón */
+  overflow-y: scroll;           /* scroll siempre visible, no auto â€” mÃ¡s predecible */
+  overscroll-behavior-y: contain;  /* contiene el scroll dentro del acordeÃ³n */
   touch-action: pan-y;          /* iOS: solo scroll vertical, no propaga al padre */
   /* Scrollbar sutil */
   scrollbar-width: thin;
   scrollbar-color: var(--border2) transparent;
 }
 
-/* ── CAMPOS DE FORMULARIO ── */
+/* â”€â”€ CAMPOS DE FORMULARIO â”€â”€ */
 .sfield { padding: 14px 16px; border-bottom: 1px solid var(--border); }
 .sfield:last-child {
   border-bottom: none;
@@ -357,7 +355,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
   color:var(--text);
   font-family:var(--sans);
   font-size:16px;
-  padding:0 15px;               /* padding lateral, sin padding vertical — height lo controla */
+  padding:0 15px;               /* padding lateral, sin padding vertical â€” height lo controla */
   line-height:55px;             /* igual a height para centrado vertical exacto */
   outline:none;
   display:block;
@@ -410,15 +408,14 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .file-label b { color:var(--text); display:block; font-size:15px; margin-bottom:2px; }
 .fhint { font-size:12px; color:var(--text3); margin-top:5px; line-height:1.5; }
 
-/* ═══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    HOME
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #screen-home { background:var(--bg); }
 .home-hdr {
   display:flex; align-items:center; justify-content:space-between;
   padding:12px 14px; border-bottom:1px solid var(--border); flex-shrink:0; gap:8px;
   margin:0;
-  height: 64px;
 }
 .h-brand { flex:1; min-width:0; margin:0; }
 .h-appname {
@@ -508,8 +505,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .profile-lang-btn.active { background:var(--purple); border-color:var(--purple); color:#fff; }
 .home-body { 
   flex:1; overflow-y:auto; min-height:0; padding:0 14px 12px; 
-  display:flex; flex-direction:column;
-  justify-content: flex-start !important;
+  display:block;
 }
 .home-body > * { margin-top: 6px; }
 .home-body > *:first-child { margin-top: 0 !important; }
@@ -541,7 +537,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
   background:var(--text); border:2px solid var(--bg); cursor:pointer;
 }
 
-/* SOS — botón prominente */
+/* SOS â€” botÃ³n prominente */
 .sos-main-btn {
   width:100%; height:68px;
   background:var(--red);
@@ -573,7 +569,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .sec-btn.deudas  { border-color:var(--green);  background:var(--green-bg);  }
 .sec-btn.deudas .lbl   { color:var(--green); }
 
-/* Botones de nivel — ancho completo, colores semáforo */
+/* Botones de nivel â€” ancho completo, colores semÃ¡foro */
 .lvl-btn {
   width:100%; min-height:72px; height:auto;
   display:flex; align-items:center; gap:13px; padding:12px 16px;
@@ -608,10 +604,10 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 /* Fila botones inferiores */
 .bottom-row { display:flex; gap:8px; }
 
-/* ═══════════════════════════════════════
-   SOS — MODO EMERGENCIA: FONDO BLANCO
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   SOS â€” MODO EMERGENCIA: FONDO BLANCO
    Legible a distancia por terceros
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #screen-sos {
   background:#ffffff !important;
   color:#111111 !important;
@@ -639,7 +635,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 
 .sos-body { flex:1; overflow-y:auto; padding:10px 14px; display:flex; flex-direction:column; gap:12px; }
 
-/* Banner principal — rojo con texto blanco */
+/* Banner principal â€” rojo con texto blanco */
 .sos-banner {
   background:#cc2030;
   border-radius:10px;
@@ -649,7 +645,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .sos-banner-main { font-size:26px; font-weight:900; color:#fff; line-height:1.25; }
 .sos-banner-rules { font-size:15px; font-weight:700; color:rgba(255,255,255,.88); margin-top:10px; line-height:1.7; }
 
-/* Tarjeta de datos — letras negras, fondo blanco */
+/* Tarjeta de datos â€” letras negras, fondo blanco */
 .sos-data { background:#fff; border:2px solid #ddd; border-radius:10px; overflow:hidden; }
 .sos-data-hdr { background:#f5f5f5; border-bottom:2px solid #ddd; padding:10px 15px; font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#555; }
 .sos-row2 { display:flex; gap:0; border-bottom:1px solid #e8e8e8; }
@@ -669,7 +665,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .sos-lbl-sm { font-size:10px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#888; margin-bottom:3px; }
 .sos-nombre-big { font-size:22px; font-weight:900; color:#111; line-height:1.1; }
 
-/* Botón de WhatsApp en SOS */
+/* BotÃ³n de WhatsApp en SOS */
 .sos-wa-btn {
   width:100%; height:62px;
   background:#229944; border:none; border-radius:10px;
@@ -685,16 +681,16 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 }
 .sos-call-btn:active { opacity:.8; }
 
-/* ═══════════════════════════════════════
-   PANTALLAS DE NIVEL — header band
-═══════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   PANTALLAS DE NIVEL â€” header band
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .ls-hdr { padding:16px; flex-shrink:0; display:flex; align-items:flex-start; gap:12px; }
 .ls-body { flex:1; overflow-y:auto; min-height:0; padding:0 14px 24px; display:flex; flex-direction:column; gap:10px;
   scrollbar-width:thin; scrollbar-color:var(--border2) transparent; }
 
-/* ═══════════════════════════════════════
-   ESCÁNER
-═══════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   ESCÃNER
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #screen-scanner { background:#0c1410; padding:0; }
 .scan-hdr { background:var(--teal); padding:16px 16px 10px; flex-shrink:0; display:flex; align-items:center; gap:12px; }
 .scan-hdr .back { background:rgba(0,0,0,.2); border:none; color:#fff; }
@@ -717,9 +713,9 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .scan-result-detail b { color:var(--teal); }
 .scan-result-actions { display:flex; flex-direction:column; gap:8px; }
 
-/* ═══════════════════════════════════════
-   DEUDAS — Módulo financiero
-═══════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   DEUDAS â€” MÃ³dulo financiero
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #screen-deudas { background:var(--bg); padding:0; }
 .deudas-hdr { background:var(--bg); padding:14px 16px; flex-shrink:0; display:flex; align-items:center; gap:12px; border-bottom:1px solid var(--border); }
 .deudas-body { flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:10px; }
@@ -761,9 +757,9 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .deudas-footer-lbl { font-family:var(--mono); font-size:11px; letter-spacing:1px; color:var(--text3); text-transform:uppercase; }
 .deudas-footer-total { font-size:20px; font-weight:900; font-family:var(--mono); color:var(--amber); }
 
-/* ═══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    CAVE
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #screen-cave { background:#111111 !important; color: #3a3a3a !important; align-items:center; justify-content:center; padding:36px; gap:24px; }
 .cave-icon  { font-size:52px; opacity:.25; }
 .cave-title { font-family:var(--mono); font-size:12px; letter-spacing:4px; color:#404040; text-transform:uppercase; text-align:center; }
@@ -772,9 +768,9 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .cave-exit-lbl { font-size:12px; font-family:var(--mono); letter-spacing:2px; color:#3a3a3a; }
 .cave-timer { font-family:var(--mono); font-size:44px; color:#2a2a2a; margin-top:6px; letter-spacing:3px; }
 
-/* ═══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    MEDICATION
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #screen-medication { background:#a07000; align-items:center; justify-content:center; padding:28px; text-align:center; gap:0; }
 .med-shake { font-size:66px; animation:sh .5s infinite; }
 @keyframes sh { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
@@ -784,14 +780,14 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .med-ok  { width:100%; max-width:360px; height:60px; background:#111; border:none; border-radius:14px; font-family:var(--sans); font-size:18px; font-weight:900; color:#d4a020; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; }
 .med-ok:active { opacity:.85; }
 
-/* ═══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    COMMS
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #screen-comms-display { background:#0e0e0e; align-items:center; justify-content:center; padding:24px; text-align:center; gap:16px; }
 .cd-icon { font-size:78px; }
 .cd-text { font-size:22px; font-weight:700; color:var(--text); line-height:1.4; max-width:310px; white-space:pre-line; }
 .cd-sub  { font-size:12px; font-family:var(--mono); letter-spacing:1.5px; color:var(--text3); max-width:310px; }
-/* ── COMM BUTTONS — tarjetas de comunicación ── */
+/* â”€â”€ COMM BUTTONS â€” tarjetas de comunicaciÃ³n â”€â”€ */
 .comm-btn {
   width: 100%;
   min-height: 58px;
@@ -819,9 +815,9 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .comms-hdr  { background:var(--surface2); border-bottom:1px solid var(--border); padding:14px 16px; display:flex; align-items:center; gap:12px; flex-shrink:0; }
 .comms-body { flex:1; overflow-y:auto; padding:13px; display:flex; flex-direction:column; gap:9px; }
 
-/* ═══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    OVERLAY
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .ov { position:fixed; inset:0; background:rgba(0,0,0,.88); z-index:200; display:none; align-items:center; justify-content:center; padding:18px; }
 .ov.active { display:flex; }
 .ovc { background:var(--surface); border:1px solid var(--border2); border-radius:var(--r-lg); padding:24px; width:100%; max-width:380px; text-align:center; }
@@ -830,10 +826,10 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .ov-text  { font-size:14px; color:var(--text2); line-height:1.65; margin-bottom:20px; }
 .ov-actions { display:flex; flex-direction:column; gap:9px; }
 
-/* ── Img cover util ── */
+/* â”€â”€ Img cover util â”€â”€ */
 .card-img-cover { width:100%; max-height:150px; object-fit:cover; display:block; border-radius:var(--r); cursor:pointer; }
 
-/* ── IMAGE LIGHTBOX ── */
+/* â”€â”€ IMAGE LIGHTBOX â”€â”€ */
 #img-lightbox {
   position:fixed; inset:0; z-index:9000;
   background:rgba(0,0,0,.92);
@@ -851,7 +847,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .lb-label { font-size:15px; color:var(--text2); font-weight:600; text-align:center; }
 .lb-close { font-size:12px; color:var(--text3); font-family:var(--mono); letter-spacing:1px; cursor:pointer; padding:10px 24px; }
 
-/* ── MED CALENDAR SCREEN ── */
+/* â”€â”€ MED CALENDAR SCREEN â”€â”€ */
 #screen-medcal { background:var(--bg); padding:0; }
 .medcal-hdr { background:var(--bg); padding:14px 16px; flex-shrink:0; display:flex; align-items:center; gap:12px; border-bottom:1px solid var(--border); }
 .medcal-body { flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:12px; }
@@ -867,7 +863,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 }
 .cal-day.today { border-color:var(--purple); color:var(--purple); }
 .cal-day.taken { background:var(--green-bg); border-color:var(--green); color:var(--green); }
-.cal-day.taken::after { content:'✓'; font-size:10px; position:absolute; }
+.cal-day.taken::after { content:'âœ“'; font-size:10px; position:absolute; }
 .cal-day { position:relative; }
 .cal-day.missed { background:var(--red-bg); border-color:var(--red); color:var(--red); }
 .cal-day.empty  { background:transparent; border-color:transparent; cursor:default; }
@@ -876,7 +872,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .cal-leg-item { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--text2); }
 .cal-leg-dot { width:12px; height:12px; border-radius:3px; }
 
-/* ── ALARM MANAGER SCREEN ── */
+/* â”€â”€ ALARM MANAGER SCREEN â”€â”€ */
 #screen-medication { background:var(--bg); padding:0; }
 .alarm-hdr { background:var(--bg); padding:14px 16px; flex-shrink:0; display:flex; align-items:center; gap:12px; border-bottom:1px solid var(--border); }
 .alarm-body { flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:10px; }
@@ -919,7 +915,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 }
 .day-btn.active { background:var(--amber-bg); border-color:var(--amber); color:var(--amber); }
 
-/* ── EMOTIONAL SUPPORT SCREEN ── */
+/* â”€â”€ EMOTIONAL SUPPORT SCREEN â”€â”€ */
 #screen-emotional { background:var(--bg); padding:0; }
 .emo-hdr { background:var(--bg); padding:14px 16px; flex-shrink:0; display:flex; align-items:center; gap:12px; border-bottom:1px solid var(--border); }
 .emo-body { flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:12px; }
@@ -937,7 +933,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .emo-gen-btn { width:100%; height:58px; background:linear-gradient(135deg,var(--teal),var(--purple)); border:none; border-radius:var(--r); font-family:var(--sans); font-size:16px; font-weight:700; color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; }
 .emo-gen-btn:active { opacity:.85; }
 
-/* ── LANGUAGE SWITCH ── */
+/* â”€â”€ LANGUAGE SWITCH â”€â”€ */
 .lang-switcher { display:flex; gap:8px; align-items:center; margin-top:8px; }
 .lang-btn {
   flex:1; height:44px; border-radius:10px; border:1.5px solid var(--border2);
@@ -946,7 +942,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 }
 .lang-btn.active { border-color:var(--purple); background:var(--purple-bg); color:var(--purple); }
 
-/* ── ISOCHRONIC TONES SCREEN ── */
+/* â”€â”€ ISOCHRONIC TONES SCREEN â”€â”€ */
 #screen-isochronic { background:var(--bg); padding:0; }
 .iso-hdr { background:var(--bg); padding:14px 16px; flex-shrink:0; display:flex; align-items:center; gap:12px; border-bottom:1px solid var(--border); }
 .iso-body { flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:12px; }
@@ -989,7 +985,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .recipe-card-steps { font-size:14px; color:var(--text2); line-height:1.75; }
 .recipe-loading { text-align:center; padding:32px; color:var(--text3); font-family:var(--mono); font-size:13px; }
 #advanced-section { display:flex; flex-direction:column; gap:9px; }
-/* ══ SPLASH SCREEN ══ */
+/* â•â• SPLASH SCREEN â•â• */
 #screen-splash {
   position:fixed; inset:0; z-index:9999;
   background:#111; display:flex; flex-direction:column;
@@ -1024,7 +1020,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
   0%   { opacity:0; transform:translateY(10px); }
   100% { opacity:1; transform:translateY(0); }
 }
-/* ══ SUBSCRIPTION SCREEN ══ */
+/* â•â• SUBSCRIPTION SCREEN â•â• */
 #screen-subscription { background:var(--bg); }
 .sub-hdr { padding:13px 16px 10px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:12px; flex-shrink:0; }
 .sub-body { flex:1; overflow-y:auto; min-height:0; padding:12px 16px 20px; display:flex; flex-direction:column; gap:16px; }
@@ -1054,7 +1050,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 [data-theme="rainbow"] #screen-l5 { background: #00060f !important; }
 .sub-legal { text-align:center; font-size:11px; color:var(--text3); line-height:1.7; padding:0 8px 8px; }
 
-/* ══ THEME: LIGHT ══ */
+/* â•â• THEME: LIGHT â•â• */
 [data-theme="light"] {
   --bg:        #f5f5f7;
   --surface:   #ffffff;
@@ -1113,7 +1109,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 [data-theme="light"] .setup-hero  { background: var(--surface); border-bottom: 1px solid var(--border); }
 
 
-/* ══ THEME: RAINBOW (∞ autismo) ══ */
+/* â•â• THEME: RAINBOW (âˆž autismo) â•â• */
 [data-theme="rainbow"] {
   --bg:        #0d0d1a;
   --surface:   #131325;
@@ -1210,7 +1206,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
   100% { background-position: 200% 50%; }
 }
 
-/* ══ APPEARANCE SUBMENU ══ */
+/* â•â• APPEARANCE SUBMENU â•â• */
 .hmenu-submenu {
   overflow:hidden; max-height:0;
   transition: max-height .3s cubic-bezier(.4,0,.2,1);
@@ -1234,21 +1230,3 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 .hmenu-sub-item.active .theme-check { opacity:1; }
 .h-menu-item-arrow { margin-left:auto; font-size:12px; color:var(--text3); transition:transform .25s; }
 .h-menu-item-arrow.open { transform:rotate(90deg); }
-
-.mute-btn-floating {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 9999;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--surface2);
-  border: 1.5px solid var(--border2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,.5);
-}
