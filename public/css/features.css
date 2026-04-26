@@ -1,0 +1,118 @@
+/* ═══════════════════════════════════════
+   FEATURES CSS (Nuevas Funciones)
+═══════════════════════════════════════ */
+
+/* Botón de Silencio Global */
+body.global-mute {
+  filter: grayscale(100%) brightness(0.5) contrast(1.2) !important;
+  transition: filter 0.3s ease;
+}
+
+.mute-btn-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: var(--surface2);
+  border: 2px solid var(--border2);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 9000;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: all 0.2s;
+}
+.mute-btn-floating.active {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+/* Cucharas (Spoon Tracker) */
+#screen-cucharas { background: var(--bg); padding: 0; }
+.spoon-hdr { background: var(--bg); padding: 14px 16px; flex-shrink: 0; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--border); }
+.spoon-body { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 12px; }
+.spoon-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px 0;
+}
+.spoon-icon {
+  font-size: 32px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.spoon-icon.used {
+  opacity: 0.2;
+  filter: grayscale(100%);
+}
+.spoon-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Tarjetas Personalizadas */
+.custom-card-form {
+  background: var(--surface);
+  border: 1px solid var(--purple);
+  border-radius: var(--r);
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.custom-card-form input, .custom-card-form textarea {
+  width: 100%;
+  background: var(--surface2);
+  border: 1.5px solid var(--border2);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: var(--sans);
+  padding: 10px 14px;
+  outline: none;
+}
+.custom-card-form textarea { height: 80px; resize: none; }
+
+/* Mini Widget Batería */
+.mini-battery-widget {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 8500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: none; /* Hidden by default, toggled in settings or always on */
+}
+.mini-battery-widget.visible {
+  display: flex;
+}
+
+/* Print Styles for PDF Export */
+@media print {
+  body { background: #fff !important; color: #000 !important; filter: none !important; }
+  .screen { display: none !important; position: static !important; }
+  #screen-sos { display: flex !important; }
+  .sos-back-bar, .sos-wa-btn, .sos-call-btn, .mute-btn-floating, .mini-battery-widget, .btn { display: none !important; }
+  .sos-wrap { max-width: 100% !important; margin: 0 !important; }
+  .sos-data { border: 1px solid #000 !important; break-inside: avoid; margin-bottom: 15px; }
+}
