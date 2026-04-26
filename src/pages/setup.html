@@ -13,7 +13,7 @@
       </div>
     <div class="setup-hero-brand">
       <div class="setup-hero-logo">
-        <img src="./icono_neurodome.png" onerror="this.parentElement.textContent='♾️'">
+        <img src="icono_neurodome.png" onerror="this.parentElement.textContent='♾️'">
       </div>
       <div class="setup-hero-appname">NEURO<span data-i18n="auto_155">-DOME</span></div>
     </div>
@@ -39,12 +39,12 @@
       <div class="acc-body open" style="display:block;background:#080e18">
         <div class="sfield" style="border-color:#1a3a5a">
           <label style="color:#60b0f0"><span data-i18n="sosNombreLbl">NOMBRE COMPLETO</span> <span style="color:#d93545">*</span></label>
-          <input id="cfg-nombre" type="text" placeholder="Ej: José Aponte Torres" autocomplete="off" required>
+          <input id="cfg-nombre" type="text" placeholder="Ej: José Aponte Torres" data-i18n-placeholder="ph_name" autocomplete="off" required>
           <div class="field-error" id="err-nombre" data-i18n="auto_164">Campo obligatorio</div>
         </div>
         <div class="sfield" style="border-color:#1a3a5a">
           <label style="color:#60b0f0"><span data-i18n="cfgTelLbl">TELÉFONO MÓVIL</span></label>
-          <input id="cfg-telefono" type="tel" placeholder="Ej: 51987654321" autocomplete="off">
+          <input id="cfg-telefono" type="tel" placeholder="Ej: 51987654321" data-i18n-placeholder="ph_tel" autocomplete="off">
         </div>
       </div>
     </div>
@@ -62,18 +62,18 @@
       <div class="acc-body open" style="display:block;background:#120404">
         <div class="sfield" style="border-color:#3a1a1a">
           <label style="color:#e86060">NOMBRE Y APELLIDOS <span style="color:#d93545">*</span></label>
-          <input id="cfg-cn" type="text" placeholder="Ej: María García" autocomplete="off" required>
+          <input id="cfg-cn" type="text" placeholder="Ej: María García" data-i18n-placeholder="auto_165" autocomplete="off" required>
           <div class="field-error" id="err-cn" data-i18n="auto_167">Campo obligatorio</div>
         </div>
         <div class="sfield" style="border-color:#3a1a1a">
           <label style="color:#e86060">TELÉFONO / WHATSAPP <span style="color:#d93545">*</span></label>
-          <input id="cfg-ct" type="tel" placeholder="Ej: 51987654321" autocomplete="off" required>
+          <input id="cfg-ct" type="tel" placeholder="Ej: 51987654321" data-i18n-placeholder="ph_tel" autocomplete="off" required>
           <div class="fhint" style="margin-top:6px" data-i18n="auto_168">Con código de país. Sin el +. Ej: 51 para Perú, 58 Venezuela, 57 Colombia.</div>
           <div class="field-error" id="err-ct" data-i18n="auto_169">Campo obligatorio</div>
         </div>
         <div class="sfield" style="border-color:#3a1a1a">
           <label style="color:#e86060" data-i18n="auto_170">RELACIÓN (opcional)</label>
-          <input id="cfg-apoyo-rel" type="text" placeholder="Ej: mamá, pareja, mejor amiga" autocomplete="off">
+          <input id="cfg-apoyo-rel" type="text" placeholder="Ej: mamá, pareja, mejor amiga" data-i18n-placeholder="ph_rel" autocomplete="off">
         </div>
       </div>
     </div>
@@ -132,20 +132,20 @@
       <div class="acc-body" style="background:#160606">
         <div class="sfield" style="border-color:#5a1a1a">
           <label style="color:#f07070"><span data-i18n="sosSangreLbl">TIPO DE SANGRE</span></label>
-          <input id="cfg-sangre" type="text" placeholder="Ej: A+" autocomplete="off">
+          <input id="cfg-sangre" type="text" placeholder="Ej: A+" data-i18n-placeholder="ph_blood" autocomplete="off">
         </div>
         <div class="sfield" style="border-color:#5a1a1a">
           <label style="color:#f07070" data-i18n="auto_182">ALERGIAS (separadas por coma)</label>
-          <input id="cfg-alergias" type="text" placeholder="Ej: Penicilina, Ibuprofeno, Látex" autocomplete="off">
+          <input id="cfg-alergias" type="text" placeholder="Ej: Penicilina, Ibuprofeno, Látex" data-i18n-placeholder="ph_allergies" autocomplete="off">
           <div class="fhint" style="margin-top:7px" data-i18n="auto_183">Visible en la pantalla SOS para personal médico.</div>
         </div>
         <div class="sfield" style="border-color:#5a1a1a">
           <label style="color:#f07070" data-i18n="auto_184">MEDICAMENTO DE CRISIS (Nivel 1)</label>
-          <input id="cfg-mc" type="text" placeholder="Ej: Clonazepam 2mg" autocomplete="off">
+          <input id="cfg-mc" type="text" placeholder="Ej: Clonazepam 2mg" data-i18n-placeholder="ph_med" autocomplete="off">
         </div>
         <div class="sfield" style="border-color:#5a1a1a">
           <label style="color:#f07070" data-i18n="auto_185">MEDICAMENTO DIARIO (separar varios con coma)</label>
-          <input id="cfg-md" type="text" placeholder="Ej: Sertralina 100mg, Melatonina 5mg" autocomplete="off">
+          <input id="cfg-md" type="text" placeholder="Ej: Sertralina 100mg, Melatonina 5mg" data-i18n-placeholder="ph_daily" autocomplete="off">
         </div>
       </div>
     </div>
@@ -163,16 +163,16 @@
       <div class="acc-body" style="background:#120e02">
         <div class="sfield" style="border-color:#4a3a0a">
           <label style="color:#e0b030" data-i18n="auto_188">HIPERSENSIBILIDADES (separadas por coma)</label>
-          <input id="cfg-hiper" type="text" placeholder="Ej: ruidos agudos, luces fuertes, multitudes" autocomplete="off">
+          <input id="cfg-hiper" type="text" placeholder="Ej: ruidos agudos, luces fuertes, multitudes" data-i18n-placeholder="ph_hiper" autocomplete="off">
           <div class="fhint" style="margin-top:7px" data-i18n="auto_189">Estímulos que te sobrecargan. La IA y el escáner usan esta información.</div>
         </div>
         <div class="sfield" style="border-color:#4a3a0a">
           <label style="color:#e0b030" data-i18n="auto_190">HIPOSENSIBILIDADES (separadas por coma)</label>
-          <input id="cfg-hipo" type="text" placeholder="Ej: temperatura extrema, dolor físico" autocomplete="off">
+          <input id="cfg-hipo" type="text" placeholder="Ej: temperatura extrema, dolor físico" data-i18n-placeholder="ph_hipo" autocomplete="off">
         </div>
         <div class="sfield" style="border-color:#4a3a0a">
           <label style="color:#e0b030" data-i18n="auto_191">DISPARADORES / TRIGGERS (separados por coma)</label>
-          <input id="cfg-triggers" type="text" placeholder="Ej: cambios de planes, ruido inesperado" autocomplete="off">
+          <input id="cfg-triggers" type="text" placeholder="Ej: cambios de planes, ruido inesperado" data-i18n-placeholder="ph_triggers" autocomplete="off">
         </div>
       </div>
     </div>
@@ -189,15 +189,15 @@
       </button>
       <div class="acc-body" style="background:#0c0618">
         <div style="padding:13px 16px 10px;border-bottom:1px solid #2a1840;font-size:13px;color:#9060c0;line-height:1.6" data-i18n="auto_194">Estos detalles son tu arquitectura interna. No son rarezas — son el sistema con el que funciona tu cerebro.</div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_195">COMIDA SEGURA (separada por coma)</label><input id="cfg-comida" type="text" placeholder="Ej: Yogurt, Frutos secos, Arroz blanco" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_196">MI LUGAR FIJO</label><input id="cfg-lugar-fijo" type="text" placeholder="Ej: El sillón izquierdo, la esquina del café" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_197">MIS RUTAS HABITUALES</label><textarea id="cfg-rutas" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Al trabajo por Av. Principal…"></textarea></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_198">QUÉ PASA SI MI RUTA CAMBIA</label><input id="cfg-ruta-cambio" type="text" placeholder="Ej: Me desregulo, entro en pánico…" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_199">MIS RITUALES DE INICIO</label><textarea id="cfg-rituales" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Revisar llaves 3 veces, tocar la puerta…"></textarea></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_200">COSAS QUE HAGO QUE OTROS NO ENTIENDEN</label><textarea id="cfg-peculiaridades" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Cuento escalones, ordeno la comida por colores…"></textarea></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_201">OBJETOS IMPRESCINDIBLES AL SALIR</label><input id="cfg-objetos-salida" type="text" placeholder="Ej: Audífonos, fidget, botella de agua fría" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_202">TEXTURAS QUE NO TOLERO EN ROPA</label><input id="cfg-texturas-ropa" type="text" placeholder="Ej: Lana, etiquetas, costuras gruesas" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_203">MI STIMMING PRINCIPAL</label><input id="cfg-stimming" type="text" placeholder="Ej: Balanceo, golpear dedos, tararear" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_195">COMIDA SEGURA (separada por coma)</label><input id="cfg-comida" type="text" placeholder="Ej: Yogurt, Frutos secos, Arroz blanco" data-i18n-placeholder="ph_food" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_196">MI LUGAR FIJO</label><input id="cfg-lugar-fijo" type="text" placeholder="Ej: El sillón izquierdo, la esquina del café" data-i18n-placeholder="ph_place" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_197">MIS RUTAS HABITUALES</label><textarea id="cfg-rutas" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Al trabajo por Av. Principal…" data-i18n-placeholder="ph_routes"></textarea></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_198">QUÉ PASA IF MI RUTA CAMBIA</label><input id="cfg-ruta-cambio" type="text" placeholder="Ej: Me desregulo, entro en pánico…" data-i18n-placeholder="ph_change" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_199">MIS RITUALES DE INICIO</label><textarea id="cfg-rituales" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Revisar llaves 3 veces, tocar la puerta…" data-i18n-placeholder="ph_rituales"></textarea></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_200">COSAS QUE HAGO QUE OTROS NO ENTIENDEN</label><textarea id="cfg-peculiaridades" style="height:70px;background:#160a28;border-color:#3a1a5a;color:var(--text)" placeholder="Ej: Cuento escalones, ordeno la comida por colores…" data-i18n-placeholder="ph_peculiar"></textarea></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_201">OBJETOS IMPRESCINDIBLES AL SALIR</label><input id="cfg-objetos-salida" type="text" placeholder="Ej: Audífonos, fidget, botella de agua fría" data-i18n-placeholder="ph_objects" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_202">TEXTURAS QUE NO TOLERO EN ROPA</label><input id="cfg-texturas-ropa" type="text" placeholder="Ej: Lana, etiquetas, costuras gruesas" data-i18n-placeholder="ph_textura" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1840"><label style="color:#c890f8" data-i18n="auto_203">MI STIMMING PRINCIPAL</label><input id="cfg-stimming" type="text" placeholder="Ej: Balanceo, golpear dedos, tararear" data-i18n-placeholder="ph_stimming" autocomplete="off"></div>
       </div>
     </div>
 
@@ -215,12 +215,12 @@
         <div style="padding:13px 16px 10px;border-bottom:1px solid #0a2a3a;font-size:13px;color:#207080;line-height:1.6" data-i18n="auto_206">En un momento de crisis no tendrás que escribir tu dirección ni pensar a dónde ir. Un solo botón llamará a tu app de taxi con tu destino ya listo.</div>
         <div class="sfield" style="border-color:#0a2a3a">
           <label style="color:#40c0e8" data-i18n="auto_207">APP DE TAXI PREFERIDA</label>
-          <input id="cfg-taxi-app" type="text" placeholder="Ej: Uber, Cabify, inDriver, Beat…" autocomplete="off">
+          <input id="cfg-taxi-app" type="text" placeholder="Ej: Uber, Cabify, inDriver, Beat…" data-i18n-placeholder="ph_taxi" autocomplete="off">
           <div class="fhint" style="margin-top:6px" data-i18n="auto_208">Escribe exactamente el nombre de la app que tienes instalada.</div>
         </div>
         <div class="sfield" style="border-color:#0a2a3a">
           <label style="color:#40c0e8" data-i18n="auto_209">MENSAJE PARA EL CONDUCTOR (opcional)</label>
-          <input id="cfg-taxi-msg" type="text" placeholder="Ej: Soy autista. Por favor no hables durante el viaje." autocomplete="off">
+          <input id="cfg-taxi-msg" type="text" placeholder="Ej: Soy autista. Por favor no hables durante el viaje." data-i18n-placeholder="ph_msg" autocomplete="off">
         </div>
       </div>
     </div>
@@ -238,7 +238,7 @@
       <div class="acc-body" style="background:#041218">
         <div class="sfield" style="border-color:#1a3a4a">
           <label style="color:#40c8e0" data-i18n="auto_212">TEMAS DE HIPERENFOQUE (separados por coma)</label>
-          <input id="cfg-intereses" type="text" placeholder="Ej: astrofísica, datos, videojuegos de estrategia" autocomplete="off">
+          <input id="cfg-intereses" type="text" placeholder="Ej: astrofísica, datos, videojuegos de estrategia" data-i18n-placeholder="ph_interest" autocomplete="off">
           <div class="fhint" data-i18n="auto_213">La IA los usa como ancla de regulación cuando el sistema nervioso está sobrecargado.</div>
         </div>
       </div>
@@ -257,7 +257,7 @@
       <div class="acc-body" style="background:#0c0618">
         <div class="sfield" style="border-color:#2a1a4a">
           <label style="color:#a080e8" data-i18n="auto_216">OCUPACIÓN</label>
-          <input id="cfg-ocupacion" type="text" placeholder="Ej: Desarrollador, Diseñador, Estudiante" autocomplete="off">
+          <input id="cfg-ocupacion" type="text" placeholder="Ej: Desarrollador, Diseñador, Estudiante" data-i18n-placeholder="ph_job" autocomplete="off">
         </div>
         <div class="sfield" style="border-color:#2a1a4a">
           <label style="color:#a080e8" data-i18n="auto_217">HORAS AL DÍA</label>
@@ -308,8 +308,8 @@
         <span class="acc-arrow" style="color:#3ad4a0">▼</span>
       </button>
       <div class="acc-body" style="background:#0a1e16">
-        <div class="sfield" style="border-color:#1a4a3a"><label style="color:#3ad4a0" data-i18n="auto_226">NOMBRE DE TU APOYO INCONDICIONAL</label><input id="cfg-pet-name" type="text" placeholder="Ej: Luna, Mochi, Pelusa…" autocomplete="off"></div>
-        <div class="sfield" style="border-color:#1a4a3a"><label style="color:#3ad4a0" data-i18n="auto_227">TIPO DE APOYO INCONDICIONAL</label><input id="cfg-pet-type" type="text" placeholder="Ej: Gato, Perro, Conejo…" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#1a4a3a"><label style="color:#3ad4a0" data-i18n="auto_226">NOMBRE DE TU APOYO INCONDICIONAL</label><input id="cfg-pet-name" type="text" placeholder="Ej: Luna, Mochi, Pelusa…" data-i18n-placeholder="ph_pet_name" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#1a4a3a"><label style="color:#3ad4a0" data-i18n="auto_227">TIPO DE APOYO INCONDICIONAL</label><input id="cfg-pet-type" type="text" placeholder="Ej: Gato, Perro, Conejo…" data-i18n-placeholder="ph_pet_type" autocomplete="off"></div>
         <div class="sfield" style="border-color:#1a4a3a"><label style="color:#3ad4a0" data-i18n="auto_228">DESCRIPCIÓN (para la IA)</label><textarea id="cfg-pet-desc" style="height:80px;background:#0e2a20;border-color:#1a5a40;color:var(--text)" placeholder="Ej: Gato negro, ojos verdes, muy juguetón…"></textarea></div>
         <div class="sfield" style="border-color:#1a4a3a">
           <label style="color:#3ad4a0" data-i18n="auto_229">FOTO DE TU APOYO INCONDICIONAL (opcional)</label>
@@ -334,9 +334,9 @@
       </button>
       <div class="acc-body" style="background:#0e0a1e">
         <div style="padding:13px 16px 10px;border-bottom:1px solid #2a1a4a;font-size:13px;color:#8060d0;line-height:1.6" data-i18n="auto_233">Los objetos de regulación son válidos. No son "cosas de niños" — son herramientas de tu sistema nervioso.</div>
-        <div class="sfield" style="border-color:#2a1a4a"><label style="color:#b090f0" data-i18n="auto_234">NOMBRE DEL OBJETO</label><input id="cfg-obj-name" type="text" placeholder="Ej: Oso Nube, mi manta…" autocomplete="off"></div>
+        <div class="sfield" style="border-color:#2a1a4a"><label style="color:#b090f0" data-i18n="auto_234">NOMBRE DEL OBJETO</label><input id="cfg-obj-name" type="text" placeholder="Ej: Oso Nube, mi manta…" data-i18n-placeholder="ph_obj_name" autocomplete="off"></div>
         <div class="sfield" style="border-color:#2a1a4a"><label style="color:#b090f0" data-i18n="auto_235">DESCRIPCIÓN</label><textarea id="cfg-obj-desc" style="height:80px;background:#140e22;border-color:#3a2060;color:var(--text)" placeholder="Ej: Peluche blanco pequeño, muy suave…"></textarea></div>
-        <div class="sfield" style="border-color:#2a1a4a"><label style="color:#b090f0" data-i18n="auto_236">¿DÓNDE SUELE ESTAR?</label><input id="cfg-obj-location" type="text" placeholder="Ej: En mi mochila, en el cajón del escritorio" autocomplete="off"><div class="fhint" style="margin-top:6px" data-i18n="auto_237">Cuando estés desregulado, sabrás dónde buscarlo.</div></div>
+        <div class="sfield" style="border-color:#2a1a4a"><label style="color:#b090f0" data-i18n="auto_236">¿DÓNDE SUELE ESTAR?</label><input id="cfg-obj-location" type="text" placeholder="Ej: En mi mochila, en el cajón del escritorio" data-i18n-placeholder="ph_obj_loc" autocomplete="off"><div class="fhint" style="margin-top:6px" data-i18n="auto_237">Cuando estés desregulado, sabrás dónde buscarlo.</div></div>
       </div>
     </div>
 

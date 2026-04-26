@@ -583,7 +583,17 @@ function applyLang() {
     if (L[key]) {
       if (el.tagName === 'SPAN' || el.tagName === 'DIV' || el.tagName === 'BUTTON' || el.tagName === 'LABEL') {
          el.textContent = L[key];
+      } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+         el.value = L[key];
       }
+    }
+  });
+
+  // Auto-translate placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (L[key]) {
+      el.placeholder = L[key];
     }
   });
 
@@ -1136,7 +1146,7 @@ function toggleAdvancedSetup() {
     if (btn)  btn.style.borderStyle = 'dashed';
   } else {
     body.classList.add('show-all');
-    if (adv)  adv.style.display = 'flex';
+    if (adv)  adv.style.display = 'block';
     if (icon) icon.textContent = '－';
     if (lbl)  lbl.textContent = T[LANG].btnHideAdvanced || 'Ocultar sección avanzada';
     if (btn)  btn.style.borderStyle = 'solid';
@@ -3237,9 +3247,70 @@ const EXTRA_EN = {
   "auto_270": "AI Custom Isochronous Tones",
   "auto_271": "Priority access to new features",
   "auto_272": "Apoyas el desarrollo de la app ♾️",
-  "auto_273": "✦ Suscribirse a Pro"
+  "auto_273": "✦ Suscribirse a Pro",
+  "ph_name": "Ej: José Aponte Torres",
+  "ph_tel": "Ej: 51987654321",
+  "ph_rel": "Ej: mamá, pareja, mejor amiga",
+  "ph_blood": "Ej: A+",
+  "ph_allergies": "Ej: Penicilina, Ibuprofeno, Látex",
+  "ph_med": "Ej: Clonazepam 2mg",
+  "ph_daily": "Ej: Sertralina 100mg, Melatonina 5mg",
+  "ph_hiper": "Ej: ruidos agudos, luces fuertes, multitudes",
+  "ph_hipo": "Ej: temperatura extrema, dolor físico",
+  "ph_triggers": "Ej: cambios de planes, ruido inesperado",
+  "ph_food": "Ej: Yogurt, Frutos secos, Arroz blanco",
+  "ph_place": "Ej: El sillón izquierdo, la esquina del café",
+  "ph_routes": "Ej: Al trabajo por Av. Principal…",
+  "ph_change": "Ej: Me desregulo, entro en pánico…",
+  "ph_rituales": "Ej: Revisar llaves 3 veces, tocar la puerta…",
+  "ph_peculiar": "Ej: Cuento escalones, ordeno la comida por colores…",
+  "ph_objetos": "Ej: Audífonos, fidget, botella de agua fría",
+  "ph_textura": "Ej: Lana, etiquetas, costuras gruesas",
+  "ph_stimming": "Ej: Balanceo, golpear dedos, tararear",
+  "ph_taxi": "Ej: Uber, InDrive, Cabify",
+  "ph_msg": "Ej: Soy autista, por favor evita ruidos fuertes…",
+  "ph_interest": "Ej: Dinosaurios, espacio, trenes…",
+  "ph_job": "Ej: Desarrollador, Diseñador, Estudiante",
+  "ph_pet_name": "Ej: Luna, Mochi, Pelusa…",
+  "ph_pet_type": "Ej: Gato, Perro, Conejo…",
+  "ph_obj_name": "Ej: Oso Nube, mi manta…",
+  "ph_obj_loc": "Ej: En mi mochila, en el cajón del escritorio"
+};
+
+const EXTRA_EN_PH = {
+  "ph_name": "e.g. José Aponte Torres",
+  "ph_tel": "e.g. 51987654321",
+  "ph_rel": "e.g. mom, partner, best friend",
+  "ph_blood": "e.g. A+",
+  "ph_allergies": "e.g. Penicillin, Ibuprofen, Latex",
+  "ph_med": "e.g. Clonazepam 2mg",
+  "ph_daily": "e.g. Sertraline 100mg, Melatonin 5mg",
+  "ph_hiper": "e.g. high-pitched noises, loud lights, crowds",
+  "ph_hipo": "e.g. extreme temperature, physical pain",
+  "ph_triggers": "e.g. changes in plans, unexpected noise",
+  "ph_food": "e.g. Yogurt, Nuts, White rice",
+  "ph_place": "e.g. The left couch, the coffee corner",
+  "ph_routes": "e.g. To work via Main Ave…",
+  "ph_change": "e.g. I deregulate, I panic…",
+  "ph_rituales": "e.g. Check keys 3 times, knock on the door…",
+  "ph_peculiar": "e.g. Count steps, sort food by colors…",
+  "ph_objects": "e.g. Headphones, fidget, cold water bottle",
+  "ph_textura": "e.g. Wool, labels, thick seams",
+  "ph_stimming": "e.g. Rocking, finger tapping, humming",
+  "ph_taxi": "e.g. Uber, InDrive, Cabify",
+  "ph_msg": "e.g. I am autistic, please avoid loud noises…",
+  "ph_interest": "e.g. Dinosaurs, space, trains…",
+  "ph_job": "e.g. Developer, Designer, Student",
+  "ph_pet_name": "e.g. Luna, Mochi, Fluffy…",
+  "ph_pet_type": "e.g. Cat, Dog, Rabbit…",
+  "ph_obj_name": "e.g. Cloud Bear, my blanket…",
+  "ph_obj_loc": "e.g. In my backpack, in the desk drawer",
+  "btnMoreProfile": "Complete my profile (optional)",
+  "btnLessProfile": "Hide advanced section"
 };
 
 Object.assign(T.es, EXTRA_ES);
 Object.assign(T.en, EXTRA_EN);
+Object.assign(T.en, EXTRA_EN_PH);
 applyLang();
+

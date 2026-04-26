@@ -10,7 +10,7 @@
 /* ═══════════════════════════════════════
    TOKENS DE DISEÑO
 ═══════════════════════════════════════ */
-:root {
+:root, [data-theme="dark"] {
   --bg:       #1a1a1a;
   --surface:  #242424;
   --surface2: #2d2d2d;
@@ -55,7 +55,7 @@ html, body {
 }
 
 /* ── SCREEN LAYER ── */
-.screen { position:fixed; inset:0; display:none; flex-direction:column; overflow:hidden; background:var(--bg); color:var(--text); height:100dvh; }
+.screen { position:fixed; inset:0; display:none; flex-direction:column; overflow-y:auto; background:var(--bg); color:var(--text); height:100dvh; }
 .screen.active { display:flex; }
 
 /* ── CENTRADO / CONTENEDOR ── */
@@ -326,13 +326,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 }
 .acc-body.open {
   display: block;
-  max-height: 340px;
-  overflow-y: scroll;           /* scroll siempre visible, no auto — más predecible */
-  overscroll-behavior-y: contain;  /* contiene el scroll dentro del acordeón */
-  touch-action: pan-y;          /* iOS: solo scroll vertical, no propaga al padre */
-  /* Scrollbar sutil */
-  scrollbar-width: thin;
-  scrollbar-color: var(--border2) transparent;
+  /* Eliminado scroll interno para permitir scroll de página global */
 }
 
 /* ── CAMPOS DE FORMULARIO ── */
@@ -1099,7 +1093,7 @@ h2 { font-size:20px; font-weight:700; line-height:1.25; }
 [data-theme="light"] .btn.ghost { color: var(--text2); border-color: var(--border2); }
 [data-theme="light"] .btn.maps { background: var(--blue-bg) !important; border-color: var(--blue) !important; color: var(--blue) !important; }
 [data-theme="light"] input, [data-theme="light"] textarea, [data-theme="light"] select {
-  background: #fff !important; border-color: var(--border2) !important; color: var(--text) !important;
+  background: #fff !important; border-color: var(--border2) !important; color: #111 !important;
 }
 [data-theme="light"] .sfield { border-color: var(--border2) !important; }
 [data-theme="light"] .sfield label { color: var(--text2) !important; }
