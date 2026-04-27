@@ -574,14 +574,15 @@ function setLang(lang) {
 function applyLang() {
   const L = T[LANG] || T.es;
   const isEn = LANG === 'en';
-  function st(id, val) { const e = document.getElementById(id); if (e && val !== undefined) e.textContent = val; }
-  function sh(id, val) { const e = document.getElementById(id); if (e && val !== undefined) e.innerHTML = val; }
+  document.documentElement.lang = LANG;
 
+  function st(id, val) { const e = document.getElementById(id); if (e && val !== undefined) e.textContent = val; }
+  
   // Auto-translate using data-i18n
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (L[key]) {
-      if (el.tagName === 'SPAN' || el.tagName === 'DIV' || el.tagName === 'BUTTON' || el.tagName === 'LABEL') {
+      if (el.tagName === 'SPAN' || el.tagName === 'DIV' || el.tagName === 'BUTTON' || el.tagName === 'LABEL' || el.tagName === 'P' || el.tagName === 'H1' || el.tagName === 'H2') {
          el.textContent = L[key];
       } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
          el.value = L[key];
@@ -599,10 +600,13 @@ function applyLang() {
 
   // Home
   document.querySelectorAll('.h-appname').forEach(el => el.innerHTML = 'NEURO<span style="color:var(--text3)">-DOME</span>');
+  
+  // Update specific elements that might not use data-i18n or need special handling
   st('bat-label', L.batLabel);
   st('sos-main-btn', L.sosBtnLabel);
   st('lbl-scanner', L.scannerLbl); st('lbl-deudas', L.deudasLbl);
   st('lbl-ia', L.iaHoyLbl); st('lbl-tonos', L.tonosLbl);
+  // ... rest of manual applications if needed
   st('tag-nivel', L.nivelTag);
   st('n1-title', L.n1title); st('n1-sub', L.n1sub);
   st('n2-title', L.n2title); st('n2-sub', L.n2sub);
@@ -793,7 +797,7 @@ function applyLang() {
   st('l4-avail-hd', L.l4AvailHd);
   st('l4-avoid-hd', L.l4AvoidHd);
   // L5
-  st('l5-tag', L.l5Tag); st('l5-h1', L.l5H1);
+  st('l5-tag', L.l4Tag); st('l5-h1', L.l5H1);
   st('l5-acts-hd', L.l5ActsHd);
   st('l5-cons-hd', L.l5ConsHd);
   // Isochronic
@@ -1676,8 +1680,10 @@ function renderCal() {
 
 function toggleMedDay(dateStr) {
   const today = new Date();
-  const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
-  if (dateStr > todayStr) return; // Cannot toggle future dates
+  today.setHours(0,0,0,0);
+  const dParts = dateStr.split('-');
+  const dDate = new Date(dParts[0], dParts[1]-1, dParts[2]);
+  if (dDate > today) return; // Cannot toggle future dates
   
   if (medLog[dateStr] && medLog[dateStr].length > 0) {
     // Already taken, remove it
@@ -1812,7 +1818,7 @@ function stopAllTones() {
   isoPlayingIdx = null;
   document.querySelectorAll('.tone-play-btn').forEach(b => {
     b.classList.remove('playing');
-    b.textContent = '▶ Iniciar';
+    b.textContent = (T[LANG]||T.es).tonePlay || '▶ Iniciar';
   });
 }
 
@@ -2115,7 +2121,7 @@ const LOCAL_MSGS = {
   ],
   disociacion: [
     { icon:'🟠', title:'Protocolo de anclaje activo', body:'Tu cuerpo está en el espacio aunque no lo sientas.\n\nToca el suelo con las manos. Describe la textura en voz baja: rugoso, frío, liso. Eso es real.\n\nUn objeto conocido en tu bolsillo. Encuéntralo y sostenlo.' },
-    { icon:'🟠', title:'Esto es temporal y tiene nombre', body:'Lo que sientes es disociación propioceptiva. Es un mecanismo de protección neurológica, no estás perdiéndote.\n\nPresión profunda: abraza tus propios brazos fuerte contra el cuerpo. Cuenta hasta 10.\n\nDespués, mira tu nombre escrito en esta pantalla: {nombre}.' }
+    { icon:'🟠', title:'Esto es temporal y tiene nombre', body:'Lo que sientes es disociación proprioceptiva. Es un mecanismo de protección neurológica, no estás perdiéndote.\n\nPresión profunda: abraza tus propios brazos fuerte contra el cuerpo. Cuenta hasta 10.\n\nDespués, mira tu nombre escrito en esta pantalla: {nombre}.' }
   ],
   energia: [
     { icon:'🟡', title:'Batería baja — modo conservación', body:'Tu sistema nervioso ha agotado recursos. Eso es información, no fracaso.\n\nUna prioridad ahora: {md}. Solo eso.\n\nComida segura si puedes: {comida}. Todo lo demás puede esperar.' },
@@ -2282,7 +2288,7 @@ async function generarGuionIA() {
   Opción 1: Directa y profesional.
   Opción 2: Amable y suave.
   Opción 3: Muy corta y al grano.
-  No des explicaciones, solo entrega las 3 opciones claramente separadas.`;
+  No das explicaciones, solo entrega las 3 opciones claramente separadas.`;
 
   try {
     const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apikey}`, {
@@ -2348,9 +2354,9 @@ function renderRegistro() {
 }
 
 function eliminarRegistroSensorial(id) {
-  if (confirm(isEn ? 'Delete this record?' : '¿Eliminar este registro?')) {
+  if (confirm(LANG === 'en' ? 'Delete this record?' : '¿Eliminar este registro?')) {
     sensoryLog = sensoryLog.filter(x => x.id !== id);
-    localStorage.setItem(KEYS.sensoryLog, JSON.stringify(sensoryLog));
+    localStorage.setItem('cfg_sensory_log', JSON.stringify(sensoryLog));
     renderRegistro();
   }
 }
@@ -2504,7 +2510,7 @@ function renderDeudas() {
 }
 
 function eliminarDeuda(id) {
-  if (confirm(isEn ? 'Delete this commitment?' : '¿Eliminar este compromiso?')) {
+  if (confirm(LANG === 'en' ? 'Delete this commitment?' : '¿Eliminar este compromiso?')) {
     deudas = deudas.filter(x => x.id !== id);
     saveDeudas();
     renderDeudas();
@@ -2743,7 +2749,7 @@ const EXTRA_ES = {
   "auto_41": "APOYO EMOCIONAL",
   "auto_42": "Mi ser de apoyo",
   "auto_43": "💌 Está contigo ahora mismo",
-  "auto_44": "Aunque no esté físicamente aquí, su energía viaja contigo. Pronto volverás a casa.",
+  "auto_44": "Aunque no esté físicamente aquí, su energía ya viaja contigo. Pronto volverás a casa.",
   "auto_45": "✨ Recreado con IA — solo para ti",
   "auto_46": "Toca el botón para que la IA genere una imagen de tu ser de apoyo mostrándote amor 🤍",
   "auto_47": "✨ Generar imagen de apoyo con IA",
@@ -2974,74 +2980,75 @@ const EXTRA_ES = {
   "auto_272": "Apoyas el desarrollo de la app ♾️",
   "auto_273": "✦ Suscribirse a Pro"
 };
+
 const EXTRA_EN = {
   "auto_1": "🕳️",
   "auto_2": "15:00",
-  "auto_3": "← Volver a tarjetas",
+  "auto_3": "← Back to cards",
   "auto_4": "CURRENT STATUS",
-  "auto_5": "🌫️ No te reconozco ahora mismo",
-  "auto_6": "🔇 No puedo hablar",
-  "auto_7": "♾️ Soy autista — instrucciones",
+  "auto_5": "🌫️ I don't recognize you right now",
+  "auto_6": "🔇 I cannot speak",
+  "auto_7": "♾️ I am autistic — instructions",
   "auto_8": "I NEED NOW",
-  "auto_9": "💊 Necesito mi Clona",
-  "auto_10": "💧 Necesito tomar agua",
+  "auto_9": "💊 I need my medication",
+  "auto_10": "💧 I need to drink water",
   "auto_11": "🧘 I need to lie down on the floor",
   "auto_12": "🫂 I need chest pressure",
   "auto_13": "SENSORY",
-  "auto_14": "🔊 Me molestan los ruidos",
-  "auto_15": "💡 Me molesta la luz",
-  "auto_16": "🎧 Necesito mis audífonos o loops",
-  "auto_17": "🕶️ Necesito mis gafas de sol",
+  "auto_14": "🔊 Noises bother me",
+  "auto_15": "💡 Light bothers me",
+  "auto_16": "🎧 I need my headphones or loops",
+  "auto_17": "🕶️ I need my sunglasses",
   "auto_18": "🪀 I need a fidget toy",
   "auto_19": "EMERGENCY",
-  "auto_20": "🏥 EMERGENCIA — llamar contacto",
+  "auto_20": "🏥 EMERGENCY — call contact",
   "auto_21": "MY CARDS",
-  "auto_22": "➕ Crear",
+  "auto_22": "➕ Create",
   "auto_23": "New Card",
-  "auto_24": "Keep",
+  "auto_24": "Save",
   "auto_25": "Cancel",
   "auto_26": "ENERGY MANAGEMENT",
   "auto_27": "My Spoons",
   "auto_28": "Spoon Theory",
-  "auto_29": "Each spoon represents a unit of physical and mental energy. ",
+  "auto_29": "Each spoon represents a unit of physical and mental energy. Tapping a spoon 'spends' it. Use it to visualize how much energy you have left today and avoid burnout.",
   "auto_30": "- Remove total spoon",
   "auto_31": "+ Add spoon total",
-  "auto_32": "➕ Añadir compromiso",
-  "auto_33": "📋 Historial",
-  "auto_34": "\"Money is a resource brought from the future. This registration is the technical route to return it to the present. It is not a moral failure, it is an ongoing technical process.\"",
+  "auto_32": "➕ Add commitment",
+  "auto_33": "📋 History",
+  "auto_34": \"'Money is a resource brought from the future. This record is the technical route to return it to the present. It is not a moral failure, it is an ongoing technical process.'\",
   "auto_35": "New commitment",
   "auto_36": "CREDITOR / CONCEPT",
   "auto_37": "AMOUNT",
   "auto_38": "PAYMENT DATE",
-  "auto_39": "✓ Registrar",
-  "auto_40": "✗ Cancelar",
+  "auto_39": "✓ Register",
+  "auto_40": "✗ Cancel",
   "auto_41": "EMOTIONAL SUPPORT",
-  "auto_42": "My supportive being",
-  "auto_43": "💌 Está contigo ahora mismo",
-  "auto_44": "Even though he is not physically here, his energy travels with you. ",
-  "auto_45": "✨ Recreado con IA — solo para ti",
-  "auto_46": "Tap the button to have the AI ​​generate an image of your supportive person showing you love 🤍",
-  "auto_47": "✨ Generar imagen de apoyo con IA",
-  "auto_48": "Generando imagen…",
+  "auto_42": "My support being",
+  "auto_43": "💌 Is with you right now",
+  "auto_44": "Even if not physically here, their energy travels with you. You will be home soon.",
+  "auto_45": "✨ Recreated with AI — only for you",
+  "auto_46": "Tap the button to have the AI generate an image of your support being showing you love 🤍",
+  "auto_47": "✨ Generate support image with AI",
+  "auto_48": "Generating image…",
   "auto_49": "-DOME",
   "auto_50": "Profile",
-  "auto_51": "Configuration",
+  "auto_51": "Settings",
   "auto_52": "VISUAL APPEARANCE",
   "auto_53": "Dark Mode",
-  "auto_54": "Clear Mode",
-  "auto_55": "Modo Arcoíris ♾️",
+  "auto_54": "Light Mode",
+  "auto_55": "Rainbow Mode ♾️",
   "auto_56": "Profile settings",
-  "auto_57": "S.O.S.",
+  "auto_57": "SOS",
   "auto_58": "Body Scanner",
-  "auto_59": "Sensory Registration",
+  "auto_59": "Sensory Register",
   "auto_60": "My emotional support",
-  "auto_61": "my favorite object",
+  "auto_61": "My favorite object",
   "auto_62": "Step by Step (AI)",
   "auto_63": "Scripts (AI)",
   "auto_64": "Cards",
   "auto_65": "Alarms",
   "auto_66": "Debts",
-  "auto_67": "ISO tones",
+  "auto_67": "ISO Tones",
   "auto_68": "🕳️",
   "auto_69": "Cave",
   "auto_70": "Survival Kit",
@@ -3051,31 +3058,31 @@ const EXTRA_EN = {
   "auto_74": "LANGUAGE",
   "auto_75": "🇪🇸",
   "auto_76": "🇺🇸",
-  "auto_77": "🆘 SOS — CREDENCIAL MÉDICA Y LEGAL",
+  "auto_77": "🆘 SOS — MEDICAL & LEGAL CREDENTIAL",
   "auto_78": "GO HOME BY TAXI",
-  "auto_79": "Un toque — tu dirección ya está lista",
+  "auto_79": "One tap — your address is ready",
   "auto_80": "SCANNER",
   "auto_81": "DEBTS",
-  "auto_82": "IA TODAY",
+  "auto_82": "AI TODAY",
   "auto_83": "STEP BY STEP (AI)",
   "auto_84": "SCRIPTS (AI)",
-  "auto_85": "ISO TONE",
-  "auto_86": "SENSORY RECORD",
+  "auto_85": "ISO TONES",
+  "auto_86": "SENSORY REGISTER",
   "auto_87": "SELECT YOUR CURRENT LEVEL",
   "auto_88": "SEVERE CRISIS",
-  "auto_89": "Meltdown · Shutdown · Didn't work",
-  "auto_90": "DISSOCIATION/AGNOSIA",
-  "auto_91": "I don't recognize the environment or people",
+  "auto_89": "Meltdown · Shutdown · I am not functioning",
+  "auto_90": "DISSOCIATION / AGNOSIA",
+  "auto_91": "I don't recognize the surroundings or people",
   "auto_92": "LOW ENERGY",
-  "auto_93": "Cognitive fatigue Active burnout",
+  "auto_93": "Cognitive fatigue · Active burnout",
   "auto_94": "REDUCED FUNCTIONAL",
   "auto_95": "Simple tasks and routines",
-  "auto_96": "OPTIMUM STATE",
-  "auto_97": "Open functional window",
-  "auto_98": "🃏 Tarjetas",
-  "auto_99": "🕳️ Cueva",
-  "auto_100": "💊 Alarmas",
-  "auto_101": "🐾 Mi apoyo emocional",
+  "auto_96": "OPTIMAL STATE",
+  "auto_97": "Functional window open",
+  "auto_98": "🃏 Cards",
+  "auto_99": "🕳️ Cave",
+  "auto_100": "💊 Alarms",
+  "auto_101": "🐾 My emotional support",
   "auto_102": "🧸 My favorite object",
   "auto_103": "🥄 Spoons",
   "auto_104": "My Social Battery",
@@ -3083,45 +3090,45 @@ const EXTRA_EN = {
   "auto_106": "NEUROLOGICAL REGULATION",
   "auto_107": "Isochronic Tones",
   "auto_108": "What are isochronic tones?",
-  "auto_109": "reduce hyperactivation of the nervous system",
-  "auto_110": "🧠 Suggest custom ringtones with AI",
+  "auto_109": "reduce nervous system hyperactivation",
+  "auto_110": "🧠 Suggest personalized tones with AI",
   "auto_111": "SENSORY TOOLS",
   "auto_112": "Survival Kit",
-  "auto_113": "Selection of proven tools for the regulation of the nervous system.",
+  "auto_113": "Selection of proven tools for nervous system regulation.",
   "auto_114": "*By purchasing from these links, you support the development of NEURO-DOME at no extra cost to you.",
-  "auto_115": "Loop Experience Plugs",
-  "auto_116": "They reduce background noise without completely isolating you. ",
-  "auto_117": "Ver en Amazon ↗",
+  "auto_115": "Loop Experience Earplugs",
+  "auto_116": "Reduce background noise without completely isolating you. Ideal for supermarkets or meetings.",
+  "auto_117": "View on Amazon ↗",
   "auto_118": "Weighted Blanket",
-  "auto_119": "Constant deep pressure (DTP). ",
-  "auto_120": "Ver en Amazon ↗",
+  "auto_119": "Constant deep pressure (DTP). Helps regulate the nervous system and improve sleep.",
+  "auto_120": "View on Amazon ↗",
   "auto_121": "Fidget Cube / Tangle",
-  "auto_122": "Silent stimming tool. ",
-  "auto_123": "Ver en Amazon ↗",
+  "auto_122": "Silent stimming tool. Helps channel motor anxiety in public.",
+  "auto_123": "View on Amazon ↗",
   "auto_124": "🕶️",
   "auto_125": "FL-41 Glasses (Light Sensitivity)",
   "auto_126": "They block blue/green light from screens and fluorescent lights that cause migraines and overload.",
-  "auto_127": "Ver en Amazon ↗",
+  "auto_127": "View on Amazon ↗",
   "auto_128": "Understood",
   "auto_129": "REMINDER",
-  "auto_130": "✓ Entendido",
-  "auto_131": "MEDICINE",
-  "auto_132": "HOUR",
+  "auto_130": "✓ Understood",
+  "auto_131": "MEDICATION",
+  "auto_132": "TIME",
   "auto_133": "DAYS",
-  "auto_134": "✓ Guardar",
-  "auto_135": "✗ Cancelar",
+  "auto_134": "✓ Save",
+  "auto_135": "✗ Cancel",
   "auto_136": "My Profile",
   "auto_137": "NEURO-DOME",
   "auto_138": "🌐 Idioma / Language",
   "auto_139": "🇪🇸 ES",
   "auto_140": "🇺🇸 EN",
-  "auto_141": "✏️ Editar perfil",
+  "auto_141": "✏️ Edit profile",
   "auto_142": "DATA TRACKER",
-  "auto_143": "Sensory Registration",
+  "auto_143": "Sensory Register",
   "auto_144": "Register Event",
-  "auto_145": "TYPE OF EVENT",
+  "auto_145": "EVENT TYPE",
   "auto_146": "Meltdown (Explosion/Crisis)",
-  "auto_147": "Shutdown",
+  "auto_147": "Shutdown (Blocking)",
   "auto_148": "Sensory Overload",
   "auto_149": "TRIGGER",
   "auto_150": "Save Record",
@@ -3131,87 +3138,87 @@ const EXTRA_EN = {
   "auto_154": "🇺🇸",
   "auto_155": "-DOME",
   "auto_156": "My Support Profile",
-  "auto_157": "Your data is saved only on this device. ",
-  "auto_158": "👋 Solo 3 pasos para empezar:",
-  "auto_159": "my identity",
-  "auto_160": "emergency contact",
+  "auto_157": "Your data is saved only on this device. Neuro-Dome AI will use this info to personalize your advice and regulations.",
+  "auto_158": "👋 Only 3 steps to start:",
+  "auto_159": "My identity",
+  "auto_160": "Emergency contact",
   "auto_161": "Images",
-  "auto_162": "Configuración ⚙️",
-  "auto_163": "my identity",
-  "auto_164": "Mandatory field",
+  "auto_162": "Settings ⚙️",
+  "auto_163": "My identity",
+  "auto_164": "Required field",
   "auto_165": "My emergency contact",
   "auto_166": "Trusted person for crisis",
-  "auto_167": "Mandatory field",
-  "auto_168": "With country code. ",
-  "auto_169": "Mandatory field",
+  "auto_167": "Required field",
+  "auto_168": "With country code. No +. e.g.: 51 for Peru, 58 Venezuela, 57 Colombia.",
+  "auto_169": "Required field",
   "auto_170": "RELATIONSHIP (optional)",
   "auto_171": "Image Management",
   "auto_172": "Upload from gallery (saved on device)",
   "auto_173": "YOUR PHOTO (profile)",
   "auto_174": "Upload from gallery",
-  "auto_175": "It appears on the SOS credential and in your profile.",
-  "auto_176": "PHOTO OF YOURS WITH EMERGENCY CONTACT",
+  "auto_175": "Appears on SOS credential and in your profile.",
+  "auto_176": "PHOTO OF YOU WITH EMERGENCY CONTACT",
   "auto_177": "🧑‍🤝‍🧑",
   "auto_178": "Upload from gallery",
-  "auto_179": "Ayuda con la agnosia en el Nivel 2 — ver la foto ancla el reconocimiento.",
+  "auto_179": "Helps with agnosia in Level 2 — seeing the photo anchors recognition.",
   "auto_180": "Health",
   "auto_181": "Blood type, Medicines, Allergies",
-  "auto_182": "ALLERGIES (separated by comma)",
-  "auto_183": "Visible on SOS screen for medical personnel.",
-  "auto_184": "CRISIS MEDICATION (Tier 1)",
-  "auto_185": "DAILY MEDICATION (separate several with a comma)",
+  "auto_182": "ALLERGIES (comma separated)",
+  "auto_183": "Visible on SOS screen for medical staff.",
+  "auto_184": "CRISIS MEDICATION (Level 1)",
+  "auto_185": "DAILY MEDICATION (separate multiple with comma)",
   "auto_186": "Sensory Profile",
   "auto_187": "Hypersensitivities, Triggers, Hyposensitivities",
-  "auto_188": "HYPERSENSITIVITIES (separated by comma)",
-  "auto_189": "Stimuli that overload you. ",
-  "auto_190": "HYPOSENSITIVITIES (separated by comma)",
-  "auto_191": "TRIGGERS / TRIGGERS (separated by comma)",
+  "auto_188": "HYPERSENSITIVITIES (comma separated)",
+  "auto_189": "Stimuli that overload you. AI and scanner use this info.",
+  "auto_190": "HYPOSENSITIVITIES (comma separated)",
+  "auto_191": "TRIGGERS (comma separated)",
   "auto_192": "My Autistic World",
   "auto_193": "Food, routines, places and own habits",
-  "auto_194": "Estos detalles son tu arquitectura interna. No son rarezas — son el sistema con el que funciona tu cerebro.",
-  "auto_195": "SAFE FOOD (separated by comma)",
+  "auto_194": "These details are your internal architecture. They are not oddities — they are the system your brain works with.",
+  "auto_195": "SAFE FOOD (comma separated)",
   "auto_196": "MY FIXED PLACE",
   "auto_197": "MY REGULAR ROUTES",
-  "auto_198": "WHAT HAPPENS IF MY ROUTE CHANGES",
-  "auto_199": "MY STARTING RITUALS",
+  "auto_198": "WHAT IF MY ROUTE CHANGES",
+  "auto_199": "MY START RITUALS",
   "auto_200": "THINGS I DO THAT OTHERS DON'T UNDERSTAND",
-  "auto_201": "ESSENTIAL OBJECTS WHEN LEAVING",
-  "auto_202": "TEXTURES THAT I DO NOT TOLERATE IN CLOTHES",
+  "auto_201": "MUST-HAVE OBJECTS WHEN GOING OUT",
+  "auto_202": "TEXTURES I DON'T TOLERATE IN CLOTHES",
   "auto_203": "MY MAIN STIMMING",
   "auto_204": "Safe Transportation",
   "auto_205": "My taxi app and return routes",
-  "auto_206": "In a moment of crisis you won't have to write down your address or think about where to go. ",
+  "auto_206": "In a crisis moment you won't have to write your address or think where to go. One button will call your taxi app with your destination ready.",
   "auto_207": "PREFERRED TAXI APP",
-  "auto_208": "Write exactly the name of the app you have installed.",
-  "auto_209": "MESSAGE FOR THE DRIVER (optional)",
-  "auto_210": "Restricted Interest",
+  "auto_208": "Type exactly the name of the app you have installed.",
+  "auto_209": "MESSAGE FOR DRIVER (optional)",
+  "auto_210": "Restricted Interests",
   "auto_211": "Hyperfocus topics that regulate you",
-  "auto_212": "HYPERFOCUS TOPICS (separated by comma)",
-  "auto_213": "AI uses them as a regulatory anchor when the nervous system is overloaded.",
-  "auto_214": "What do you do",
-  "auto_215": "Work/Study",
+  "auto_212": "HYPERFOCUS TOPICS (comma separated)",
+  "auto_213": "AI uses them as regulation anchor when the nervous system is overloaded.",
+  "auto_214": "Occupation",
+  "auto_215": "Work / Study",
   "auto_216": "OCCUPATION",
-  "auto_217": "HOURS A DAY",
-  "auto_218": "GREATEST CHALLENGES (separated by comma)",
-  "auto_219": "The AI ​​considers this for containment suggestions in a work context.",
+  "auto_217": "HOURS PER DAY",
+  "auto_218": "GREATEST CHALLENGES (comma separated)",
+  "auto_219": "AI considers this for containment suggestions in work context.",
   "auto_220": "Diagnosis",
   "auto_221": "Upload your ASD diagnosis document",
   "auto_222": "Upload file",
-  "auto_223": "The file is saved on this device. ",
+  "auto_223": "File is saved on this device. Not uploaded to any server.",
   "auto_224": "My unconditional support",
-  "auto_225": "He helps me regulate myself",
-  "auto_226": "NAME OF YOUR UNCONDITIONAL SUPPORT",
+  "auto_225": "Helps me regulate",
+  "auto_226": "NAME OF UNCONDITIONAL SUPPORT",
   "auto_227": "TYPE OF UNCONDITIONAL SUPPORT",
   "auto_228": "DESCRIPTION (for AI)",
-  "auto_229": "PHOTO OF YOUR UNCONDITIONAL SUPPORT (optional)",
+  "auto_229": "PHOTO OF UNCONDITIONAL SUPPORT (optional)",
   "auto_230": "Upload photo",
-  "auto_231": "My Regulatory Objects",
+  "auto_231": "My Regulation Objects",
   "auto_232": "Stuffed animals, comfort objects, anchors",
-  "auto_233": "Los objetos de regulación son válidos. No son \"cosas de niños\" — son herramientas de tu sistema nervioso.",
+  "auto_233": "Regulation objects are valid. They are not 'children's things' — they are your nervous system tools.",
   "auto_234": "OBJECT NAME",
   "auto_235": "DESCRIPTION",
-  "auto_236": "WHERE DOES IT USUALLY BE?",
-  "auto_237": "When you are deregulated, you will know where to look for it.",
+  "auto_236": "WHERE IS IT USUALLY?",
+  "auto_237": "When you are dysregulated, you'll know where to look.",
   "auto_238": "Complete my profile (optional)",
   "auto_239": "NEURO-DOME by Fabiola Aponte",
   "auto_240": "FULL NAME",
@@ -3219,62 +3226,35 @@ const EXTRA_EN = {
   "auto_242": "DIAGNOSIS",
   "auto_243": "TEA / ASD ♾️",
   "auto_244": "BLOOD TYPE",
-  "auto_245": "📍 DIRECCIÓN DE DOMICILIO",
+  "auto_245": "📍 HOME ADDRESS",
   "auto_246": "MAIN CONTACT",
-  "auto_247": "📱 WhatsApp de emergencia",
-  "auto_248": "📞 LLAMAR AL CONTACTO AHORA",
-  "auto_249": "📍 Compartir mi ubicación en vivo",
-  "auto_250": "📄 Exportar Perfil a PDF",
+  "auto_247": "📱 Emergency WhatsApp",
+  "auto_248": "📞 CALL CONTACT NOW",
+  "auto_249": "📍 Share my live location",
+  "auto_250": "📄 Export Profile to PDF",
   "auto_251": "Subscription",
   "auto_252": "NEURO-DOME Pro",
   "auto_253": "Support app development and unlock advanced features designed for your nervous system.",
   "auto_254": "Free Plan",
-  "auto_255": "/ always",
+  "auto_255": "/ forever",
   "auto_256": "SOS and medical credential",
-  "auto_257": "Niveles de regulación N1–N5",
-  "auto_258": "body scanner",
+  "auto_257": "Regulation levels N1–N5",
+  "auto_258": "Body scanner",
   "auto_259": "Communication cards",
   "auto_260": "Medication alarms",
   "auto_261": "Taxi home",
   "auto_262": "Current plan",
-  "auto_263": "✨ RECOMENDADO",
+  "auto_263": "✨ RECOMMENDED",
   "auto_264": "Pro Plan",
   "auto_265": "/ month",
   "auto_266": "All Free Plan included",
-  "auto_267": "IA personalizada sin límites — consejos adaptados a tu perfil",
-  "auto_268": "Recipes and safe eating with AI",
-  "auto_269": "Emotional companion (pet/AI regulation object)",
-  "auto_270": "AI Custom Isochronous Tones",
+  "auto_267": "Unlimited personalized AI — advice adapted to your profile",
+  "auto_268": "AI safe food & recipes",
+  "auto_269": "Emotional companion (pet / regulation object with AI)",
+  "auto_270": "AI personalized isochronic tones",
   "auto_271": "Priority access to new features",
-  "auto_272": "Apoyas el desarrollo de la app ♾️",
-  "auto_273": "✦ Suscribirse a Pro",
-  "ph_name": "Ej: José Aponte Torres",
-  "ph_tel": "Ej: 51987654321",
-  "ph_rel": "Ej: mamá, pareja, mejor amiga",
-  "ph_blood": "Ej: A+",
-  "ph_allergies": "Ej: Penicilina, Ibuprofeno, Látex",
-  "ph_med": "Ej: Clonazepam 2mg",
-  "ph_daily": "Ej: Sertralina 100mg, Melatonina 5mg",
-  "ph_hiper": "Ej: ruidos agudos, luces fuertes, multitudes",
-  "ph_hipo": "Ej: temperatura extrema, dolor físico",
-  "ph_triggers": "Ej: cambios de planes, ruido inesperado",
-  "ph_food": "Ej: Yogurt, Frutos secos, Arroz blanco",
-  "ph_place": "Ej: El sillón izquierdo, la esquina del café",
-  "ph_routes": "Ej: Al trabajo por Av. Principal…",
-  "ph_change": "Ej: Me desregulo, entro en pánico…",
-  "ph_rituales": "Ej: Revisar llaves 3 veces, tocar la puerta…",
-  "ph_peculiar": "Ej: Cuento escalones, ordeno la comida por colores…",
-  "ph_objetos": "Ej: Audífonos, fidget, botella de agua fría",
-  "ph_textura": "Ej: Lana, etiquetas, costuras gruesas",
-  "ph_stimming": "Ej: Balanceo, golpear dedos, tararear",
-  "ph_taxi": "Ej: Uber, InDrive, Cabify",
-  "ph_msg": "Ej: Soy autista, por favor evita ruidos fuertes…",
-  "ph_interest": "Ej: Dinosaurios, espacio, trenes…",
-  "ph_job": "Ej: Desarrollador, Diseñador, Estudiante",
-  "ph_pet_name": "Ej: Luna, Mochi, Pelusa…",
-  "ph_pet_type": "Ej: Gato, Perro, Conejo…",
-  "ph_obj_name": "Ej: Oso Nube, mi manta…",
-  "ph_obj_loc": "Ej: En mi mochila, en el cajón del escritorio"
+  "auto_272": "You support the app development ♾️",
+  "auto_273": "✦ Subscribe to Pro"
 };
 
 const EXTRA_EN_PH = {
@@ -3284,7 +3264,7 @@ const EXTRA_EN_PH = {
   "ph_blood": "e.g. A+",
   "ph_allergies": "e.g. Penicillin, Ibuprofen, Latex",
   "ph_med": "e.g. Clonazepam 2mg",
-  "ph_daily": "e.g. Sertraline 100mg, Melatonin 5mg",
+  "ph_daily": "e.g. Sertraline 100mg, Melatonina 5mg",
   "ph_hiper": "e.g. high-pitched noises, loud lights, crowds",
   "ph_hipo": "e.g. extreme temperature, physical pain",
   "ph_triggers": "e.g. changes in plans, unexpected noise",
@@ -3313,4 +3293,3 @@ Object.assign(T.es, EXTRA_ES);
 Object.assign(T.en, EXTRA_EN);
 Object.assign(T.en, EXTRA_EN_PH);
 applyLang();
-
