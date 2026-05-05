@@ -5,7 +5,8 @@
 // CONFIG — API KEY GEMINI (interna)
 // ═══════════════════════════════════════
 // Pega tu key aquí O déjala vacía y se usará la guardada en localStorage.
-const GEMINI_API_KEY_BUILTIN = 'AIzaSyAfW_ip5uWc0ZmjMen5-VuvbW2RHCS5rhA';
+const GEMINI_API_KEY_BUILTIN = '';
+
 
 // ═══════════════════════════════════════
 // STORAGE KEYS
